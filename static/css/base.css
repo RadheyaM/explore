@@ -1,0 +1,14 @@
+/*=========================
+    home page css
+==========================*/
+
+.hero-image {
+    background: url('/media/hero.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.hero-section {
+    display: block;
+    height: 70vh;
+    width: 100%;
+}
