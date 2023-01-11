@@ -1,3 +1,8 @@
+.btn-action {
+    background-color: orange;
+    color: white;
+}
+
 /*=========================
     homepage
 ==========================*/
@@ -27,8 +32,4 @@
 
 .card-title {
     height: 50px;
-}
-
-.btn-action {
-    background-color: orange;
 }
