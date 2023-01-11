@@ -3,8 +3,22 @@
 
 {% block content %}
     <div class="container">
-        {% for book in books %}
-            <img src="{{ book.image.url }}" style="width: 200px; height: 400px; display: block;">
-        {% endfor %}
+        <div class="row product-row">
+                {% for book in books %}
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                    <div class="card border-0 mt-2">
+                        <img src="{{ book.image.url }}" class="card-img-top book-card-image" alt="{{ book.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ book.title }}</h5>
+                            <h6>{{ book.author }}</h6>
+                            <p><strong>£{{ book.price }}</strong></p>
+                            <a href="#" class="btn btn-primary">View</a>
+                            <a href="#" class="btn btn-primary btn-action">Add to Basket</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 {% endblock %}
