@@ -14,7 +14,9 @@
       "price": 12.99,
       "rating": 4.7,
       "google_url": "https://www.google.co.uk/books/edition/The_Temple_in_Man/ch0xHAAACAAJ?hl=en",
+      "thumbnail_url": "https://m.media-amazon.com/images/I/81HovZOW6sL._AC_UY218_.jpg",
       "thumbnail": "books/thumbnails/the_temple_in_man.jpeg",
+      "image_url": "https://m.media-amazon.com/images/I/51PVcWjx23L._SX314_BO1,204,203,200_.jpg",
       "image": "books/images/the_temple_in_man.jpeg"
     }
   },
@@ -33,7 +35,9 @@
       "price": 14.99,
       "rating": 4.7,
       "google_url": "https://www.google.co.uk/books/edition/Serpent_in_the_Sky/bFJbBgAAQBAJ?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=bFJbBgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/serpent_in_the_sky.jpeg",
+      "image_url": "https://books.google.com/books/publisher/content/images/frontcover/bFJbBgAAQBAJ?fife=w240-h345",
       "image": "books/images/serpent_in_the_sky.jpeg"
     }
   },
@@ -52,7 +56,9 @@
       "price": 19.99,
       "rating": 3.5,
       "google_url": "https://www.google.co.uk/books/edition/Sir_Gardner_Wilkinson_and_His_Circle/sqgAAQAAQBAJ?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=sqgAAQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/sir_gardner_wilkinson.jpeg",
+      "image_url": "https://books.google.com/books/publisher/content/images/frontcover/sqgAAQAAQBAJ?fife=w240-h345",
       "image": "books/images/sir_gardner_wilkinson.jpeg"
     }
   },
@@ -71,7 +77,9 @@
       "price": 40.37,
       "rating": 4.6,
       "google_url": "hhttps://www.google.co.uk/books/edition/_/ru4LPyMAxxkC?hl=en&sa=X&ved=2ahUKEwir45bTj7D8AhWOUMAKHRo4CdQQ7_IDegQIHBAD",
+      "thumbnail_url": "http://books.google.com/books/content?id=ru4LPyMAxxkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/our_oriental_heritage.jpeg",
+      "image_url": "https://books.google.com/books/content/images/frontcover/ru4LPyMAxxkC?fife=w480-h690",
       "image": "books/images/our_oriental_heritage.jpeg"
     }
   },
@@ -90,7 +98,9 @@
       "price": 39.76,
       "rating": 4.7,
       "google_url": "https://www.google.co.uk/books/edition/The_Life_of_Greece/17sEhzZ-MokC?hl=en&sa=X&ved=2ahUKEwjIqOnzkbD8AhXQasAKHXsVDYwQiKUDegQIGhAE",
+      "thumbnail_url": "http://books.google.com/books/content?id=17sEhzZ-MokC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/the_life_of_greece.jpeg",
+      "image_url": "https://m.media-amazon.com/images/I/414xnOPBNJL.jpg",
       "image": "books/images/the_life_of_greece.jpeg"
     }
   },
@@ -109,7 +119,9 @@
       "price": 27.38,
       "rating": 4.5,
       "google_url": "https://www.google.co.uk/books/edition/Caesar_and_Christ/89sruQAACAAJ?hl=en&kptab=overview",
+      "thumbnail_url": "http://books.google.com/books/content?id=89sruQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "thumbnail": "books/thumbnails/caesar_and_christ.jpeg",
+      "image_url": "https://pictures.abebooks.com/isbn/9781567310146-uk.jpg",
       "image": "books/images/caesar_and_christ.jpeg"
     }
   },
@@ -128,7 +140,9 @@
       "price": 9.47,
       "rating": 4.4,
       "google_url": "https://www.google.co.uk/books/edition/The_Age_of_Faith/cusRoE1OJvEC?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=cusRoE1OJvEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/the_age_of_faith.jpeg",
+      "image_url": "https://books.google.com/books/content/images/frontcover/cusRoE1OJvEC?fife=w480-h690",
       "image": "books/images/the_age_of_faith.jpeg"
     }
   },
@@ -147,7 +161,9 @@
       "price": 85.14,
       "rating": 4.9,
       "google_url": "https://www.google.co.uk/books/edition/The_Renaissance/XvWpHsfKVoMC?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=XvWpHsfKVoMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/the_renaissance.jpeg",
+      "image_url": "https://books.google.com/books/content/images/frontcover/XvWpHsfKVoMC?fife=w480-h690",
       "image": "books/images/the_renaissance.jpeg"
     }
   },
@@ -166,7 +182,9 @@
       "price": 53.23,
       "rating": 4.7,
       "google_url": "https://www.google.co.uk/books/edition/The_Reformation/yWa7JBDirUYC?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=yWa7JBDirUYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/the_reformation.jpeg",
+      "image_url": "https://books.google.com/books/content/images/frontcover/yWa7JBDirUYC?fife=w480-h690",
       "image": "books/images/the_reformation.jpeg"
     }
   },
@@ -185,7 +203,9 @@
       "price": 47.46,
       "rating": 5.0,
       "google_url": "https://www.google.co.uk/books/edition/The_Age_of_Reason_Begins/rk06KtO6Sq8C?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=rk06KtO6Sq8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/age_of_reason_begins.jpeg",
+      "image_url": "https://books.google.com/books/content/images/frontcover/rk06KtO6Sq8C?fife=w480-h690",
       "image": "books/images/age_of_reason_begins.jpeg"
     }
   },
@@ -204,7 +224,9 @@
       "price": 12.43,
       "rating": 4.7,
       "google_url": "https://www.google.co.uk/books/edition/The_Age_of_Louis_XIV/RIQioWcVxnkC?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=RIQioWcVxnkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/the_age_of_louis.jpeg",
+      "image_url": "https://books.google.com/books/content/images/frontcover/RIQioWcVxnkC?fife=w480-h690",
       "image": "books/images/the_age_of_louis.jpeg"
     }
   },
@@ -223,7 +245,9 @@
       "price": 12.65,
       "rating": 4.8,
       "google_url": "https://www.google.co.uk/books/edition/The_Age_of_Voltaire/0EytOwAACAAJ?hl=en",
+      "thumbnail_url": "http://books.google.com/books/content?id=OXXlCgQR4V8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/age_of_voltaire.jpeg",
+      "image_url": "https://books.google.com/books/content/images/frontcover/OXXlCgQR4V8C?fife=w480-h690",
       "image": "books/images/age_of_voltaire.jpeg"
     }
   },
@@ -242,7 +266,9 @@
       "price": 13.35,
       "rating": 4.0,
       "google_url": "https://www.google.co.uk/books/edition/Rousseau_and_Revolution/Cq2ffQUf1GIC?hl=en&sa=X&ved=2ahUKEwi6-MOfmLD8AhWvQEEAHYB0B38QiKUDegQIEBAE",
+      "thumbnail_url": "http://books.google.com/books/content?id=Cq2ffQUf1GIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/rousseau_and_revolution.jpeg",
+      "image_url": "https://d28hgpri8am2if.cloudfront.net/book_images/cvr9781451647679/rousseau-and-revolution-9781451647679_hr.jpg",
       "image": "books/images/rousseau_and_revolution.jpeg"
     }
   },
@@ -261,7 +287,9 @@
       "price": 19.97,
       "rating": 4.2,
       "google_url": "https://www.google.co.uk/books/edition/_/JiE3GbPcJcwC?hl=en&kptab=getbook",
+      "thumbnail_url": "http://books.google.com/books/content?id=JiE3GbPcJcwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/age_of_napoleon.jpeg",
+      "image_url": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781451647686/the-age-of-napoleon-9781451647686_hr.jpg",
       "image": "books/images/age_of_napoleon.jpeg"
     }
   },
@@ -280,7 +308,9 @@
       "price": 24.95,
       "rating": 4.5,
       "google_url": "https://www.google.co.uk/books/edition/Western_Philosophy/91O2vgEACAAJ?hl=en",
+      "thumbnail_url": "http://books.google.com/books/content?id=3w0jEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/western_philosophy.jpeg",
+      "image_url": "https://m.media-amazon.com/images/I/41XWH0zN7uS.jpg",
       "image": "books/images/western_philosophy.jpeg"
     }
   },
@@ -299,7 +329,9 @@
       "price": 21.99,
       "rating": 3.9,
       "google_url": "https://www.google.co.uk/books/edition/Ancient_Greek_Philosophy/89zzlbsG1KgC?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=89zzlbsG1KgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/ancient_greek_phil.jpeg",
+      "image_url": "https://books.google.com/books/content/images/frontcover/89zzlbsG1KgC?fife=w480-h690",
       "image": "books/images/ancient_greek_phil.jpeg"
     }
   },
@@ -318,7 +350,9 @@
       "price": 27.99,
       "rating": 4.2,
       "google_url": "https://www.google.co.uk/books/edition/_/otQhAwAAQBAJ?hl=en&sa=X&ved=2ahUKEwjB05nOnbD8AhWKS8AKHYqjDLAQ7_IDegQIDBAD",
+      "thumbnail_url": "http://books.google.com/books/content?id=1tOuwV4VI6AC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/greek_and_roman_phil.jpeg",
+      "image_url": "https://books.google.com/books/publisher/content/images/frontcover/otQhAwAAQBAJ?fife=w480-h690",
       "image": "books/images/greek_and_roman_phil.jpeg"
     }
   },
@@ -337,7 +371,9 @@
       "price": 24.00,
       "rating": 3.9,
       "google_url": "https://www.google.co.uk/books/edition/The_Sumerians/iY9xp4pLp88C?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=iY9xp4pLp88C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/sumer.jpeg",
+      "image_url": "https://books.google.com/books/content/images/frontcover/iY9xp4pLp88C?fife=w480-h690",
       "image": "books/images/sumer.jpeg"
     }
   },
@@ -356,7 +392,9 @@
       "price": 24.00,
       "rating": 4.3,
       "google_url": "https://www.google.co.uk/books/edition/Neuroscience_and_Philosophy/XrZNEAAAQBAJ?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=XrZNEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/neuro_phil.jpeg",
+      "image_url": "https://m.media-amazon.com/images/I/61H1JrdQeNL.jpg",
       "image": "books/images/neuro_phil.jpeg"
     }
   },
@@ -375,7 +413,9 @@
       "price": 5.75,
       "rating": 3.5,
       "google_url": "https://www.google.co.uk/books/edition/The_Alchemist_s_Kitchen/3U3B7XPxU2sC?hl=enal",
+      "thumbnail_url": "http://books.google.com/books/content?id=3U3B7XPxU2sC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "thumbnail": "books/thumbnails/alchemists_kitchen.jpeg",
+      "image_url": "https://m.media-amazon.com/images/I/61M+7527KYL.jpg",
       "image": "books/images/alchemists_kitchen.jpeg"
     }
   },
@@ -394,7 +434,9 @@
       "price": 15.75,
       "rating": 4.7,
       "google_url": "https://www.google.co.uk/books/edition/Sciencia/etmguAAACAAJ?hl=en",
+      "thumbnail_url": "http://books.google.com/books/content?id=etmguAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "thumbnail": "books/thumbnails/sciencia.jpeg",
+      "image_url": "https://m.media-amazon.com/images/I/A1TwDV4Dg9L.jpg",
       "image": "books/images/sciencia.jpeg"
     }
   },
@@ -413,7 +455,9 @@
       "price": 4.75,
       "rating": 4.6,
       "google_url": "https://www.google.co.uk/books/edition/Sacred_Geometry/AtNHEAAAQBAJ?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=AtNHEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/sacred_geometry.jpeg",
+      "image_url": "https://books.google.com/books/publisher/content/images/frontcover/AtNHEAAAQBAJ?fife=w480-h690",
       "image": "books/images/sacred_geometry.jpeg"
     }
   },
@@ -432,7 +476,9 @@
       "price": 4.75,
       "rating": 4.3,
       "google_url": "https://www.google.co.uk/books/edition/Harmonograph/BtNHEAAAQBAJ?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=BtNHEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/harmonograph.jpeg",
+      "image_url": "https://books.google.com/books/publisher/content/images/frontcover/BtNHEAAAQBAJ?fife=w480-h690",
       "image": "books/images/harmonograph.jpeg"
     }
   },
@@ -451,7 +497,9 @@
       "price": 4.75,
       "rating": 4.5,
       "google_url": "https://www.google.co.uk/books/edition/Perspective_and_Other_Optical_Illusions/_NJHEAAAQBAJ?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=DCVbzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "thumbnail": "books/thumbnails/perspective.jpeg",
+      "image_url": "https://m.media-amazon.com/images/P/B07DCC73Y1.01._SCLZZZZZZZ_SX500_.jpg",
       "image": "books/images/perspective.jpeg"
     }
   },
@@ -470,7 +518,9 @@
       "price": 5.75,
       "rating": 4.6,
       "google_url": "https://www.google.co.uk/books/edition/Sun_Moon_and_Earth/1N1BAAAACAAJ?hl=en",
+      "thumbnail_url": "http://books.google.com/books/content?id=1N1BAAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "thumbnail": "books/thumbnails/sun_moon_earth.jpeg",
+      "image_url": "https://m.media-amazon.com/images/I/51XCF46W27L.jpg",
       "image": "books/images/sun_moon_earth.jpeg"
     }
   },
@@ -489,7 +539,9 @@
       "price": 4.75,
       "rating": 4.0,
       "google_url": "https://www.google.co.uk/books/edition/Symmetry/CtNHEAAAQBAJ?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=CtNHEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/symmetry.jpeg",
+      "image_url": "https://books.google.com/books/publisher/content/images/frontcover/CtNHEAAAQBAJ?fife=w480-h690",
       "image": "books/images/symmetry.jpeg"
     }
   },
@@ -508,7 +560,9 @@
       "price": 5.75,
       "rating": 4.0,
       "google_url": "https://www.google.co.uk/books/edition/Grammar/LzqzuAAACAAJ?hl=en",
+      "thumbnail_url": "http://books.google.com/books/content?id=LzqzuAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "thumbnail": "books/thumbnails/grammar.jpeg",
+      "image_url": "https://m.media-amazon.com/images/I/61PcpmP1KcL.jpg",
       "image": "books/images/grammar.jpeg"
     }
   },
@@ -526,7 +580,9 @@
       "price": 37.21,
       "rating": 4.1,
       "google_url": "https://www.google.co.uk/books/edition/_/tk8MAAAACAAJ?hl=en&kptab=getbook",
+      "thumbnail_url": "http://books.google.com/books/content?id=izMmSgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "thumbnail": "books/thumbnails/ecce.jpeg",
+      "image_url": "https://m.media-amazon.com/images/I/51L7xHephwL.jpg",
       "image": "books/images/ecce.jpeg"
     }
   },
@@ -545,7 +601,9 @@
       "price": 3.99,
       "rating": 3.5,
       "google_url": "https://www.google.co.uk/books/edition/The_Penguin_Latin_Dictionary/AX_vGQAACAAJ?hl=en",
+      "thumbnail_url": "http://books.google.com/books/content?id=AX_vGQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "thumbnail": "books/thumbnails/latin_dictionary.jpeg",
+      "image_url": "https://m.media-amazon.com/images/I/61-ksTdZrtL.jpg",
       "image": "books/images/latin_dictionary.jpeg"
     }
   },
@@ -564,7 +622,9 @@
       "price": 3.99,
       "rating": 5.0,
       "google_url": "https://www.google.co.uk/books/edition/Wheelock_s_Latin_Reader/0yZcZdbPlu8C?hl=en&gbpv=0",
+      "thumbnail_url": "http://books.google.com/books/content?id=0yZcZdbPlu8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "thumbnail": "books/thumbnails/wheelocks.jpeg",
+      "image_url": "https://books.google.com/books/content/images/frontcover/0yZcZdbPlu8C?fife=w480-h690",
       "image": "books/images/wheelocks.jpeg"
     }
   }
