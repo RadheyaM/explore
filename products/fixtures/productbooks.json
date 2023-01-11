@@ -1,0 +1,571 @@
+[
+  {
+    "pk": 1,
+    "model": "products.books",
+    "fields": {
+      "title": "The Temple in Man",
+      "slug": "",
+      "category": 1,
+      "author": "R.A. Schwaller de Lubicz",
+      "publisher": "Inner Traditions International",
+      "genre": 1,
+      "subtitle": "Sacred Architecture and the Perfect Man",
+      "description": "This book contains the first published results of Schwaller's 12 years of research at the temple of Luxor and its implications for interpreting the symbolic and mathematical processes of the Egyptians through their sacred architecture.",
+      "price": 12.99,
+      "rating": 4.7,
+      "google_url": "https://www.google.co.uk/books/edition/The_Temple_in_Man/ch0xHAAACAAJ?hl=en",
+      "thumbnail": "books/thumbnails/the_temple_in_man.jpeg",
+      "image": "books/images/the_temple_in_man.jpeg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.books",
+    "fields": {
+      "title": "Serpent in the Sky",
+      "slug": "",
+      "category": 1,
+      "author": "John Anthony West",
+      "publisher": "Quest Books",
+      "genre": 1,
+      "subtitle": "The High Wisdom of Ancient Egypt",
+      "description": "John Anthony West's revolutionary reinterpretation of the civilization of Egypt challenges all that has been accepted as dogma concerning Ancient Egypt. In this pioneering study West documents that: Hieroglyphs carry hermetic messages that convey the subtler realities of the Sacred Science of the Pharaohs. Egyptian science, medicine, mathematics, and astronomy were more sophisticated than most modern Egyptologists acknowledge. Egyptian knowledge of the universe was a legacy from a highly sophisticated civilization that flourished thousands of years ago. The great Sphinx represents geological proof that such a civilization existed. This revised edition includes a new introduction linking Egyptian spiritual science with the perennial wisdom tradition and an appendix updating West's work in redating the Sphinx. Illustrated with over 140 photographs and line drawings.",
+      "price": 14.99,
+      "rating": 4.7,
+      "google_url": "https://www.google.co.uk/books/edition/Serpent_in_the_Sky/bFJbBgAAQBAJ?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/serpent_in_the_sky.jpeg",
+      "image": "books/images/serpent_in_the_sky.jpeg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.books",
+    "fields": {
+      "title": "Sir Gardner Wilkinson and His Circle",
+      "slug": "",
+      "category": 1,
+      "author": "Jason Thompson",
+      "publisher": "University of Texas Press",
+      "genre": 1,
+      "subtitle": "The Biography of a Victorian Egyptologist",
+      "description": "Following in the footsteps of Napoleon's army, Europeans invaded Egypt in the early nineteenth century to gaze in wonder at the massive, inscrutable remains of its ancient civilizations. One of these travelers was a twenty-four-year-old Englishman, John Gardner Wilkinson. His copious observations of ancient and modern Egyptian places, artifacts, and lifeways, recorded in such widely read publications as Manners and Customs of the Ancient Egyptians and Handbook for Travellers in Egypt, made him the leading early Victorian authority on ancient Egypt and paved the way for thc scientific study of Egyptology.",
+      "price": 19.99,
+      "rating": 3.5,
+      "google_url": "https://www.google.co.uk/books/edition/Sir_Gardner_Wilkinson_and_His_Circle/sqgAAQAAQBAJ?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/sir_gardner_wilkinson.jpeg",
+      "image": "books/images/sir_gardner_wilkinson.jpeg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.books",
+    "fields": {
+      "title": "Our Oriental Heritage",
+      "slug": "",
+      "category": 1,
+      "author": "Will Durant",
+      "publisher": "Simon & Schuster",
+      "genre": 2,
+      "subtitle": "Book 1 of the famous Story of Civilization Series by Will and Ariel Durant",
+      "description": "Being a History of Civilization in Egypt and the Near East to the Death of Alexander, and in India, China and Japan from the Beginning to Our Own Day, with an Introduction on the Nature and Foundations of Civilization",
+      "price": 40.37,
+      "rating": 4.6,
+      "google_url": "hhttps://www.google.co.uk/books/edition/_/ru4LPyMAxxkC?hl=en&sa=X&ved=2ahUKEwir45bTj7D8AhWOUMAKHRo4CdQQ7_IDegQIHBAD",
+      "thumbnail": "books/thumbnails/our_oriental_heritage.jpeg",
+      "image": "books/images/our_oriental_heritage.jpeg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.books",
+    "fields": {
+      "title": "The Life of Greece",
+      "slug": "",
+      "category": 1,
+      "author": "Will Durant",
+      "publisher": "Simon & Schuster",
+      "genre": 2,
+      "subtitle": "The second volume of the expansive Pulitzer Prize-winning series The Story of Civilization.",
+      "description": "The Story of Civilization, Volume II: A history of Greek civilization from the beginnings, and of civilization in the Near East from the Death of Alexander to the Roman Conquest. This is the second volume of the classic Pulitzer Prize-winning series.",
+      "price": 39.76,
+      "rating": 4.7,
+      "google_url": "https://www.google.co.uk/books/edition/The_Life_of_Greece/17sEhzZ-MokC?hl=en&sa=X&ved=2ahUKEwjIqOnzkbD8AhXQasAKHXsVDYwQiKUDegQIGhAE",
+      "thumbnail": "books/thumbnails/the_life_of_greece.jpeg",
+      "image": "books/images/the_life_of_greece.jpeg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.books",
+    "fields": {
+      "title": "Caesar and Christ",
+      "slug": "",
+      "category": 1,
+      "author": "Will Durant",
+      "publisher": "Simon & Schuster",
+      "genre": 2,
+      "subtitle": "The third volume of the expansive Pulitzer Prize-winning series The Story of Civilization.",
+      "description": "A History of Roman Civilization and of Christianity from Their Beginnings to A.D. 325. Survey all aspects of Roman life - Politics, economics, literature, art, morals. It ends with the conflict of Pagan and Christian Forces and raises the curtain on the great struggle between church and state.",
+      "price": 27.38,
+      "rating": 4.5,
+      "google_url": "https://www.google.co.uk/books/edition/Caesar_and_Christ/89sruQAACAAJ?hl=en&kptab=overview",
+      "thumbnail": "books/thumbnails/caesar_and_christ.jpeg",
+      "image": "books/images/caesar_and_christ.jpeg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.books",
+    "fields": {
+      "title": "The Age of Faith",
+      "slug": "",
+      "category": 1,
+      "author": "Will Durant",
+      "publisher": "Simon & Schuster",
+      "genre": 2,
+      "subtitle": "The fourth volume of the expansive Pulitzer Prize-winning series The Story of Civilization.",
+      "description": "The Story of Civilization, Volume IV: A history of medieval civilization—Christian, Islamic, and Judaic—from Constantine to Dante: A.D. 325-1300. This is the fourth volume of the classic, Pulitzer Prize-winning series.",
+      "price": 9.47,
+      "rating": 4.4,
+      "google_url": "https://www.google.co.uk/books/edition/The_Age_of_Faith/cusRoE1OJvEC?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/the_age_of_faith.jpeg",
+      "image": "books/images/the_age_of_faith.jpeg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.books",
+    "fields": {
+      "title": "The Renaissance",
+      "slug": "",
+      "category": 1,
+      "author": "Will Durant",
+      "publisher": "Simon & Schuster",
+      "genre": 2,
+      "subtitle": "The fifth volume of the expansive Pulitzer Prize-winning series The Story of Civilization.",
+      "description": "The Story of Civilization, Volume V: A history of civilization in Italy from 1304-1576.",
+      "price": 85.14,
+      "rating": 4.9,
+      "google_url": "https://www.google.co.uk/books/edition/The_Renaissance/XvWpHsfKVoMC?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/the_renaissance.jpeg",
+      "image": "books/images/the_renaissance.jpeg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.books",
+    "fields": {
+      "title": "The Reformation",
+      "slug": "",
+      "category": 1,
+      "author": "Will Durant",
+      "publisher": "Simon & Schuster",
+      "genre": 2,
+      "subtitle": "The sixth volume of the expansive Pulitzer Prize-winning series The Story of Civilization.",
+      "description": "The Story of Civilization, Volume VI: A history of European civilization from Wyclif to Calvin: 1300-1564.",
+      "price": 53.23,
+      "rating": 4.7,
+      "google_url": "https://www.google.co.uk/books/edition/The_Reformation/yWa7JBDirUYC?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/the_reformation.jpeg",
+      "image": "books/images/the_reformation.jpeg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.books",
+    "fields": {
+      "title": "The Age of Reason Begins",
+      "slug": "",
+      "category": 1,
+      "author": "Will Durant, Ariel Durant",
+      "publisher": "Simon & Schuster",
+      "genre": 2,
+      "subtitle": "The seventh volume of the expansive Pulitzer Prize-winning series The Story of Civilization.",
+      "description": "The Story of Civilization, Volume VII: A history of European civilization in the period of Shakespeare, Bacon, Montaigne, Rembrandt, Galileo, and Descartes: 1558-1648.",
+      "price": 47.46,
+      "rating": 5.0,
+      "google_url": "https://www.google.co.uk/books/edition/The_Age_of_Reason_Begins/rk06KtO6Sq8C?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/age_of_reason_begins.jpeg",
+      "image": "books/images/age_of_reason_begins.jpeg"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.books",
+    "fields": {
+      "title": "The Age of Louis XIV",
+      "slug": "",
+      "category": 1,
+      "author": "Will Durant, Ariel Durant",
+      "publisher": "Simon & Schuster",
+      "genre": 2,
+      "subtitle": "The eighth volume of the expansive Pulitzer Prize-winning series The Story of Civilization.",
+      "description": "The Story of Civilization, Volume VIII: A history of European civilization in the period of Pascal, Moliere, Cromwell, Milton, Peter the Great, Newton, and Spinoza: 1648-1715.",
+      "price": 12.43,
+      "rating": 4.7,
+      "google_url": "https://www.google.co.uk/books/edition/The_Age_of_Louis_XIV/RIQioWcVxnkC?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/the_age_of_louis.jpeg",
+      "image": "books/images/the_age_of_louis.jpeg"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.books",
+    "fields": {
+      "title": "The Age of Voltaire",
+      "slug": "",
+      "category": 1,
+      "author": "Will Durant, Ariel Durant",
+      "publisher": "Simon & Schuster",
+      "genre": 2,
+      "subtitle": "The ninth volume of the expansive Pulitzer Prize-winning series The Story of Civilization.",
+      "description": "A History of Civilization in Western Europe from 1715 to 1756, With Special Emphasis on the Conflict Between Religion and Philosophy.",
+      "price": 12.65,
+      "rating": 4.8,
+      "google_url": "https://www.google.co.uk/books/edition/The_Age_of_Voltaire/0EytOwAACAAJ?hl=en",
+      "thumbnail": "books/thumbnails/age_of_voltaire.jpeg",
+      "image": "books/images/age_of_voltaire.jpeg"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.books",
+    "fields": {
+      "title": "Rousseau and Revolution",
+      "slug": "",
+      "category": 1,
+      "author": "Will Durant, Ariel Durant",
+      "publisher": "Simon & Schuster",
+      "genre": 2,
+      "subtitle": "The tenth volume of the expansive Pulitzer Prize-winning series The Story of Civilization.",
+      "description": "Rousseau and Revolution, Volume 10 of Willand Ariel Durant's Story of Civilization, ranges over a Europe in ferment, but centers on the passionate rebel--philosopher Jean-Jacques Rousseau, the great exponent of the romantic impulse toward self-exploration and social revolt, who contended with the great rationalist, Voltaire, for the mind of Europe. Rousseau condemned civilization as a disease, glorified the noble savage, proclaimed to the world with equal intensity his own love affairs and the natural Rights of Man, and became the patron Saint of the Revolution and the worldwide social upheavals of two centuries.",
+      "price": 13.35,
+      "rating": 4.0,
+      "google_url": "https://www.google.co.uk/books/edition/Rousseau_and_Revolution/Cq2ffQUf1GIC?hl=en&sa=X&ved=2ahUKEwi6-MOfmLD8AhWvQEEAHYB0B38QiKUDegQIEBAE",
+      "thumbnail": "books/thumbnails/rousseau_and_revolution.jpeg",
+      "image": "books/images/rousseau_and_revolution.jpeg"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.books",
+    "fields": {
+      "title": "The Age of Napoleon",
+      "slug": "",
+      "category": 1,
+      "author": "Will Durant, Ariel Durant",
+      "publisher": "Simon & Schuster",
+      "genre": 2,
+      "subtitle": "The eleventh and final volume of the expansive Pulitzer Prize-winning series The Story of Civilization.",
+      "description": "The Story of Civilization, Volume XI: A history of European civilization from 1789 to 1815. ",
+      "price": 19.97,
+      "rating": 4.2,
+      "google_url": "https://www.google.co.uk/books/edition/_/JiE3GbPcJcwC?hl=en&kptab=getbook",
+      "thumbnail": "books/thumbnails/age_of_napoleon.jpeg",
+      "image": "books/images/age_of_napoleon.jpeg"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.books",
+    "fields": {
+      "title": "Western Philosophy | An Anthology",
+      "slug": "",
+      "category": 1,
+      "author": "John Cottingham",
+      "publisher": "Wiley",
+      "genre": 3,
+      "subtitle": "This outstanding text will support a wide variety of introductory courses in philosophy, as well as providing more advanced students with an indispensable collection of classic source materials.",
+      "description": "Western Philosophy: An Anthology provides the most comprehensive and authoritative survey of the Western philosophical tradition from ancient Greece to the leading philosophers of today. In 144 substantial and carefully chosen extracts, the volume covers all the main branches of philosophy – theory of knowledge and metaphysics, philosophy of mind, religion and science, moral philosophy (theoretical and applied), political theory and aesthetics. Chronologically and thematically arranged, the readings are introduced and linked together by a lucid philosophical commentary which guides the reader through the key arguments. For this new edition, all the existing sections have been updated with additional contemporary extracts, and two completely new sections on logic and language, and philosophy and the meaning of life have been included.",
+      "price": 24.95,
+      "rating": 4.5,
+      "google_url": "https://www.google.co.uk/books/edition/Western_Philosophy/91O2vgEACAAJ?hl=en",
+      "thumbnail": "books/thumbnails/western_philosophy.jpeg",
+      "image": "books/images/western_philosophy.jpeg"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.books",
+    "fields": {
+      "title": "Ancient Greek Philosophy",
+      "slug": "",
+      "category": 1,
+      "author": "Thomas A. Blackson",
+      "publisher": "John Wiley & Sons",
+      "genre": 3,
+      "subtitle": "From the Presocratics to the Hellenistic Philosophers",
+      "description": "Ancient Greek Philosophy: From the Presocratics to the Hellenistic Philosophers presents a comprehensive introduction to the philosophers and philosophical traditions that developed in ancient Greece from 585 BC to 529 AD. Provides coverage of the Presocratics through the Hellenistic philosophers Moves beyond traditional textbooks that conclude with Aristotle A uniquely balanced organization of exposition, choice excerpts and commentary, informed by classroom feedback Contextual commentary traces the development of lines of thought through the period, ideal for students new to the discipline Can be used in conjunction with the online resources found at http://tomblackson.com/Ancient/toc.html.",
+      "price": 21.99,
+      "rating": 3.9,
+      "google_url": "https://www.google.co.uk/books/edition/Ancient_Greek_Philosophy/89zzlbsG1KgC?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/ancient_greek_phil.jpeg",
+      "image": "books/images/ancient_greek_phil.jpeg"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.books",
+    "fields": {
+      "title": "The Cambridge Companion to Greek and Roman Philosophy",
+      "slug": "",
+      "category": 1,
+      "author": "David Sedley",
+      "publisher": "Cambridge University Press",
+      "genre": 3,
+      "subtitle": "The Cambridge Companiong to Greek and Roman Philosophy - will put you to sleep in minutes!",
+      "description": "The Cambridge Companion to Greek and Roman Philosophy is a wide-ranging 2003 introduction to the study of philosophy in the ancient world. A team of leading specialists surveys the developments of the period and evaluates a comprehensive series of major thinkers, ranging from Pythagoras to Epicurus. There are also separate chapters on how philosophy in the ancient world interacted with religion, literature and science, and a final chapter traces the seminal influence of Greek and Roman philosophy down to the seventeenth century. Practical elements such as tables, illustrations, a glossary, and extensive advice on further reading make it an ideal book to accompany survey courses on the history of ancient philosophy. It will be an invaluable guide for all who are interested in the philosophical thought of this rich and formative period.",
+      "price": 27.99,
+      "rating": 4.2,
+      "google_url": "https://www.google.co.uk/books/edition/_/otQhAwAAQBAJ?hl=en&sa=X&ved=2ahUKEwjB05nOnbD8AhWKS8AKHYqjDLAQ7_IDegQIDBAD",
+      "thumbnail": "books/thumbnails/greek_and_roman_phil.jpeg",
+      "image": "books/images/greek_and_roman_phil.jpeg"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.books",
+    "fields": {
+      "title": "The Sumerians",
+      "slug": "",
+      "category": 1,
+      "author": "Samuel Noah Kramer",
+      "publisher": "University of Chicago Press",
+      "genre": 2,
+      "subtitle": "Their History, Culture, and Character",
+      "description": "The Sumerians, the pragmatic and gifted people who preceded the Semites in the land first known as Sumer and later as Babylonia, created what was probably the first high civilization in the history of man, spanning the fifth to the second millenniums B.C. This book is an unparalleled compendium of what is known about them.",
+      "price": 24.00,
+      "rating": 3.9,
+      "google_url": "https://www.google.co.uk/books/edition/The_Sumerians/iY9xp4pLp88C?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/sumer.jpeg",
+      "image": "books/images/sumer.jpeg"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.books",
+    "fields": {
+      "title": "Neuroscience and Philosophy",
+      "slug": "",
+      "category": 1,
+      "author": "Felipe De Brigard, Walter Sinnott-Armstrong",
+      "publisher": "MIT Press",
+      "genre": 3,
+      "subtitle": "Philosophers and neuroscientists address central issues in both fields, including morality, action, mental illness, consciousness, perception, and memory.",
+      "description": "Philosophers and neuroscientists grapple with the same profound questions involving consciousness, perception, behavior, and moral judgment, but only recently have the two disciplines begun to work together. This volume offers fourteen original chapters that address these issues, each written by a team that includes at least one philosopher and one neuroscientist who integrate disciplinary perspectives and reflect the latest research in both fields. Topics include morality, empathy, agency, the self, mental illness, neuroprediction, optogenetics, pain, vision, consciousness, memory, concepts, mind wandering, and the neural basis of psychological categories.",
+      "price": 24.00,
+      "rating": 4.3,
+      "google_url": "https://www.google.co.uk/books/edition/Neuroscience_and_Philosophy/XrZNEAAAQBAJ?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/neuro_phil.jpeg",
+      "image": "books/images/neuro_phil.jpeg"
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.books",
+    "fields": {
+      "title": "The Alchemist's Kitchen",
+      "slug": "",
+      "category": 1,
+      "author": "Guy Ogilvy",
+      "publisher": "Wooden Books",
+      "genre": 4,
+      "subtitle": "Extraordinary Potions & Curious Notions",
+      "description": "Packed with everything from ancient recipes for glues, varnishes, and paints to spiritual preparations of herbal tinctures and oils, including magical formulae and practices of alchemy, The Alchemist's Kitchen will appeal to anyone fascinated by the past and by the occult world. Guy Ogilvy takes you inside medieval laboratories and kitchens, revealing the hows and whys of mythical recipes and concoctions.",
+      "price": 5.75,
+      "rating": 3.5,
+      "google_url": "https://www.google.co.uk/books/edition/The_Alchemist_s_Kitchen/3U3B7XPxU2sC?hl=enal",
+      "thumbnail": "books/thumbnails/alchemists_kitchen.jpeg",
+      "image": "books/images/alchemists_kitchen.jpeg"
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.books",
+    "fields": {
+      "title": "Sciencia",
+      "slug": "",
+      "category": 1,
+      "author": "Burkard Polster, Moff Betts",
+      "publisher": "Wooden Books",
+      "genre": 4,
+      "subtitle": "Mathematics, Physics, Chemistry, Biology and Astronomy for All",
+      "description": "Curious about quarks, quasars and the fantastic universe around you? Ever wanted to explore a mathematical proof? Need some trigonometry fast? Want to swat up on physics, chemistry, or learn some new biology? Ever wondered why your scratches itch just before you go to sleep? Beautifully illustrated and packed with fascinating and useful information, SCIENCIA is the ultimate one-stop science reference book for inquisitive readers of all ages. Whether you just want to brush up on what you learnt at school, still are at school or never went to school, these pages will test you, stretch you, and make you brainier. Scientia brings together the six bestselling science books from the 'Wooden Books' series. Together they cover almost the whole of the A-level syllabus in mathematics, physics, chemistry and biology.",
+      "price": 15.75,
+      "rating": 4.7,
+      "google_url": "https://www.google.co.uk/books/edition/Sciencia/etmguAAACAAJ?hl=en",
+      "thumbnail": "books/thumbnails/sciencia.jpeg",
+      "image": "books/images/sciencia.jpeg"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.books",
+    "fields": {
+      "title": "Sacred Geometry",
+      "slug": "",
+      "category": 1,
+      "author": "Miranda Lundy",
+      "publisher": "Wooden Books",
+      "genre": 4,
+      "subtitle": "Is there a secret visual language all around us? - no.",
+      "description": "Is there a secret visual language all around us? What's so special about the shape of the Great Pyramid? Why is there something so sixy about circles? How many ways can you tile the plane? Lavishly illustrated by the author, this enchanting small introduction to one of the oldest and most widely-used ancient traditions on Earth will forever change the way you look at a triangle, arch, window, fabric repeat, ceramic pattern, graphic design, painting, spiral or flower. WOODEN BOOKS are small but packed with information.",
+      "price": 4.75,
+      "rating": 4.6,
+      "google_url": "https://www.google.co.uk/books/edition/Sacred_Geometry/AtNHEAAAQBAJ?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/sacred_geometry.jpeg",
+      "image": "books/images/sacred_geometry.jpeg"
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.books",
+    "fields": {
+      "title": "Harmonograph",
+      "slug": "",
+      "category": 1,
+      "author": "Anthony Ashton",
+      "publisher": "Wooden Books",
+      "genre": 4,
+      "subtitle": "Why did Pythagoras ... ",
+      "description": "Why did Pythagoras pause outside a Blacksmith's workshop? Can the nature of Harmony really be understood visually? Why do harmonies leave gaps or 'commas' when added together? In this charming little book Anthony Ashton uses a Victorian device called a Harmonograph to tell the story of Harmony and the intervals in the scale. With useful appendices and exquisite line drawings this is a unique and original introduction to this timeless subject. WOODEN BOOKS are small but packed with information.",
+      "price": 4.75,
+      "rating": 4.3,
+      "google_url": "https://www.google.co.uk/books/edition/Harmonograph/BtNHEAAAQBAJ?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/harmonograph.jpeg",
+      "image": "books/images/harmonograph.jpeg"
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.books",
+    "fields": {
+      "title": "Perspective and other Illusions",
+      "slug": "",
+      "category": 1,
+      "author": "McNaughten Phoebe",
+      "publisher": "Wooden Books",
+      "genre": 4,
+      "subtitle": "WOODEN BOOKS are small but packed with information.",
+      "description": "Do things always look smaller when they are further away? Can something be clearly visible but not there at all? Is it ever possible to have a direct and true experience of reality? Are you sure? In this delightful and informative little book Phoebe McNaughton takes us on a classical journey through the history of artistic perspective, showing how the eye can be tricked and confused, the brain befuddled, and the philosopher inside all of us awakened by the nature of illusion. WOODEN BOOKS are small but packed with information.",
+      "price": 4.75,
+      "rating": 4.5,
+      "google_url": "https://www.google.co.uk/books/edition/Perspective_and_Other_Optical_Illusions/_NJHEAAAQBAJ?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/perspective.jpeg",
+      "image": "books/images/perspective.jpeg"
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.books",
+    "fields": {
+      "title": "Sun, Moon and Earth",
+      "slug": "",
+      "category": 1,
+      "author": "Robin Heath",
+      "publisher": "Wooden Books",
+      "genre": 4,
+      "subtitle": "WOODEN BOOKS are small but packed with information.",
+      "description": "'Sun, Moon & Earth' is dedicated to understanding the incredible dance and marriage of the Sun and the Moon. Heath has solved one of the age-old puzzles of antiquity and in these pages shows simple tricks which predict eclipses, the motions of the Moon's nodes, and even the number of days in a year.",
+      "price": 5.75,
+      "rating": 4.6,
+      "google_url": "https://www.google.co.uk/books/edition/Sun_Moon_and_Earth/1N1BAAAACAAJ?hl=en",
+      "thumbnail": "books/thumbnails/sun_moon_earth.jpeg",
+      "image": "books/images/sun_moon_earth.jpeg"
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.books",
+    "fields": {
+      "title": "Symmetry",
+      "slug": "",
+      "category": 1,
+      "author": "David Wade",
+      "publisher": "Wooden Books",
+      "genre": 4,
+      "subtitle": "WOODEN BOOKS are small but packed with information.",
+      "description": "Why on earth do cars have the same symmetry as dragonflies? Is there really a beautiful swirling pattern lurking in every dripping tap? What do insect eggs have in common with planets, and why? In this exquisite book, the smallest and most concise ever produced, designer David Wade introduces the main principles of symmetry, and shows how, despite opinions over exactly what it is, symmetry can be found in almost every corner of science, nature and human culture.",
+      "price": 4.75,
+      "rating": 4.0,
+      "google_url": "https://www.google.co.uk/books/edition/Symmetry/CtNHEAAAQBAJ?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/symmetry.jpeg",
+      "image": "books/images/symmetry.jpeg"
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.books",
+    "fields": {
+      "title": "Grammar",
+      "slug": "",
+      "category": 1,
+      "author": "Rachel Grenon",
+      "publisher": "Wooden Books",
+      "genre": 4,
+      "subtitle": "The Structure of Language",
+      "description": "In the ancient scholarly curriculum, grammar formed part of the Trivium, with its sister sciences of logic and rhetoric. Logic asks: When is a sentence true? Rhetoric asks: Which is the right sentence? Grammar purely asks: When is a sentence correct? In Grammar, Rachel Grenon defines the rules governing the construction of words, phrases, sentences, and extended text or speech. Beginning with the rules behind ancient languages such as Sanskrit and Greek, she then focuses on how the rules of English have developed-from nouns and pronouns, verbs and adverbs, to tenses, the passive voice, questions, imperatives, and much more. With diagrams, engravings, and witty cartoon illustrations, this original take on a classic subject is essential for anyone interested in language.",
+      "price": 5.75,
+      "rating": 4.0,
+      "google_url": "https://www.google.co.uk/books/edition/Grammar/LzqzuAAACAAJ?hl=en",
+      "thumbnail": "books/thumbnails/grammar.jpeg",
+      "image": "books/images/grammar.jpeg"
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.books",
+    "fields": {
+      "title": "Ecce Romani",
+      "category": 1,
+      "author": "Gilbert Lawall, David Tafe, Carol Esler",
+      "publisher": "Longman Publishing Group",
+      "genre": 5,
+      "subtitle": "Learn Latin - Read the Classics",
+      "description": "ECCE ROMANI - a Latin reading course - was first published in 1971. Its aims are to bring pupils quickly to the point where they can read Latin with confidence, and also to give them some insight into life in the early Roman Empire. The reading passages are written in a lively style and grammatical information is dealt with efficiently and sensibly. This second edition is the result of a complete revision and now provides better preparation for examinations at 16+. It consists of five course books (each with an accompanying book of teacher's notes), two companion reference books and a Roman Studies Handbook containing bibliographical references.",
+      "price": 37.21,
+      "rating": 4.1,
+      "google_url": "https://www.google.co.uk/books/edition/_/tk8MAAAACAAJ?hl=en&kptab=getbook",
+      "thumbnail": "books/thumbnails/ecce.jpeg",
+      "image": "books/images/ecce.jpeg"
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.books",
+    "fields": {
+      "title": "The Penguin Latin Dictionary",
+      "slug": "",
+      "category": 1,
+      "author": "David Butterfield, Robert Shorrock",
+      "publisher": "Penguin",
+      "genre": 5,
+      "subtitle": "A clear and approachable dictionary designed to serve the needs of today's Latin users",
+      "description": "Though it is a language that predates the dawn of the Roman Empire, Latin continues to influence many areas of modern life. Medical, legal, and literary texts are littered with Latin phrases that convey a meaning English simply can't articulate. This latest addition to Penguin's successful dictionary series is one of the most comprehensive concise Latin dictionaries ever published.",
+      "price": 3.99,
+      "rating": 3.5,
+      "google_url": "https://www.google.co.uk/books/edition/The_Penguin_Latin_Dictionary/AX_vGQAACAAJ?hl=en",
+      "thumbnail": "books/thumbnails/latin_dictionary.jpeg",
+      "image": "books/images/latin_dictionary.jpeg"
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.books",
+    "fields": {
+      "title": "Wheelock's Latin Reader",
+      "slug": "",
+      "category": 1,
+      "author": "Richard A. LaFleur",
+      "publisher": "Harper Collins",
+      "genre": 5,
+      "subtitle": "Selections from Latin Literature.",
+      "description": "Originally intended by Professor Frederic M. Wheelock as a sequel to Wheelock's Latin, his classic introductory Latin textbook, Wheelock's Latin Reader, newly revised and updated by Richard A. LaFleur, is the ideal text for any intermediate-level Latin course. You'll find a rich selection of of prose and poetry from a wide range of classical authors, as well as briefer passages from medieval and Late Latin writers, each presented in the Latin in which it was originally written. Useful features include extensive notes; a complete Latin-English vocabulary; maps of ancient Italy, Greece, and the Roman Empire; and numerous photographs illustrating aspects of classical culture, mythology, and history featured in the readings.",
+      "price": 3.99,
+      "rating": 5.0,
+      "google_url": "https://www.google.co.uk/books/edition/Wheelock_s_Latin_Reader/0yZcZdbPlu8C?hl=en&gbpv=0",
+      "thumbnail": "books/thumbnails/wheelocks.jpeg",
+      "image": "books/images/wheelocks.jpeg"
+    }
+  }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "pk": 1,
+        "model": "products.genre",
+        "fields": {
+            "name": "Egyptology"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.genre",
+        "fields": {
+            "name": "History"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.genre",
+        "fields": {
+            "name": "Philosophy"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.genre",
+        "fields": {
+            "name": "Curiosities"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.genre",
+        "fields": {
+            "name": "Latin"
+        }
+    }
+]
