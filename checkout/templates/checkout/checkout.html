@@ -1,8 +1,31 @@
+<!--First Code based off of boutique ado-->
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheeet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="col"></div>
+    </div>
+{% endblock %}
+
 {% block content %}
 <section class="container">
-    <h1>checkout test</h1>
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="mb-4">Shopping Basket</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <p class="text-muted">Please fill out the form belwo to complete your order</p>
+        </div>
+    </div>   
 </section>
+<
 {% endblock %}
