@@ -2,7 +2,19 @@
 {% load static %}
 
 {% block content %}
-<section class="container">
-    <h1>BASKET</h1>
-</section>
+    <section class="container">
+        <div class="row d-flex justify-content-center mt-5">
+            <h2>Your Basket</h2>
+            <h3> {{ free_delivery_threshold }} </h3>
+        </div>
+        <hr>
+    </section>
+    <section class="container">
+        <div class="row d-flex">
+            <div class="col-lg-3 basket-row"></div>
+            <div class="col-lg-3 basket-row"></div>
+            <div class="col-lg-3 basket-row"></div>
+            <div class="col-lg-3 basket-row"></div>
+        </div>
+    </scetion>
 {% endblock %}
