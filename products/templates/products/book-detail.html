@@ -2,5 +2,21 @@
 {% load static %}
 
 {% block content %}
-
+    <div class="container">
+        <div class="row product-row d-flex">
+            <div class="col-lg-6">
+                <img src="{{ book.image.url }}" class="book-image">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="mb-3">{{ book.title }}</h2>
+                <h4 class="mb-3">{{ book.author }}</h4>
+                <h4 class="badge badge-info mb-3">{{ book.genre.name }}</h4>
+                <h6 class="mb-3"> {{ book.subtitle }} </h6>
+                <p> {{ book.description }}</p>
+                <p> {{ book.rating }} </p>
+                <p><strong>£{{ book.price }}</strong></p>
+                <a href="" class="btn btn-action">Add to Basket</a>
+            </div>
+        </div>
+    </div>
 {% endblock %}
