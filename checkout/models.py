@@ -1,4 +1,4 @@
-"""Based on project boutique ado"""
+"""Based on project boutique ado code"""
 import uuid
 
 from django.db import models
