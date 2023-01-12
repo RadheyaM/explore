@@ -39,7 +39,14 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Basket £0.00 <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'basket' %}">
+                      Basket
+                      {% if grand_total %}
+                        £{{ grand_total|floatformat:2 }}
+                      {% else %}
+                        £0.00
+                      {% endif %}
+                    </a>
                   </li>
             </li>
         </ul>
