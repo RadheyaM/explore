@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     # my apps
     'home',
     'products',
+    'basket',
 ]
 
 SITE_ID = 1
