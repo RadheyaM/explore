@@ -15,7 +15,7 @@
                 <p> {{ book.description }}</p>
                 <p> {{ book.rating }} </p>
                 <p><strong>£{{ book.price }}</strong></p>
-                <a href="" class="btn btn-action">Add to Basket</a>
+                {% include 'products/includes/add-to-basket.html' %}
             </div>
         </div>
     </div>
