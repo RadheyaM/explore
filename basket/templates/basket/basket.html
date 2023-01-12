@@ -5,16 +5,38 @@
     <section class="container">
         <div class="row d-flex justify-content-center mt-5">
             <h2>Your Basket</h2>
-            <h3> {{ free_delivery_threshold }} </h3>
         </div>
         <hr>
     </section>
     <section class="container">
         <div class="row d-flex">
-            <div class="col-lg-3 basket-row">{{ basket_items }}</div>
-            <div class="col-lg-3 basket-row"></div>
-            <div class="col-lg-3 basket-row"></div>
-            <div class="col-lg-3 basket-row"></div>
+            {% for item in basket_items %}
+                <div class="row basket-table">            
+                    <div class="col-lg-3">
+                        <img src="{{ item.product.thumbnail.url }}">
+                    </div>
+                    <div class="col-lg-3">
+                        <h4> {{ item.product.title }}</h4>
+                        <p><strong> {{ item.product.author }}</strong></p>
+                        <p class="badge badge-info">{{ item.product.genre.name }}</p>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <p>Quantity: {{ item.quantity }}</p>
+                        <p>£{{ item.product.price }}</p>
+                    </div>
+                    <div class="col-lg-3 text-right">
+                        Subtotal: £{{ item.subtotal }}
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="col-lg-12 totals-row text-right">
+                <p>Basket Total: £{{ total }} </p>
+                <p><small>Delivery: £{{ delivery }}</small></p>
+                <p><strong>Grand Total: £{{ grand_total }}</strong></p>
+                <a href="{% url 'books' %}" class="btn btn-outline-dark rounded-0 mt-5">
+                    <i class="fas fa-chevron-left"></i>&nbsp;Keep Browsing
+                </a>
+            </div>
         </div>
     </scetion>
 {% endblock %}

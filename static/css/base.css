@@ -47,6 +47,11 @@ products book & book detail page
 basket
 ===================================*/
 
-.basket-row {
+.basket-table {
     height: 200px;
+    width: 100%;
+}
+
+.totals-row {
+    height: 300px;
 }
