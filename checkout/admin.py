@@ -1,3 +1,4 @@
+"""Code from boutique ado walkthrough"""
 from django.contrib import admin
 from .models import Order, OrderLineItem
 
