@@ -1,0 +1,29 @@
+<!--Code based off of boutique ado-->
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="col"></div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<section class="container">
+    <div class="row">
+        <div class="col text-center">
+            <hr>
+            <h2 class="mb-4">Thanks a Million!</h2>
+            <hr>
+            <p>Your order info is below.  A confirmation email will be sent to {{ order.email }}.
+        </div>
+    </div>
+    <div class="row">
+       <div class="col-12 col-lg-7"></div>
+    </div>   
+</section>
+{% endblock %}
