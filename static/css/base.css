@@ -113,12 +113,27 @@ products book & book detail page
 }
 
 .book-detail-section {
-    height: 150vh;;
+    height: 70vh;
 }
 
 .book-image {
     max-width: 350px;
     max-height: 500px;
+}
+
+.bought-together {
+    width: 100%;
+    height: 400px;
+}
+
+.explore {
+    width: 100%;
+    height: 100%;
+}
+
+.explore-box {
+    height: 100%;
+    width: 33%;
 }
 
 /*===================================

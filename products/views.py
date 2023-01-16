@@ -30,9 +30,13 @@ def book_detail(request, book_id):
     A view to show all book products available for sale.
     """
     book = get_object_or_404(Books, pk=book_id)
+    genre = book.genre
+    genres = Books.objects.filter(genre=genre)
+    recommend = genres.exclude(pk=book_id)
 
     context = {
         'book': book,
+        'recommend': recommend,
     }
 
     return render(request, 'products/book-detail.html', context)
