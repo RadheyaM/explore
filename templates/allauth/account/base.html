@@ -1,1 +1,18 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/allauth.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="allauth-container">
+        <div class="allauth-form-row">
+            <div class="allauth-form-col">
+                {% block inner_content %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

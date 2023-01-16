@@ -1,0 +1,24 @@
+.allauth-container {
+    height: 100%;
+    width:100%;
+    margin: 0;
+
+    background: url('/media/hero.jpg') no-repeat center center fixed;
+    background-color: black;
+    background-size: cover;
+    
+    display: flex;
+}
+
+.allauth-form-row {
+    margin: auto;
+    height: 500px;
+    width: 100%;
+}
+
+.allauth-form-col {
+    height: 400px;
+    width: 500px;
+    margin: auto;
+
+}
