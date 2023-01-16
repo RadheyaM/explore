@@ -3,6 +3,23 @@
 
 {% block content %}
     <div class="container">
+        <div class="row product-info-row d-flex flex-column m-5">
+            <div class="mb-3">
+               <h2>Books</h2>
+            </div>
+            <div>
+               {% for genre in genres %}
+                  <h6><small>{{ books|length }}&nbsp;books available in genre&nbsp|&nbsp;</small><strong class="badge badge-info">{{ genre }}</strong></h6>
+               {% endfor %}
+            </div>
+            <div>
+               <small>Genres available</small>
+               {% for genre in all_genres %}
+                  <a href="{% url 'books' %}?genre={{genre}}" class="btn btn-outline-primary m-2"><strong>{{ genre }}</strong></a>
+               {% endfor %}
+               <hr class="bg-light">
+            </div>
+         </div>
         <div class="row product-row">
                 {% for book in books %}
                 <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
