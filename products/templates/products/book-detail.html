@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
+    <section class="container book-detail-section">
         <div class="row product-row d-flex">
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <img src="{{ book.image.url }}" class="book-image">
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-7 product-details">
                 <h2 class="mb-3">{{ book.title }}</h2>
                 <h4 class="mb-3">{{ book.author }}</h4>
                 <h4 class="badge badge-info mb-3">{{ book.genre.name }}</h4>
@@ -18,5 +18,5 @@
                 {% include 'products/includes/add-to-basket.html' %}
             </div>
         </div>
-    </div>
+    </section>
 {% endblock %}
