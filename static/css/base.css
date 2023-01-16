@@ -31,6 +31,14 @@ hr {
     color: white;
 }
 
+.navbar {
+    background-color: black;
+}
+
+.navbar-brand {
+    font-size: 3rem;
+}
+
 /* footer {
     width: 100%;
     height: 50px;
@@ -45,7 +53,7 @@ hr {
 
 .hero-section {
     display: block;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     padding-top: 10px;
     margin: 0;
