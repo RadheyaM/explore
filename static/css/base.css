@@ -73,10 +73,15 @@ hr {
     margin-bottom: 0;
 }
 
+.home-action-btn {
+    margin: 10px;
+    height: 100px;
+}
+
 .hero-subtext {
     color: white;
     background-color: var(--hero-txt-bg);
-    height: 250px;
+    height: auto;
     width: 100%;
     padding-left: 200px;
 }
@@ -113,7 +118,7 @@ products book & book detail page
 }
 
 .book-detail-section {
-    height: 70vh;
+    height: auto;
 }
 
 .book-image {
