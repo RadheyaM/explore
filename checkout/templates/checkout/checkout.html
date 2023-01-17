@@ -23,7 +23,33 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-6">
-            <p class="text-muted">Please fill out the form belwo to complete your order</p>
+            <h6> Order Summary <span class="badge badge-success">{{ product_count }}</span></h6>
+            {% for book in basket_items %}
+            <div class="row">
+                <div class="col-3">
+                    <br>
+                    <img src="{{ book.product.thumbnail.url }}" alt="{{ book.product.title  }}">
+                    <br>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-5 p-4">
+                    <br>
+                    <p>{{ book.product.title }}</p>
+                    <p> {{ book.product.author }}</p>
+                    <p class="badge badge-info">{{ book.product.genre.name }}</p>
+                    <br>
+                </div>
+                <div class="col-3 p-4">
+                    <br>
+                    <p>Qty: {{ book.quantity }}</p>
+                    <p> £{{ book.subtotal }}</p>
+                    <br>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-12 col-lg-6">
+            <p class="text-muted">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset>
@@ -54,23 +80,24 @@
                 </fieldset>
 
                 <div class="submit-button text-right mt-5 mb-2">                    
-                    <a href="{% url 'basket' %}" class="btn btn-outline-black rounded-0">
+                    <a href="{% url 'basket' %}" class="btn btn-outline-light rounded-0">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="font-weight-bold">Adjust Bag</span>
+                        <span class="font-weight-bold">Adjust Basket</span>
                     </a>
-                    <button id="submit-button" class="btn btn-black rounded-0">
-                        <span class="font-weight-bold">Complete Order</span>
+                    <button id="submit-button" class="btn btn-action rounded-0">
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>
+                        <span class="font-weight-bold">Complete Order</span>
                     </button>
                     <p class="small text-danger my-0">
+                        <br>
                         <span class="icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
-                        <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                        <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
                     </p>
                 </div>
 
