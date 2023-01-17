@@ -10,7 +10,11 @@
             </button>
         </div>
         <hr>
-        <h6>CONTENTS&nbsp;<span class="badge badge-primary">{{ product_count }}</span></h6>
+        {% if product_count != 0 %}
+            <h6>CONTENTS&nbsp;<span class="badge badge-primary">{{ product_count }}</span></h6>
+        {% else %}
+            <h6><span class="badge badge-warning">&nbsp;empty!</span></h6>
+        {% endif %}
     </div>
     {% for book in basket_items %}
         <div class="row m-2">
@@ -23,23 +27,29 @@
                 <p><small class="small-text">£{{ book.subtotal|floatformat:2 }}</small></p>
             </div>
         </div>
+    {% empty %}
+        <div class="row text-center d-flex justify-content-center">
+            <h6>Your Basket is currently empty.</h6>
+        </div>
     {% endfor %}
     <hr>
-    <div class="row text-center">
-        <p class="col-12"><small class="small-text">TOTAL: £{{ total|floatformat:2 }}</small></p>
-        <p class="col-12"><small class="small-text">DELIVERY: £{{ delivery|floatformat:2 }}</small></p>
-        <p class="col-12"><small class="small-text">GRAND TOTAL: £{{ grand_total|floatformat:2 }}</small></p>
-    </div>
-    <hr>
-    <div class="row text-center d-flex justify-content-center">
-        <div class="col-6 text-center">
-            <a href="{% url 'basket' %}" class="btn btn-sm btn-action">To Basket</a>
+    {%if product_count != 0 %}
+        <div class="row text-center">
+            <p class="col-12"><small class="small-text">TOTAL: £{{ total|floatformat:2 }}</small></p>
+            <p class="col-12"><small class="small-text">DELIVERY: £{{ delivery|floatformat:2 }}</small></p>
+            <p class="col-12"><small class="small-text">GRAND TOTAL: £{{ grand_total|floatformat:2 }}</small></p>
         </div>
-        <div class="col-6">
-            <button class="btn btn-sm btn-outline-light" type="button" data-toggle="collapse" data-target="#basket-sidenav" aria-expanded="false" aria-controls="basket-sidenav">
-                Close
-            </button>
+        <hr>
+        <div class="row text-center d-flex justify-content-center">
+            <div class="col-6 text-center">
+                <a href="{% url 'basket' %}" class="btn btn-sm btn-action">To Basket</a>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-sm btn-outline-light" type="button" data-toggle="collapse" data-target="#basket-sidenav" aria-expanded="false" aria-controls="basket-sidenav">
+                    Close
+                </button>
+            </div>
         </div>
-    </div>
-    <hr>
+        <hr>
+    {% endif %}
 </div>

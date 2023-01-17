@@ -36,18 +36,31 @@
                         Subtotal: £{{ item.subtotal }}
                     </div>
                 </div>
+            {% empty %}
+                <div class="col-12 h-50 d-flex flex-column justify-content-center align-items-center p-5">
+                    <div class="alert alert-info w-50 text-center" role="alert">
+                        <i class="fa-solid fa-triangle-exclamation"></i>&nbsp;Your Basket is currently empty!
+                    </div>
+                    <div>
+                        <a href="{% url 'books' %}" class="btn btn-outline-dark rounded-0 mt-5">
+                            <i class="fas fa-chevron-left"></i>&nbsp;Keep Browsing</i>
+                        </a>
+                    </div>
+                </div>
             {% endfor %}
-            <div class="col-lg-12 totals-row text-right">
-                <p>Basket Total: £{{ total|floatformat:2}} </p>
-                <p><small>Delivery: £{{ delivery|floatformat:2 }}</small></p>
-                <p><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></p>
-                <a href="{% url 'books' %}" class="btn btn-outline-dark rounded-0 mt-5">
-                    <i class="fas fa-chevron-left"></i>&nbsp;Keep Browsing</i>
-                </a>
-                <a href="{% url 'checkout' %}" class="btn btn-action rounded-0 mt-5">
-                     <i class="fa-solid fa-lock"></i>&nbsp;Secure Checkout</i>
-                </a>
-            </div>
+            {% if product_count != 0 %}
+                <div class="col-lg-12 totals-row text-right">
+                    <p>Basket Total: £{{ total|floatformat:2}} </p>
+                    <p><small>Delivery: £{{ delivery|floatformat:2 }}</small></p>
+                    <p><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></p>
+                    <a href="{% url 'books' %}" class="btn btn-outline-dark rounded-0 mt-5">
+                        <i class="fas fa-chevron-left"></i>&nbsp;Keep Browsing</i>
+                    </a>
+                    <a href="{% url 'checkout' %}" class="btn btn-action rounded-0 mt-5">
+                        <i class="fa-solid fa-lock"></i>&nbsp;Secure Checkout</i>
+                    </a>
+                </div>
+            {% endif %}
         </div>
     </section>
 {% endblock %}

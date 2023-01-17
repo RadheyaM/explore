@@ -202,13 +202,13 @@ basket
 basket sidenav - Code W3Schools
 ===================================*/
 .sidenav {
-    width: 300px; /* Set the width of the sidebar */
-    position: absolute; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
     right: 0;
-    background-color: #111; /* Black */
-    overflow: hidden; /* Disable horizontal scroll */
+    background-color: #111;
+    overflow: hidden;
     padding-top: 20px;
     margin-top: 100px;
   }
