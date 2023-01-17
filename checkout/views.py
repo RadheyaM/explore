@@ -6,6 +6,8 @@ from django.conf import settings
 
 from .forms import OrderForm
 from .models import OrderLineItem, Order
+from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
 from products.models import Books
 from basket.contexts import basket_contents
 
@@ -74,11 +76,11 @@ def checkout(request):
                     messages.error(request, (
                         "One of the products in your bag wasn't "
                         "found in our database. "
-                        "Please call us for assistance!"
-                        )
+                        "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('basket'))
+
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout-success', args=[order.order_number]))
         else:
@@ -98,9 +100,25 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-        
-        order_form = OrderForm()
 
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'country': profile.default_phone_number,
+                    'postcode': profile.default_postcode,
+                    'town_or_city': profile.default_town_or_city,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'county': profile.default_county,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
+        
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing.\
             Did you forget to set it in your environment?')
@@ -121,6 +139,28 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save-info')
     order = get_object_or_404(Order, order_number=order_number)
+
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        profile.first_order = 'False'
+        order.user_profile = profile
+        order.save()
+        profile.save()
+
+        if save_info:
+            profile_data = {
+                'default_phone_number': order.phone_number,
+                'default_country': order.country,
+                'default_postcode': order.postcode,
+                'default_town_or_city': order.town_or_city,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
+                'default_county': order.county,
+            }
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
+
     messages.success(request, f'Order successfully processed! \
             Your order number is {order_number} \
             A confirmation email will be sent to {order.email}.'

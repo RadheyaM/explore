@@ -43,7 +43,7 @@ def basket_contents(request):
 
     ten_percent = (total / 100) * 10
     if first_order == True:
-        total_ten_percent = total - ten_percent
+        total_ten_percent = Decimal(total - ten_percent)
         grand_total = total_ten_percent + delivery
     else:
         grand_total = total + delivery
