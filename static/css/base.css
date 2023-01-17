@@ -39,7 +39,7 @@ hr {
 
 .top-banner {
     display: flex;
-    height: 35px;
+    height: 40px;
     width:100%;
     background: var(--yellow);
     margin: 0;

@@ -51,7 +51,18 @@
             {% if product_count != 0 %}
                 <div class="col-lg-12 totals-row text-right">
                     <p>Basket Total: £{{ total|floatformat:2}} </p>
-                    <p><small>Delivery: £{{ delivery|floatformat:2 }}</small></p>
+                    {% if first_order == True %}
+                        <p class="badge badge-success">-£{{ ten_percent|floatformat:2 }} first order bonus!</p>
+                        <p>New Basket Total: £{{ total_ten_percent|floatformat:2}} </p>
+                    {% endif %}
+                    {% if delivery == 0 %}
+                        <p><small>Delivery:</small>&nbsp;<span class="badge badge-success">£{{ delivery|floatformat:2 }}</span></p>
+                    {% else %}
+                        <p><small>Delivery:</small>&nbsp;<span class="badge badge-warning">£{{ delivery|floatformat:2 }}</span></p>
+                    {% endif %}
+                    {% if free_delivery_delta > 0 %}
+                        <p><small class="text-danger"> £{{ free_delivery_delta }} more for free delivery!</small></p>
+                    {% endif %}
                     <p><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></p>
                     <a href="{% url 'books' %}" class="btn btn-outline-dark rounded-0 mt-5">
                         <i class="fas fa-chevron-left"></i>&nbsp;Keep Browsing</i>

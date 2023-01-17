@@ -1,7 +1,11 @@
 <div class="row top-banner">
     <div class="col-6 subscribe-banner">
-        <a href="" class="btn btn-sm btn-action">Subscribe</a>
-        For 10% off your first order!
+        {% if user.is_authenticated %}
+            Did you know you get points back on all your orders???
+        {% else %}
+            <a href="{% url 'account_signup' %}" class="btn btn-sm btn-action">Create Account</a>
+            GET 10% OFF YOUR FIRST ORDER!
+        {% endif %}
     </div>
     <div class="col-6"><i class="fa-solid fa-truck"></i>&nbsp;FREE DELIVERY ON ORDERS OVER £50</div>
 </div>

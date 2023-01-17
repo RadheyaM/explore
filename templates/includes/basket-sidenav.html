@@ -36,8 +36,14 @@
     {%if product_count != 0 %}
         <div class="row text-center">
             <p class="col-12"><small class="small-text">TOTAL: £{{ total|floatformat:2 }}</small></p>
-            <p class="col-12"><small class="small-text">DELIVERY: £{{ delivery|floatformat:2 }}</small></p>
-            <p class="col-12"><small class="small-text">GRAND TOTAL: £{{ grand_total|floatformat:2 }}</small></p>
+            {% if free_delivery_delta > 0 %}
+                <p class="col-12"><small class="small-text badge badge-warning">£{{ free_delivery_delta|floatformat:2 }} more for free delivery!</small></p>
+            {% else %}
+                <p class="col-12"><small class="small-text badge badge-primary">You qualify for free delivery!</small></p>
+            {% endif %}
+            {% if first_order == True %}
+                <p class="col-12"><small class="small-text badge badge-success">You qualify for 10% extra off!</small></p>
+            {% endif %}
         </div>
         <hr>
         <div class="row text-center d-flex justify-content-center">
