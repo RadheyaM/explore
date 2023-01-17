@@ -37,12 +37,33 @@ hr {
     color: white;
 }
 
+.top-banner {
+    display: flex;
+    height: 35px;
+    width:100%;
+    background: var(--yellow);
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.subscribe-banner {
+    text-align: left;
+    padding-left: 10px;
+}
+
 .navbar {
     background-color: black;
 }
 
 .navbar-brand {
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+.hidden {
+    display: none;
 }
 
 /* footer {

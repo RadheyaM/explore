@@ -29,23 +29,23 @@
             <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                   {% if user.is_authenticated %}
-                    {{ user }}
+                  <i class="fa-regular fa-face-smile-beam"></i>&nbsp;{{ user }}
                   {% else %}
                     Login
                   {% endif %}
                 </a>
                 <div class="dropdown-menu">
                     {% if user.is_authenticated %}
-                        <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
-                        <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="dropdown-item" href="{% url 'profile' %}"><i class="fa-solid fa-user"></i>&nbsp;My Profile</a>
+                        <a class="dropdown-item" href="{% url 'account_logout' %}"><i class="fa-solid fa-person-walking-arrow-right"></i>&nbsp;Logout</a>
                     {% else %}
-                        <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
-                        <a class="dropdown-item" href="{% url 'account_signup' %}">Signup</a>
+                        <a class="dropdown-item" href="{% url 'account_login' %}"><i class="fa-solid fa-right-from-bracket"></i>Login</a>
+                        <a class="dropdown-item" href="{% url 'account_signup' %}"><i class="fa-solid fa-user-plus"></i>&nbsp;Signup</a>
                     {% endif %}
                 </div>
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'basket' %}">
-                      Basket
+                      <i class="fa-solid fa-cart-shopping"></i>
                       {% if grand_total %}
                         £{{ grand_total|floatformat:2 }}
                       {% else %}
