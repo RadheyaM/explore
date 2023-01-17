@@ -1,0 +1,29 @@
+<div class="sidenav collapse" id="basket-sidenav">
+    <div class="row text-center d-flex justify-content-center">
+        <hr>
+        <div class="row text-center">
+            <a href="{% url 'basket' %}" class="btn btn-sm btn-action">To Basket</a>
+        </div>
+        <hr>
+        <h6>CONTENTS&nbsp;<span class="badge badge-primary">{{ product_count }}</span></h6>
+    </div>
+    {% for book in basket_items %}
+        <div class="row m-2">
+            <div class="col-6">
+                <img class="thumbnail-image" src="{{ book.product.thumbnail.url }}" alt="{{ book.product.title }}">
+            </div>
+            <div class="col-6">
+                <p><small class="small-text">{{ book.product.title }}</small></p>
+                <p><small class="small-text">Qty:&nbsp;{{ book.quantity }}</small></p>
+                <p><small class="small-text">£{{ book.subtotal|floatformat:2 }}</small></p>
+            </div>
+        </div>
+    {% endfor %}
+    <hr>
+    <div class="row text-center">
+        <p class="col-12"><small class="small-text">TOTAL: £{{ total|floatformat:2 }}</small></p>
+        <p class="col-12"><small class="small-text">DELIVERY: £{{ delivery|floatformat:2 }}</small></p>
+        <p class="col-12"><small class="small-text">GRAND TOTAL: £{{ grand_total|floatformat:2 }}</small></p>
+    </div>
+    <hr>
+</div>
