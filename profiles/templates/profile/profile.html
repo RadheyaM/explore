@@ -3,5 +3,19 @@
 
 {% block content %}
     <h1>Profile</h1>
-    <h2>{{ profile }}</h2>
+    <h2 class="text-center">{{ profile }}</h2>
+    <div class="row">
+        <div class="col-12 col-lg-6 p-5">
+            <p>Order History</p>
+            {{ orders }}
+        </div>
+        <div class="col-12 col-lg-6 p-5">
+            <p>Default Delivery Information</p>
+            <form action="{% url 'profile' %}" method="POST" id="profile-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-action rounded-0 float-right">Update Info</button>
+            </form>
+        </div>
+    </div>
 {% endblock %}
