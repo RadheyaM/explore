@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <section class="container book-detail-section">
+        <div class="row product-row d-flex">
+            <div class="col-lg-5">
+                <img src="{{ poster.image.url }}" class="book-image">
+            </div>
+            <div class="col-lg-7 product-details">
+                <h2 class="mb-3">{{ poster.name}}</h2>
+                <h4 class="badge badge-info mb-3">{{ poster.genre.name }}</h4>
+                <p> {{ poster.description }}</p>
+                <p><strong>£{{ poster.price }}</strong></p>
+                {% comment %} {% include 'products/includes/add-to-basket.html' %} {% endcomment %}
+            </div>
+        </div>
+    </section>
+    <section class="bought-together">
+        <hr>
+        <div class="row text-center d-flex justify-content-center align-items-center">
+            <h6>You might also like ... </h6>
+        </div>
+        <hr>
+        <div class="row explore d-flex">
+            {% for poster in recommend|slice:3 %}
+            <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                <div class="card book-card border-0 mt-2">
+                    <a href="{% url 'poster_detail' poster.id %}">
+                        <img src="{{ poster.image.url }}" class="card-img-top book-card-image" alt="{{ poster.name }}">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ poster.name }}</h5>
+                        <p class="badge badge-info"> {{ poster.genre.name }} </p>
+                        <p><strong>£{{ poster.price }}</strong></p>
+                        <a href="{% url 'poster_detail' poster.id %}" class="btn btn-primary">View</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

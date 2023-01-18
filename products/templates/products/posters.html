@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row product-info-row d-flex flex-column m-5">
+            <div class="mb-3">
+               <h2>Posters</h2>
+            </div>
+            <div>
+               {% for genre in genres %}
+                  <h6><small>{{ posters|length }}&nbsp;books available in genre&nbsp|&nbsp;</small><strong class="badge badge-info">{{ genre }}</strong></h6>
+               {% endfor %}
+            </div>
+            <div>
+               <small>Genres available</small>
+               {% for genre in all_genres %}
+                  <a href="{% url 'posters' %}?genre={{genre}}" class="btn btn-outline-primary m-2"><strong>{{ genre }}</strong></a>
+               {% endfor %}
+               <hr class="bg-light">
+            </div>
+         </div>
+        <div class="row product-row">
+                {% for poster in posters %}
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                    <div class="card book-card border-0 mt-2">
+                        <a href="{% url 'poster_detail' poster.id %}">
+                            <img src="{{ poster.image.url }}" class="card-img-top book-card-image" alt="{{ poster.name }}">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ poster.name }}</h5>
+                            <p class="badge badge-info"> {{ poster.genre.name }} </p>
+                            <p><strong>£{{ poster.price }}</strong></p>
+                            <a href="{% url 'poster_detail' poster.id %}" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
