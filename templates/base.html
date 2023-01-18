@@ -32,7 +32,9 @@
 
     {% block extra_js %}
     {% endblock %}
-
+    <title>Explore {% block extra_title%}| Books & Posters{% endblock %}</title>
+  </head>
+  <body>
     {% if messages %}
         <div class="message-container"></div>
     {% endif %}
@@ -41,9 +43,6 @@
     {% include 'includes/desktop-nav.html' %}
     {% include 'includes/basket-sidenav.html' %}
 
-    {% block page_header %}
-    {% endblock %}
-    
     {% block content %}
     {% endblock %}
     
