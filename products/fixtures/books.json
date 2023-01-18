@@ -4,7 +4,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Temple in Man",
-      "slug": "",
+      "product_code": "AXR5-53E5-KJ3Q-JN2G",
       "category": 1,
       "author": "R.A. Schwaller de Lubicz",
       "publisher": "Inner Traditions International",
@@ -25,7 +25,7 @@
     "model": "products.books",
     "fields": {
       "title": "Serpent in the Sky",
-      "slug": "",
+      "product_code": "67PQ-F7TB-4DNA-8C5D",
       "category": 1,
       "author": "John Anthony West",
       "publisher": "Quest Books",
@@ -46,7 +46,7 @@
     "model": "products.books",
     "fields": {
       "title": "Sir Gardner Wilkinson and His Circle",
-      "slug": "",
+      "product_code": "S8RC-53DF-MZ6V-A3ZF",
       "category": 1,
       "author": "Jason Thompson",
       "publisher": "University of Texas Press",
@@ -67,7 +67,7 @@
     "model": "products.books",
     "fields": {
       "title": "Our Oriental Heritage",
-      "slug": "",
+      "product_code": "BKW6-SPY7-5SNF-L4X7",
       "category": 1,
       "author": "Will Durant",
       "publisher": "Simon & Schuster",
@@ -88,7 +88,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Life of Greece",
-      "slug": "",
+      "product_code": "DXRW-GUR8-TW4D-WGEU",
       "category": 1,
       "author": "Will Durant",
       "publisher": "Simon & Schuster",
@@ -109,7 +109,7 @@
     "model": "products.books",
     "fields": {
       "title": "Caesar and Christ",
-      "slug": "",
+      "product_code": "TPBR-A2LK-W2JK-FS36",
       "category": 1,
       "author": "Will Durant",
       "publisher": "Simon & Schuster",
@@ -130,7 +130,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Age of Faith",
-      "slug": "",
+      "product_code": "KAJC-F8CH-32JF-3CKU",
       "category": 1,
       "author": "Will Durant",
       "publisher": "Simon & Schuster",
@@ -151,7 +151,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Renaissance",
-      "slug": "",
+      "product_code": "STKX-GPV2-CUCA-RNH3",
       "category": 1,
       "author": "Will Durant",
       "publisher": "Simon & Schuster",
@@ -172,7 +172,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Reformation",
-      "slug": "",
+      "product_code": "N3D2-2TB5-HS6P-TY8S",
       "category": 1,
       "author": "Will Durant",
       "publisher": "Simon & Schuster",
@@ -193,7 +193,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Age of Reason Begins",
-      "slug": "",
+      "product_code": "6MRQ-FQ45-EH9R-U2V4",
       "category": 1,
       "author": "Will Durant, Ariel Durant",
       "publisher": "Simon & Schuster",
@@ -214,7 +214,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Age of Louis XIV",
-      "slug": "",
+      "product_code": "VZE6-3F2R-EPLJ-M5ZP",
       "category": 1,
       "author": "Will Durant, Ariel Durant",
       "publisher": "Simon & Schuster",
@@ -235,7 +235,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Age of Voltaire",
-      "slug": "",
+      "product_code": "2E7W-ZDC8-Y4Y6-QGDV",
       "category": 1,
       "author": "Will Durant, Ariel Durant",
       "publisher": "Simon & Schuster",
@@ -256,7 +256,7 @@
     "model": "products.books",
     "fields": {
       "title": "Rousseau and Revolution",
-      "slug": "",
+      "product_code": "BHM9-XWP5-B48C-EKPB",
       "category": 1,
       "author": "Will Durant, Ariel Durant",
       "publisher": "Simon & Schuster",
@@ -277,7 +277,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Age of Napoleon",
-      "slug": "",
+      "product_code": "3ZV8-23NB-BKAX-QSUC",
       "category": 1,
       "author": "Will Durant, Ariel Durant",
       "publisher": "Simon & Schuster",
@@ -298,7 +298,7 @@
     "model": "products.books",
     "fields": {
       "title": "Western Philosophy | An Anthology",
-      "slug": "",
+      "product_code": "4RVF-HR94-RAD9-PPDS",
       "category": 1,
       "author": "John Cottingham",
       "publisher": "Wiley",
@@ -319,7 +319,7 @@
     "model": "products.books",
     "fields": {
       "title": "Ancient Greek Philosophy",
-      "slug": "",
+      "product_code": "SYCP-J553-9PMC-CD35",
       "category": 1,
       "author": "Thomas A. Blackson",
       "publisher": "John Wiley & Sons",
@@ -340,7 +340,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Cambridge Companion to Greek and Roman Philosophy",
-      "slug": "",
+      "product_code": "4DJG-5953-MAZD-L2E3",
       "category": 1,
       "author": "David Sedley",
       "publisher": "Cambridge University Press",
@@ -361,7 +361,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Sumerians",
-      "slug": "",
+      "product_code": "4AXJ-XKZ6-SRSP-UYSH",
       "category": 1,
       "author": "Samuel Noah Kramer",
       "publisher": "University of Chicago Press",
@@ -382,7 +382,7 @@
     "model": "products.books",
     "fields": {
       "title": "Neuroscience and Philosophy",
-      "slug": "",
+      "product_code": "PZMQ-5V6Y-3HGH-BG9T",
       "category": 1,
       "author": "Felipe De Brigard, Walter Sinnott-Armstrong",
       "publisher": "MIT Press",
@@ -403,7 +403,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Alchemist's Kitchen",
-      "slug": "",
+      "product_code": "QWGD-Y5TR-RYZZ-EHEQ",
       "category": 1,
       "author": "Guy Ogilvy",
       "publisher": "Wooden Books",
@@ -424,7 +424,7 @@
     "model": "products.books",
     "fields": {
       "title": "Sciencia",
-      "slug": "",
+      "product_code": "77CF-UKKB-JMF5-UV5U",
       "category": 1,
       "author": "Burkard Polster, Moff Betts",
       "publisher": "Wooden Books",
@@ -445,7 +445,7 @@
     "model": "products.books",
     "fields": {
       "title": "Sacred Geometry",
-      "slug": "",
+      "product_code": "42S2-7DZS-GQ4M-SVXC",
       "category": 1,
       "author": "Miranda Lundy",
       "publisher": "Wooden Books",
@@ -466,7 +466,7 @@
     "model": "products.books",
     "fields": {
       "title": "Harmonograph",
-      "slug": "",
+      "product_code": "9Q4R-QKC5-UXM7-RJBJ",
       "category": 1,
       "author": "Anthony Ashton",
       "publisher": "Wooden Books",
@@ -487,7 +487,7 @@
     "model": "products.books",
     "fields": {
       "title": "Perspective and other Illusions",
-      "slug": "",
+      "product_code": "AJ2G-XYCQ-LQG9-FN2A",
       "category": 1,
       "author": "McNaughten Phoebe",
       "publisher": "Wooden Books",
@@ -508,7 +508,7 @@
     "model": "products.books",
     "fields": {
       "title": "Sun, Moon and Earth",
-      "slug": "",
+      "product_code": "RESM-GFYJ-BAGB-DDAD",
       "category": 1,
       "author": "Robin Heath",
       "publisher": "Wooden Books",
@@ -529,7 +529,7 @@
     "model": "products.books",
     "fields": {
       "title": "Symmetry",
-      "slug": "",
+      "product_code": "7MVS-9BJB-MHK8-7YF8",
       "category": 1,
       "author": "David Wade",
       "publisher": "Wooden Books",
@@ -550,7 +550,7 @@
     "model": "products.books",
     "fields": {
       "title": "Grammar",
-      "slug": "",
+      "product_code": "S6BR-67WF-XVRJ-UJWE",
       "category": 1,
       "author": "Rachel Grenon",
       "publisher": "Wooden Books",
@@ -571,6 +571,7 @@
     "model": "products.books",
     "fields": {
       "title": "Ecce Romani",
+      "product_code": "78A9-4DGE-8DBT-ZCLN",
       "category": 1,
       "author": "Gilbert Lawall, David Tafe, Carol Esler",
       "publisher": "Longman Publishing Group",
@@ -591,7 +592,7 @@
     "model": "products.books",
     "fields": {
       "title": "The Penguin Latin Dictionary",
-      "slug": "",
+      "product_code": "2ZEG-XADM-FC5E-Q4QT",
       "category": 1,
       "author": "David Butterfield, Robert Shorrock",
       "publisher": "Penguin",
@@ -612,7 +613,7 @@
     "model": "products.books",
     "fields": {
       "title": "Wheelock's Latin Reader",
-      "slug": "",
+      "product_code": "65W8-HYUS-4BEH-347F",
       "category": 1,
       "author": "Richard A. LaFleur",
       "publisher": "Harper Collins",

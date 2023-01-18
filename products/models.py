@@ -27,7 +27,7 @@ class Books(models.Model):
         verbose_name_plural = 'Books'
 
     title = models.CharField(max_length=254)
-    slug = models.SlugField()
+    product_code = models.CharField(max_length=19, null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     author = models.CharField(max_length=64)
     publisher = models.CharField(max_length=64)
@@ -44,3 +44,21 @@ class Books(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Posters(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Posters'
+
+    name = models.CharField(max_length=254)
+    product_code = models.CharField(max_length=19, null=True, blank=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
+    description = models.TextField() 
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name

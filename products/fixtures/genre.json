@@ -33,5 +33,19 @@
         "fields": {
             "name": "Latin"
         }
+    },
+    {
+        "pk": 6,
+        "model": "products.genre",
+        "fields": {
+            "name": "Coat of Arms"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.genre",
+        "fields": {
+            "name": "Maps"
+        }
     }
 ]
