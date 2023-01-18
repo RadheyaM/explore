@@ -81,6 +81,17 @@
     height: 80vh;
 }
 
+.famous-people a {
+    text-decoration: none;
+    color: white;
+}
+
+.famous-people a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: lightblue;
+}
+
 .dialogue-icon {
     font-size: 10rem;
 }
