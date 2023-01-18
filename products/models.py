@@ -27,7 +27,7 @@ class Books(models.Model):
         verbose_name_plural = 'Books'
 
     title = models.CharField(max_length=254)
-    product_code = models.CharField(max_length=19, null=True, blank=True)
+    code = models.CharField(max_length=19, null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     author = models.CharField(max_length=64)
     publisher = models.CharField(max_length=64)
@@ -52,7 +52,7 @@ class Posters(models.Model):
         verbose_name_plural = 'Posters'
 
     name = models.CharField(max_length=254)
-    product_code = models.CharField(max_length=19, null=True, blank=True)
+    code = models.CharField(max_length=19, null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     description = models.TextField() 
