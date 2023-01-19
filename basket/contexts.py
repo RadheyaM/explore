@@ -4,7 +4,7 @@ Code based on that of project walkthrough boutique ado
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from products.models import Books
+from products.models import Books, Posters
 from profiles.models import UserProfile, User
 
 def basket_contents(request):
@@ -23,7 +23,10 @@ def basket_contents(request):
         first_order = False
 
     for item_id, quantity in basket.items():
-        product = get_object_or_404(Books, pk=item_id)
+        try:
+            product = get_object_or_404(Books, code=item_id)
+        except:
+            product = get_object_or_404(Posters, code=item_id)
         total += quantity * product.price
         subtotal = quantity * product.price
         product_count += quantity

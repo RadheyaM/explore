@@ -19,23 +19,42 @@
     <section class="container">
         <div class="row d-flex">
             {% for item in basket_items %}
-                <div class="row basket-table">            
-                    <div class="col-lg-3">
-                        <img src="{{ item.product.thumbnail.url }}">
+                {% if item.category.name == 'Maps' or item.category.name == 'Coat of Arms' %}
+                    <div class="row basket-table">            
+                        <div class="col-lg-3">
+                            <img src="{{ item.product.image.url }}">
+                        </div>
+                        <div class="col-lg-3">
+                            <h4> {{ item.product.name }}</h4>
+                            <p class="badge badge-info">{{ item.product.genre.name }}</p>
+                        </div>
+                        <div class="col-lg-3 text-center">
+                            <p>Quantity: {{ item.quantity }}</p>
+                            <p>£{{ item.product.price }}</p>
+                        </div>
+                        <div class="col-lg-3 text-right">
+                            Subtotal: £{{ item.subtotal }}
+                        </div>
                     </div>
-                    <div class="col-lg-3">
-                        <h4> {{ item.product.title }}</h4>
-                        <p><strong> {{ item.product.author }}</strong></p>
-                        <p class="badge badge-info">{{ item.product.genre.name }}</p>
+                {% else %}
+                    <div class="row basket-table">            
+                        <div class="col-lg-3">
+                            <img src="{{ item.product.thumbnail.url }}">
+                        </div>
+                        <div class="col-lg-3">
+                            <h4> {{ item.product.title }}</h4>
+                            <p><strong> {{ item.product.author }}</strong></p>
+                            <p class="badge badge-info">{{ item.product.genre.name }}</p>
+                        </div>
+                        <div class="col-lg-3 text-center">
+                            <p>Quantity: {{ item.quantity }}</p>
+                            <p>£{{ item.product.price }}</p>
+                        </div>
+                        <div class="col-lg-3 text-right">
+                            Subtotal: £{{ item.subtotal }}
+                        </div>
                     </div>
-                    <div class="col-lg-3 text-center">
-                        <p>Quantity: {{ item.quantity }}</p>
-                        <p>£{{ item.product.price }}</p>
-                    </div>
-                    <div class="col-lg-3 text-right">
-                        Subtotal: £{{ item.subtotal }}
-                    </div>
-                </div>
+                {% endif %}
             {% empty %}
                 <div class="col-12 h-50 d-flex flex-column justify-content-center align-items-center p-5">
                     <div class="alert alert-info w-50 text-center" role="alert">

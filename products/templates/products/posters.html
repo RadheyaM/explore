@@ -1,11 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
 {% block content %}
     <div class="container">
         <div class="row product-info-row d-flex flex-column m-5">
-            <div class="mb-3">
-               <h2>Posters</h2>
+            <div class="row book-poster-toggle">
+                <div class="col-6 col-lg-3 text-center{% block books-active %}{% endblock %}">
+                    <a class="custom-link" href="{% url 'books'  %}">
+                        Books
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3 text-center{% block posters-active %} active{% endblock %}">
+                    <a class="custom-link" href="{% url 'posters'  %}">
+                        Posters
+                    </a>
+                </div>
             </div>
             <div>
                {% for genre in genres %}
