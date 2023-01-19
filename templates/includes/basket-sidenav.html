@@ -16,17 +16,31 @@
             <h6><span class="badge badge-warning">&nbsp;empty!</span></h6>
         {% endif %}
     </div>
-    {% for book in basket_items %}
+    {% for product in basket_items %}
+        {% if product.poster %}
         <div class="row m-2">
             <div class="col-6">
-                <img class="thumbnail-image" src="{{ book.product.thumbnail.url }}" alt="{{ book.product.title }}">
+                <img class="thumbnail-image" src="{{ product.poster.image.url }}" alt="{{ product.poster.name }}">
             </div>
             <div class="col-6">
-                <p><small class="small-text">{{ book.product.title }}</small></p>
-                <p><small class="small-text">Qty:&nbsp;{{ book.quantity }}</small></p>
-                <p><small class="small-text">£{{ book.subtotal|floatformat:2 }}</small></p>
+                <p><small class="small-text">{{ product.poster.name }}</small></p>
+                <p><small class="small-text">Spec: {{ product.material_size }}</small></p>
+                <p><small class="small-text">Qty:&nbsp;{{ product.quantity }}</small></p>
+                <p><small class="small-text">£{{ product.subtotal|floatformat:2 }}</small></p>
             </div>
         </div>
+        {% else %}
+            <div class="row m-2">
+                <div class="col-6">
+                    <img class="thumbnail-image" src="{{ product.book.thumbnail.url }}" alt="{{ product.book.title }}">
+                </div>
+                <div class="col-6">
+                    <p><small class="small-text">{{ product.book.title }}</small></p>
+                    <p><small class="small-text">Qty:&nbsp;{{ product.quantity }}</small></p>
+                    <p><small class="small-text">£{{ product.subtotal|floatformat:2 }}</small></p>
+                </div>
+            </div>
+        {% endif %}
     {% empty %}
         <div class="row text-center d-flex justify-content-center">
             <h6>Your Basket is currently empty.</h6>
