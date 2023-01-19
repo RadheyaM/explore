@@ -22,20 +22,34 @@ def basket_contents(request):
     except:
         first_order = False
 
-    for item_id, quantity in basket.items():
+    for item_id, item_data in basket.items():
+        # check if the code belongs to a poster or a book
         try:
             product = get_object_or_404(Books, code=item_id)
         except:
             product = get_object_or_404(Posters, code=item_id)
-        total += quantity * product.price
-        subtotal = quantity * product.price
-        product_count += quantity
-        basket_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'product': product,
-            'subtotal': subtotal
-        })
+        if isinstance(item_data, int):
+            total += item_data * product.price
+            subtotal = item_data * product.price
+            product_count += item_data
+            basket_items.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'product': product,
+                'subtotal': subtotal
+            })
+        else:
+            for material_size, quantity in item_data['items_by_material_size'].items():
+                total += quantity * product.price
+                subtotal = quantity * product.price
+                product_count += quantity
+                basket_items.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'product': product,
+                'subtotal': subtotal,
+                'material_size': material_size,
+                })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)

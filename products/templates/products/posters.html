@@ -43,7 +43,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ poster.name }}</h5>
                             <p class="badge badge-info"> {{ poster.genre.name }} </p>
-                            <p><strong>£{{ poster.price }}</strong></p>
+                            <p><strong>Starting @ £{{ poster.price }}</strong></p>
                             <a href="{% url 'poster_detail' poster.id %}" class="btn btn-primary">View</a>
                         </div>
                     </div>
