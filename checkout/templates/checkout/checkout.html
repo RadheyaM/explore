@@ -24,29 +24,61 @@
     <div class="row">
         <div class="col-12 col-lg-6">
             <h6> Order Summary <span class="badge badge-success">{{ product_count }}</span></h6>
-            {% for book in basket_items %}
+            {% for product in basket_items %}
+                {% if product.poster %}
+                <div class="row">
+                    <div class="col-3">
+                        <br>
+                        <img class="poster-thumbnail" src="{{ product.poster.image.url }}" alt="{{ product.poster.name  }}">
+                        <br>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <br>
+                        <p>{{ product.book.title }}</p>
+                        <p> {{ product.material_size }}</p>
+                        <p class="badge badge-info">{{ product.poster.genre.name }}</p>
+                        <br>
+                    </div>
+                    <div class="col-3 p-3">
+                        <br>
+                        <p>Qty: {{ product.quantity }}</p>
+                        <p> £{{ product.subtotal }}</p>
+                        <br>
+                    </div>
+                </div>
+                {% else %}
+                    <div class="row">
+                        <div class="col-3">
+                            <br>
+                            <img src="{{ product.book.thumbnail.url }}" alt="{{ product.book.title  }}">
+                            <br>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5 p-4">
+                            <br>
+                            <p>{{ product.book.title }}</p>
+                            <p> {{ product.book.author }}</p>
+                            <p class="badge badge-info">{{ product.book.genre.name }}</p>
+                            <br>
+                        </div>
+                        <div class="col-3 p-4">
+                            <br>
+                            <p>Qty: {{ product.quantity }}</p>
+                            <p> £{{ product.subtotal }}</p>
+                            <br>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
             <div class="row">
-                <div class="col-3">
+                <div class="col-12 text-right p-5">
                     <br>
-                    <img src="{{ book.product.thumbnail.url }}" alt="{{ book.product.title  }}">
-                    <br>
-                </div>
-                <div class="col-1"></div>
-                <div class="col-5 p-4">
-                    <br>
-                    <p>{{ book.product.title }}</p>
-                    <p> {{ book.product.author }}</p>
-                    <p class="badge badge-info">{{ book.product.genre.name }}</p>
-                    <br>
-                </div>
-                <div class="col-3 p-4">
-                    <br>
-                    <p>Qty: {{ book.quantity }}</p>
-                    <p> £{{ book.subtotal }}</p>
+                    <h6>Grand Total</h6>
+                    <h6><strong>£{{ grand_total }}</strong></h6>
                     <br>
                 </div>
             </div>
-            {% endfor %}
         </div>
         <div class="col-12 col-lg-6">
             <p class="text-muted">Please fill out the form below to complete your order</p>
