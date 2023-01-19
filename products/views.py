@@ -8,7 +8,7 @@ def books(request):
     """
     books = Books.objects.all()
     genres = None
-    all_genres = Genre.objects.all()
+    all_genres = Genre.objects.filter(pk__lte=5)
 
     if request.GET:
         if 'genre' in request.GET:
@@ -31,7 +31,7 @@ def posters(request):
     """
     posters = Posters.objects.all()
     genres = None
-    all_genres = Genre.objects.all()
+    all_genres = Genre.objects.filter(pk__gte=6)
 
     if request.GET:
         if 'genre' in request.GET:
