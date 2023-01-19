@@ -37,13 +37,32 @@ def basket_contents(request):
         else:
             product = get_object_or_404(Posters, code=item_id)
             for material_size, quantity in item_data['items_by_material_size'].items():
-                total += quantity * product.price
-                subtotal = quantity * product.price
+                if material_size == 'Paper A4':
+                    price = Decimal(10.00)
+                if material_size == 'Paper A3':
+                    price = Decimal(12.50)
+                if material_size == 'Paper A2':
+                    price = Decimal(15.00)
+                if material_size == 'Plastic A4':
+                    price = Decimal(15.00)
+                if material_size == 'Plastic A3':
+                    price = Decimal(17.50)
+                if material_size == 'Plastic A2':
+                    price = Decimal(20.00)
+                if material_size == 'Metal A4':
+                    price = Decimal(15.00)
+                if material_size == 'Metal A3':
+                    price = Decimal(30.00)
+                if material_size == 'Metal A2':
+                    price = Decimal(40.00)
+                total += quantity * price
+                subtotal = quantity * price
                 product_count += quantity
                 basket_items.append({
                 'item_id': item_id,
                 'quantity': quantity,
                 'poster': product,
+                'price': price,
                 'subtotal': subtotal,
                 'material_size': material_size,
                 })
