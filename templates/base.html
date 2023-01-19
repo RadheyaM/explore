@@ -35,12 +35,25 @@
     <title>Explore {% block extra_title%}| Books & Posters{% endblock %}</title>
   </head>
   <body>
-    {% if messages %}
-        <div class="message-container"></div>
-    {% endif %}
-
     {% include 'includes/top-banner.html' %}
     {% include 'includes/desktop-nav.html' %}
+    {% if messages %}
+      <div class="container message-container">
+          {% for message in messages %}
+              {% with message.level as type %}
+                  {% if type == 40 %}
+                      {% include 'includes/messages/error.html' %}
+                  {% elif type == 30 %}
+                      {% include 'includes/messages/warning.html' %}
+                  {% elif type == 25 %}
+                      {% include 'includes/messages/success.html' %}
+                  {% else %}
+                      {% include 'includes/messages/info.html' %}
+                  {% endif %}
+              {% endwith %}
+          {% endfor %}
+      </div>
+    {% endif %}
     {% include 'includes/basket-sidenav.html' %}
 
     {% block content %}
