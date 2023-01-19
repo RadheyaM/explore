@@ -5,15 +5,15 @@
         <div class="col-4">
             <p class="mt-3">Material and Size:</p>
             <select class="form-control w-100" name="product_material_size" id="id_product_material_size">
-                <option value="paper_a4">Paper A4</option>
-                <option value="plastic_a4">Plastic A4</option>
-                <option value="metal_a4">Metal A4</option>
-                <option value="paper_a3">Paper A3</option>
-                <option value="plastic_a3">Plastic A3</option>
-                <option value="metal_a3">Metal A3</option>
-                <option value="paper_a2">Paper A2</option>
-                <option value="plastic_a2">Plastic A2</option>
-                <option value="metal_a2">Metal A2</option>
+                <option value="Paper A4">Paper A4</option>
+                <option value="Plastic A4">Plastic A4</option>
+                <option value="Metal A4">Metal A4</option>
+                <option value="Paper A3">Paper A3</option>
+                <option value="Plastic A3">Plastic A3</option>
+                <option value="Metal A3">Metal A3</option>
+                <option value="Paper A2">Paper A2</option>
+                <option value="Plastic A2">Plastic A2</option>
+                <option value="Metal A2">Metal A2</option>
             </select>
         </div>
         <div class="col-4">
@@ -27,6 +27,9 @@
             </div>
         </div>
         <div class="col-12">
+            <h4 id="price">£10.00</h4>
+        </div>
+        <div class="col-12">
             <a href="{% url 'posters' %}" class="btn btn-outline-dark rounded-0 mt-5">
                 <i class="fas fa-chevron-left"></i>&nbsp;Keep Browsing
             </a>
@@ -35,3 +38,45 @@
         <input type="hidden" name="redirect_url" value="{{ request.path }}">
     </div>
 </form>
+
+
+{% block post_load_js %}
+    <script type="text/javascript">
+        let selector = document.getElementById("id_product_material_size"); 
+        let price = document.getElementById("price"); 
+        
+        selector.addEventListener("click", () => {
+            selector.addEventListener("change", () => {
+                switch (selector.value) {
+                    case "Paper A4":
+                        price.innerText = "£10.00";
+                        break;
+                    case "Paper A3":
+                        price.innerText = "£12.50";
+                        break;
+                    case "Paper A2":
+                        price.innerText = "£15.00";
+                        break;
+                    case "Plastic A4":
+                        price.innerText = "£15.00";
+                        break;
+                    case "Plastic A3":
+                        price.innerText = "£17.50";
+                        break;
+                    case "Plastic A2":
+                        price.innerText = "£20.00";
+                        break;
+                    case "Metal A4":
+                        price.innerText = "£25.00";
+                        break;
+                    case "Metal A3":
+                        price.innerText = "£30.00";
+                        break;
+                    case "Metal A2":
+                        price.innerText = "£40.00";
+                        break;
+                }
+            });
+        });          
+    </script>
+{% endblock %}

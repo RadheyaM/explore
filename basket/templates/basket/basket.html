@@ -19,18 +19,19 @@
     <section class="container">
         <div class="row d-flex">
             {% for item in basket_items %}
-                {% if item.category.name == 'Maps' or item.category.name == 'Coat of Arms' %}
+                {% if item.poster %}
                     <div class="row basket-table">            
                         <div class="col-lg-3">
-                            <img src="{{ item.product.image.url }}">
+                            <img class="poster-thumbnail" src="{{ item.poster.image.url }}">
                         </div>
                         <div class="col-lg-3">
-                            <h4> {{ item.product.name }}</h4>
-                            <p class="badge badge-info">{{ item.product.genre.name }}</p>
+                            <h4> {{ item.poster.name }}</h4>
+                            <h6>{{ item.material_size }}</h6>
+                            <p class="badge badge-info">{{ item.poster.genre.name }}</p>
                         </div>
                         <div class="col-lg-3 text-center">
                             <p>Quantity: {{ item.quantity }}</p>
-                            <p>£{{ item.product.price }}</p>
+                            <p>£{{ item.poster.price }}</p>
                         </div>
                         <div class="col-lg-3 text-right">
                             Subtotal: £{{ item.subtotal }}
@@ -39,16 +40,16 @@
                 {% else %}
                     <div class="row basket-table">            
                         <div class="col-lg-3">
-                            <img src="{{ item.product.thumbnail.url }}">
+                            <img src="{{ item.book.thumbnail.url }}">
                         </div>
                         <div class="col-lg-3">
-                            <h4> {{ item.product.title }}</h4>
-                            <p><strong> {{ item.product.author }}</strong></p>
+                            <h4> {{ item.book.title }}</h4>
+                            <p><strong> {{ item.book.author }}</strong></p>
                             <p class="badge badge-info">{{ item.product.genre.name }}</p>
                         </div>
                         <div class="col-lg-3 text-center">
                             <p>Quantity: {{ item.quantity }}</p>
-                            <p>£{{ item.product.price }}</p>
+                            <p>£{{ item.book.price }}</p>
                         </div>
                         <div class="col-lg-3 text-right">
                             Subtotal: £{{ item.subtotal }}

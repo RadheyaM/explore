@@ -131,6 +131,11 @@ basket
     height: 300px;
 }
 
+.poster-thumbnail {
+    height: 126px;
+    width: 126px;
+}
+
 /*===================================
 basket sidenav - Code W3Schools
 ===================================*/
