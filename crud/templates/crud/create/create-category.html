@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+ <link rel="stylesheet" href="{% static 'crud/css/crud.css' %}">
+{% endblock %}
+
+{% block extra_title %} | Admin | Create Category {% endblock %}
+
+<!--Main form content-->
+{% block content %}
+    <div class="container crud-container">
+    <div class="card border-0">
+        <div class="card-header">
+        <!--Card Title-->
+        <h3>{% block card-header %}Create A Category{% endblock card-header %}</h3>
+        <div class="alert alert-info">
+            <i class="fa-solid fa-circle-info"></i>
+            <!--Card info alert sub-title-->
+            &nbsp; {% block header-subtitle %} {% endblock header-subtitle %}
+        </div>
+        </div>
+        <div class="card-body">
+        <!--For within the card body-->
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{ form.non_form_errors }}
+
+            {% for field in form %}
+                {{ field.errors }}
+                {{ field | as_crispy_field }}
+                &nbsp;
+            {% endfor %}
+            <br>
+            <!--Buttons-->
+            <input type="submit" value="Save" class="btn btn-success">
+            <input type="button" class="btn btn-secondary" value="Cancel" onClick="javascript:history.go(-1);">
+        </form>
+        </div>
+    </div>
+    </div>
+{% endblock %}
