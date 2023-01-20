@@ -30,20 +30,20 @@ def add_to_basket(request, item_id):
         if item_id in list(basket.keys()):
             if material_size in basket[item_id]['items_by_material_size'].keys():
                 basket[item_id]['items_by_material_size'][material_size] += quantity
-                messages.success(request, f'Success! You added {product} to your basket!')
+                messages.success(request, f'Success! You updated {product} ({material_size}) qty in your basket!')
             else:
                 basket[item_id]['items_by_material_size'][material_size] = quantity
-                messages.error(request, f'Success! You added {product} to your basket!')
+                messages.success(request, f'Success! You added {material_size} Poster: {product} to your basket!')
         else:
             basket[item_id] = {'items_by_material_size': {material_size: quantity}}
-            messages.warning(request, f'Success! You added {product} to your basket!')
+            messages.success(request, f'Success! You added {material_size} Poster: {product} to your basket!')
     else:
         if item_id in list(basket.keys()):
             basket[item_id] += quantity
-            messages.info(request, f'Success! You added {product} to your basket!')
+            messages.success(request, f'Success! You updated {product} qty in your basket.')
         else:
             basket[item_id] = quantity
-            messages.success(request, f'Success! You added {product} to your basket!')
+            messages.success(request, f'Success! You added {product} to your basket.')
     
     
 
