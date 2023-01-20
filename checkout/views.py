@@ -8,7 +8,7 @@ from .forms import OrderForm
 from .models import OrderLineItem, Order
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
-from products.models import Books
+from products.models import Books, Posters
 from basket.contexts import basket_contents
 
 import stripe
@@ -62,8 +62,8 @@ def checkout(request):
             order.save()
             for item_id, item_data in basket.items():
                 try:
-                    product = Books.objects.get(id=item_id)
                     if isinstance(item_data, int):
+                        product = Books.objects.get(code=item_id)
                         order_line_item = OrderLineItem(
                             order=order,
                             product=product,
@@ -71,8 +71,9 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
+                        product = Posters.objects.get(code=item_id)
                         order_line_item.save()
-                except Books.DoesNotExist:
+                except:
                     messages.error(request, (
                         "One of the products in your bag wasn't "
                         "found in our database. "
