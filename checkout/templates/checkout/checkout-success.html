@@ -22,9 +22,18 @@
         </div>
     </div>
     <div class="row">
-       <div class="col-12 col-lg-7">
-            <h4>{{ order.order_number }}</h4>
+       <div class="col-12 col-lg-6">
+            <p>ORDER NO: {{ order.order_number }}</p>
+            <p>ORDERED BY: {{ order.full_name }}</p>
+            <p>ORDER DATE: {{ order.date }}</p>
        </div>
-    </div>   
+    </div>
+    {% for product in order.lineitems.all %}
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <p>ORDER NO: {{ order.order_number }}</p>
+            </div>
+        </div>
+    {% endfor %}
 </section>
 {% endblock %}

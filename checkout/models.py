@@ -1,13 +1,14 @@
 """Based on project boutique ado code"""
 import uuid
 
+from decimal import Decimal
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 
 from django_countries.fields import CountryField
 
-from products.models import Books
+from products.models import Books, Posters
 from profiles.models import UserProfile
 
 
@@ -63,7 +64,10 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, null=False, related_name='lineitems')
-    product = models.ForeignKey(Books, on_delete=models.CASCADE, blank=False, null=False)
+    product = models.CharField(max_length=100, blank=False, null=False)
+    book = models.ForeignKey(Books, on_delete=models.CASCADE, blank=True, null=True)
+    poster = models.ForeignKey(Posters, on_delete=models.CASCADE, blank=True, null=True)
+    material_size = models.CharField(max_length=20, null=True, blank=True)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
@@ -72,8 +76,39 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.product.price * self.quantity
+        # check if this itemline is a book or a poster
+        if self.book:
+            self.product = self.book.title
+        else:
+            self.product = self.poster.name
+
+        if self.material_size:
+            material_size = self.material_size
+            price = Decimal(0.00)
+
+            if material_size == 'Paper A4':
+                price = Decimal(10.00)
+            elif material_size == 'Paper A3':
+                price = Decimal(12.50)
+            elif material_size == 'Paper A2':
+                price = Decimal(15.00)
+            elif material_size == 'Plastic A4':
+                price = Decimal(15.00)
+            elif material_size == 'Plastic A3':
+                price = Decimal(17.50)
+            elif material_size == 'Plastic A2':
+                price = Decimal(20.00)
+            elif material_size == 'Metal A4':
+                price = Decimal(25.00)
+            elif material_size == 'Metal A3':
+                price = Decimal(30.00)
+            elif material_size == 'Metal A2':
+                price = Decimal(40.00)
+
+            self.lineitem_total = price * self.quantity
+        else:
+            self.lineitem_total = self.lineitem_total = self.book.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'Title:{self.product.title} on order {self.order.order_number}'
+        return f'Title:{self.product} on order {self.order.order_number}'

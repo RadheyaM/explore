@@ -62,23 +62,29 @@ def checkout(request):
             order.save()
             for item_id, item_data in basket.items():
                 try:
+                    product = Books.objects.get(code=item_id)
+                except:
+                    product = Posters.objects.get(code=item_id)
+                
+                try:
                     if isinstance(item_data, int):
-                        product = Books.objects.get(code=item_id)
                         order_line_item = OrderLineItem(
                             order=order,
-                            product=product,
+                            book=product,
                             quantity=item_data,
                         )
                         order_line_item.save()
                     else:
-                        product = Posters.objects.get(code=item_id)
-                        order_line_item.save()
-                except:
-                    messages.error(request, (
-                        "One of the products in your bag wasn't "
-                        "found in our database. "
-                        "Please call us for assistance!")
-                    )
+                        for material_size, quantity in item_data['items_by_material_size'].items():
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                poster=product,
+                                quantity=quantity,
+                                material_size=material_size,
+                            )
+                            order_line_item.save()
+                except Exception as e:
+                    messages.error(request, e)
                     order.delete()
                     return redirect(reverse('basket'))
 
@@ -90,7 +96,7 @@ def checkout(request):
     else:
         basket = request.session.get('basket', {})
         if not basket:
-            messages.error(request, "There's nothing in your bag, better keep on shopping there buddy.")
+            messages.error(request, "There's nothing in your bag!")
             return redirect(reverse('books'))
 
         current_basket = basket_contents(request)
