@@ -8,8 +8,20 @@ def manage(request):
     """
     render the manage products index page
     """
+    books = Books.objects.all()
+    posters = Posters.objects.all()
+    genres = Genre.objects.all()
+    categories = Category.objects.all()
+
+    context = {
+        'books': books,
+        'posters': posters,
+        'genres': genres,
+        'categories': categories,
+    }
+
     template = 'crud/manage.html'
-    return render(request, template)
+    return render(request, template, context)
 
 #====================================================================================
 #                                   CREATE VIEWS
@@ -91,6 +103,90 @@ class CreateGenreView(CreateView):
         """
         messages.add_message(
             self.request, messages.SUCCESS, "You successfully added a new Genre"
+        )
+
+        return super().form_valid(form)
+
+#====================================================================================
+#                                   UPDATE VIEWS
+#====================================================================================
+
+class UpdateBookView(UpdateView):
+    """
+    View for Admin to create a book product
+    """
+    model = Books
+    fields = '__all__'
+    template_name = 'crud/update/update-book.html'
+    
+    success_url = reverse_lazy('manage_products')
+
+    def form_valid(self, form):
+        """
+        Custom form_valid function adding a success message for display.
+        """
+        messages.add_message(
+            self.request, messages.SUCCESS, "You successfully updated the Book product"
+        )
+
+        return super().form_valid(form)
+
+class UpdatePosterView(UpdateView):
+    """
+    View for Admin to create a book product
+    """
+    model = Posters
+    fields = '__all__'
+    template_name = 'crud/update/update-poster.html'
+    
+    success_url = reverse_lazy('manage_products')
+
+    def form_valid(self, form):
+        """
+        Custom form_valid function adding a success message for display.
+        """
+        messages.add_message(
+            self.request, messages.SUCCESS, "You successfully updated the Poster product"
+        )
+
+        return super().form_valid(form)
+
+class UpdateCategoryView(UpdateView):
+    """
+    View for Admin to create a book product
+    """
+    model = Category
+    fields = '__all__'
+    template_name = 'crud/update/update-category.html'
+    
+    success_url = reverse_lazy('manage_products')
+
+    def form_valid(self, form):
+        """
+        Custom form_valid function adding a success message for display.
+        """
+        messages.add_message(
+            self.request, messages.SUCCESS, "You successfully updated the Category"
+        )
+
+        return super().form_valid(form)
+
+class UpdateGenreView(UpdateView):
+    """
+    View for Admin to create a book product
+    """
+    model = Genre
+    fields = '__all__'
+    template_name = 'crud/update/update-genre.html'
+    
+    success_url = reverse_lazy('manage_products')
+
+    def form_valid(self, form):
+        """
+        Custom form_valid function adding a success message for display.
+        """
+        messages.add_message(
+            self.request, messages.SUCCESS, "You successfully updated the Genre"
         )
 
         return super().form_valid(form)

@@ -9,12 +9,92 @@
 
 {% block content %}
     <section class="container crud-container">
-        <a href="{% url 'create_book' %}">create book</a>
-        <br>
-        <a href="{% url 'create_poster' %}">create poster</a>
-        <br>
-        <a href="{% url 'create_category' %}">create category</a>
-        <br>
-        <a href="{% url 'create_genre' %}">create genre</a>
+        <div class="row p-5">
+            <a href="{% url 'create_book' %}" class="btn btn-outline-primary m-2">create book</a>
+            <br>
+            <a href="{% url 'create_poster' %}" class="btn btn-outline-primary m-2">create poster</a>
+            <br>
+            <a href="{% url 'create_category' %}" class="btn btn-outline-primary m-2">create category</a>
+            <br>
+            <a href="{% url 'create_genre' %}" class="btn btn-outline-primary m-2">create genre</a>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <table class="table text-light">
+                    <thead>
+                        <tr>
+                            <th>Book</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for book in books %}
+                        <tr>
+                            <td>{{ book.title }}</td>
+                            <td><a href="{% url 'update_book' book.id %}" class="btn btn-sm btn-outline-success">Update</a></td>
+                        </tr>
+                        {% endfor %} 
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-lg-8">
+                <table class="table text-light">
+                    <thead>
+                        <tr>
+                            <th>Poster</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for poster in posters %}
+                        <tr>
+                            <td>{{ poster.name }}</td>
+                            <td><a href="{% url 'update_poster' poster.id %}" class="btn btn-sm btn-outline-success">Update</a></td>
+                        </tr>
+                        {% endfor %} 
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-lg-8">
+                <table class="table text-light">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for category in categories %}
+                        <tr>
+                            <td>{{ category.name }}</td>
+                            <td><a href="{% url 'update_category' category.id %}" class="btn btn-sm btn-outline-success">Update</a></td>
+                        </tr>
+                        {% endfor %} 
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-lg-8">
+                <table class="table text-light">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for genre in genres %}
+                        <tr>
+                            <td>{{ genre.name }}</td>
+                            <td><a href="{% url 'update_genre' genre.id %}" class="btn btn-sm btn-outline-success">Update</a></td>
+                        </tr>
+                        {% endfor %} 
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </section>
 {% endblock %}
