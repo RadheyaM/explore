@@ -43,6 +43,9 @@
                 </a>
                 <div class="dropdown-menu">
                     {% if user.is_authenticated %}
+                        {% if user.is_superuser %}
+                            <a class="dropdown-item" href="{% url 'manage_products' %}"><i class="fa-solid fa-user"></i>&nbsp;Manage Products</a>
+                        {% endif %}
                         <a class="dropdown-item" href="{% url 'profile' %}"><i class="fa-solid fa-user"></i>&nbsp;My Profile</a>
                         <a class="dropdown-item" href="{% url 'account_logout' %}"><i class="fa-solid fa-person-walking-arrow-right"></i>&nbsp;Logout</a>
                     {% else %}
