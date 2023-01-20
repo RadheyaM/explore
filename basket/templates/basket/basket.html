@@ -2,102 +2,104 @@
 {% load static %}
 
 {% block content %}
-    <section class="container">
-        <div class="col-lg-12 text-right">
-            <a href="{% url 'books' %}" class="btn btn-outline-dark rounded-0 mt-5">
-                <i class="fas fa-chevron-left"></i>&nbsp;Keep Browsing</i>
-            </a>
-            <a href="{% url 'checkout' %}" class="btn btn-action rounded-0 mt-5">
-                 <i class="fa-solid fa-lock"></i>&nbsp;Secure Checkout</i>
-            </a>
+    <section class="basket-container">
+        <div class="container">
+            <div class="col-lg-12 text-right">
+                <a href="{% url 'books' %}" class="btn btn-outline-dark rounded-0 mt-5">
+                    <i class="fas fa-chevron-left"></i>&nbsp;Keep Browsing</i>
+                </a>
+                <a href="{% url 'checkout' %}" class="btn btn-action rounded-0 mt-5">
+                    <i class="fa-solid fa-lock"></i>&nbsp;Secure Checkout</i>
+                </a>
+            </div>
+            <div class="row d-flex justify-content-center mt-5">
+                <h2>Your Basket</h2>
+            </div>
+            <hr>
         </div>
-        <div class="row d-flex justify-content-center mt-5">
-            <h2>Your Basket</h2>
-        </div>
-        <hr>
-    </section>
-    <section class="container">
-        <div class="row d-flex">
-            {% for item in basket_items %}
-                {% if item.poster %}
-                    <div class="row basket-table">            
-                        <div class="col-lg-3">
-                            <img class="poster-thumbnail" src="{{ item.poster.image.url }}">
+        <div class="container">
+            <div class="row d-flex">
+                {% for item in basket_items %}
+                    {% if item.poster %}
+                        <div class="row basket-table">            
+                            <div class="col-lg-3">
+                                <img class="poster-thumbnail" src="{{ item.poster.image.url }}">
+                            </div>
+                            <div class="col-lg-3">
+                                <h4> {{ item.poster.name }}</h4>
+                                <h6>{{ item.material_size }}</h6>
+                                <p class="badge badge-info">{{ item.poster.genre.name }}</p>
+                            </div>
+                            <div class="col-lg-3 text-center">
+                                <p>Quantity: {{ item.quantity }}</p>
+                                <p>£{{ item.price }}</p>
+                            </div>
+                            <div class="col-lg-3 text-right">
+                                Subtotal: £{{ item.subtotal }}
+                                <a href="{% url 'remove_from_basket' item.poster.code item.material_size %}" class="btn btn-sm btn-outline-danger remove-item" id="remove_{{ item.code}}_{{item.material_size}}">
+                                    remove
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-lg-3">
-                            <h4> {{ item.poster.name }}</h4>
-                            <h6>{{ item.material_size }}</h6>
-                            <p class="badge badge-info">{{ item.poster.genre.name }}</p>
+                    {% else %}
+                        <div class="row basket-table">            
+                            <div class="col-lg-3">
+                                <img src="{{ item.book.thumbnail.url }}">
+                            </div>
+                            <div class="col-lg-3">
+                                <h4> {{ item.book.title }}</h4>
+                                <p><strong> {{ item.book.author }}</strong></p>
+                                <p class="badge badge-info">{{ item.book.genre.name }}</p>
+                            </div>
+                            <div class="col-lg-3 text-center">
+                                <p>Quantity: {{ item.quantity }}</p>
+                                <p>£{{ item.book.price }}</p>
+                            </div>
+                            <div class="col-lg-3 text-right">
+                                Subtotal: £{{ item.subtotal }}
+                                <a href="{% url 'remove_from_basket' item.book.code 'nothing' %}" class="btn btn-sm btn-outline-danger remove-item" id="remove_{{ item.code}}">
+                                    remove
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-lg-3 text-center">
-                            <p>Quantity: {{ item.quantity }}</p>
-                            <p>£{{ item.price }}</p>
+                    {% endif %}
+                {% empty %}
+                    <div class="col-12 h-50 d-flex flex-column justify-content-center align-items-center p-5">
+                        <div class="alert alert-info w-50 text-center" role="alert">
+                            <i class="fa-solid fa-triangle-exclamation"></i>&nbsp;Your Basket is currently empty!
                         </div>
-                        <div class="col-lg-3 text-right">
-                            Subtotal: £{{ item.subtotal }}
-                            <a href="{% url 'remove_from_basket' item.poster.code item.material_size %}" class="btn btn-sm btn-outline-danger remove-item" id="remove_{{ item.code}}_{{item.material_size}}">
-                                remove
+                        <div>
+                            <a href="{% url 'books' %}" class="btn btn-outline-dark rounded-0 mt-5">
+                                <i class="fas fa-chevron-left"></i>&nbsp;Keep Browsing</i>
                             </a>
                         </div>
                     </div>
-                {% else %}
-                    <div class="row basket-table">            
-                        <div class="col-lg-3">
-                            <img src="{{ item.book.thumbnail.url }}">
-                        </div>
-                        <div class="col-lg-3">
-                            <h4> {{ item.book.title }}</h4>
-                            <p><strong> {{ item.book.author }}</strong></p>
-                            <p class="badge badge-info">{{ item.book.genre.name }}</p>
-                        </div>
-                        <div class="col-lg-3 text-center">
-                            <p>Quantity: {{ item.quantity }}</p>
-                            <p>£{{ item.book.price }}</p>
-                        </div>
-                        <div class="col-lg-3 text-right">
-                            Subtotal: £{{ item.subtotal }}
-                            <a href="{% url 'remove_from_basket' item.book.code 'nothing' %}" class="btn btn-sm btn-outline-danger remove-item" id="remove_{{ item.code}}">
-                                remove
-                            </a>
-                        </div>
-                    </div>
-                {% endif %}
-            {% empty %}
-                <div class="col-12 h-50 d-flex flex-column justify-content-center align-items-center p-5">
-                    <div class="alert alert-info w-50 text-center" role="alert">
-                        <i class="fa-solid fa-triangle-exclamation"></i>&nbsp;Your Basket is currently empty!
-                    </div>
-                    <div>
+                {% endfor %}
+                {% if product_count != 0 %}
+                    <div class="col-lg-12 totals-row text-right">
+                        <p>Basket Total: £{{ total|floatformat:2}} </p>
+                        {% if first_order == True %}
+                            <p class="badge badge-success">-£{{ ten_percent|floatformat:2 }} first order bonus!</p>
+                            <p>New Basket Total: £{{ total_ten_percent|floatformat:2}} </p>
+                        {% endif %}
+                        {% if delivery == 0 %}
+                            <p><small>Delivery:</small>&nbsp;<span class="badge badge-success">£{{ delivery|floatformat:2 }}</span></p>
+                        {% else %}
+                            <p><small>Delivery:</small>&nbsp;<span class="badge badge-warning">£{{ delivery|floatformat:2 }}</span></p>
+                        {% endif %}
+                        {% if free_delivery_delta > 0 %}
+                            <p><small class="text-danger"> £{{ free_delivery_delta }} more for free delivery!</small></p>
+                        {% endif %}
+                        <p><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></p>
                         <a href="{% url 'books' %}" class="btn btn-outline-dark rounded-0 mt-5">
                             <i class="fas fa-chevron-left"></i>&nbsp;Keep Browsing</i>
                         </a>
+                        <a href="{% url 'checkout' %}" class="btn btn-action rounded-0 mt-5">
+                            <i class="fa-solid fa-lock"></i>&nbsp;Secure Checkout</i>
+                        </a>
                     </div>
-                </div>
-            {% endfor %}
-            {% if product_count != 0 %}
-                <div class="col-lg-12 totals-row text-right">
-                    <p>Basket Total: £{{ total|floatformat:2}} </p>
-                    {% if first_order == True %}
-                        <p class="badge badge-success">-£{{ ten_percent|floatformat:2 }} first order bonus!</p>
-                        <p>New Basket Total: £{{ total_ten_percent|floatformat:2}} </p>
-                    {% endif %}
-                    {% if delivery == 0 %}
-                        <p><small>Delivery:</small>&nbsp;<span class="badge badge-success">£{{ delivery|floatformat:2 }}</span></p>
-                    {% else %}
-                        <p><small>Delivery:</small>&nbsp;<span class="badge badge-warning">£{{ delivery|floatformat:2 }}</span></p>
-                    {% endif %}
-                    {% if free_delivery_delta > 0 %}
-                        <p><small class="text-danger"> £{{ free_delivery_delta }} more for free delivery!</small></p>
-                    {% endif %}
-                    <p><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></p>
-                    <a href="{% url 'books' %}" class="btn btn-outline-dark rounded-0 mt-5">
-                        <i class="fas fa-chevron-left"></i>&nbsp;Keep Browsing</i>
-                    </a>
-                    <a href="{% url 'checkout' %}" class="btn btn-action rounded-0 mt-5">
-                        <i class="fa-solid fa-lock"></i>&nbsp;Secure Checkout</i>
-                    </a>
-                </div>
-            {% endif %}
+                {% endif %}
+            </div>
         </div>
     </section>
 {% endblock %}

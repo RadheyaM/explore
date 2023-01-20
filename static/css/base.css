@@ -118,17 +118,18 @@ hr {
     right: 0;
 }
 
-/* footer {
+footer {
     width: 100%;
-    height: 50px;
     background-color: var(--blue);
-    position: fixed;
-    bottom: 0;
-} */
+    flex-shrink: 0;
+}
 
 /*===================================
 basket
 ===================================*/
+.basket-container {
+    flex: 1 0 auto;
+}
 
 .basket-table {
     height: 200px;

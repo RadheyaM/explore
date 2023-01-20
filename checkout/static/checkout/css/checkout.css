@@ -1,4 +1,8 @@
 /* Code from boutique ado */
+.checkout-container {
+    flex: 1 0 auto;
+}
+
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;

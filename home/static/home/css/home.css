@@ -5,10 +5,11 @@
 
 .hero-section {
     display: block;
-    height: 80vh;
+    height: 100%;;
     width: 100%;
     padding-top: 10px;
     margin: 0;
+    flex: 1 0 auto;
 }
 
 .hero-image {
@@ -60,6 +61,9 @@
 /*=========================
     About us page
 ==========================*/
+.about-container {
+    flex: 1 0 auto;
+}
 
 .about-us-image {
     background: url('/media/about-us.jpg') no-repeat center center fixed;
