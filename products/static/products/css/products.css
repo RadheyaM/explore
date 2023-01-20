@@ -51,6 +51,7 @@ products & product detail pages
 
 .book-detail-section {
     height: auto;
+    flex: 1 0 auto;
 }
 
 .book-image {
@@ -59,8 +60,8 @@ products & product detail pages
 }
 
 .bought-together {
+    flex: 1 0 auto;
     width: 100%;
-    height: 400px;
 }
 
 .explore {
