@@ -33,6 +33,7 @@
                         <tr>
                             <td>{{ book.title }}</td>
                             <td><a href="{% url 'update_book' book.id %}" class="btn btn-sm btn-outline-success">Update</a></td>
+                            <td><a href="{% url 'delete_book' book.id %}" class="btn btn-sm btn-outline-danger">Delete</a></td>
                         </tr>
                         {% endfor %} 
                     </tbody>
@@ -52,6 +53,7 @@
                         <tr>
                             <td>{{ poster.name }}</td>
                             <td><a href="{% url 'update_poster' poster.id %}" class="btn btn-sm btn-outline-success">Update</a></td>
+                            <td><a href="{% url 'delete_poster' poster.id %}" class="btn btn-sm btn-outline-danger">Delete</a></td>
                         </tr>
                         {% endfor %} 
                     </tbody>
@@ -71,6 +73,7 @@
                         <tr>
                             <td>{{ category.name }}</td>
                             <td><a href="{% url 'update_category' category.id %}" class="btn btn-sm btn-outline-success">Update</a></td>
+                            <td><a href="{% url 'delete_category' category.id %}" class="btn btn-sm btn-outline-danger">Delete</a></td>
                         </tr>
                         {% endfor %} 
                     </tbody>
@@ -90,6 +93,7 @@
                         <tr>
                             <td>{{ genre.name }}</td>
                             <td><a href="{% url 'update_genre' genre.id %}" class="btn btn-sm btn-outline-success">Update</a></td>
+                            <td><a href="{% url 'delete_genre' genre.id %}" class="btn btn-sm btn-outline-danger">Delete</a></td>
                         </tr>
                         {% endfor %} 
                     </tbody>

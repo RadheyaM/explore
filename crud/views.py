@@ -113,7 +113,7 @@ class CreateGenreView(CreateView):
 
 class UpdateBookView(UpdateView):
     """
-    View for Admin to create a book product
+    View for Admin to update a book product
     """
     model = Books
     fields = '__all__'
@@ -133,7 +133,7 @@ class UpdateBookView(UpdateView):
 
 class UpdatePosterView(UpdateView):
     """
-    View for Admin to create a book product
+    View for Admin to update a book product
     """
     model = Posters
     fields = '__all__'
@@ -153,7 +153,7 @@ class UpdatePosterView(UpdateView):
 
 class UpdateCategoryView(UpdateView):
     """
-    View for Admin to create a book product
+    View for Admin to update a book product
     """
     model = Category
     fields = '__all__'
@@ -173,7 +173,7 @@ class UpdateCategoryView(UpdateView):
 
 class UpdateGenreView(UpdateView):
     """
-    View for Admin to create a book product
+    View for Admin to update a book product
     """
     model = Genre
     fields = '__all__'
@@ -187,6 +187,90 @@ class UpdateGenreView(UpdateView):
         """
         messages.add_message(
             self.request, messages.SUCCESS, "You successfully updated the Genre"
+        )
+
+        return super().form_valid(form)
+
+#====================================================================================
+#                                   DELETE VIEWS
+#====================================================================================
+
+class DeleteBookView(DeleteView):
+    """
+    View for Admin to create a book product
+    """
+    model = Books
+    fields = '__all__'
+    template_name = 'crud/delete/delete-book.html'
+    
+    success_url = reverse_lazy('manage_products')
+
+    def form_valid(self, form):
+        """
+        Custom form_valid function adding a success message for display.
+        """
+        messages.add_message(
+            self.request, messages.SUCCESS, "You successfully deleted the Book product"
+        )
+
+        return super().form_valid(form)
+
+class DeletePosterView(DeleteView):
+    """
+    View for Admin to create a book product
+    """
+    model = Posters
+    fields = '__all__'
+    template_name = 'crud/delete/delete-poster.html'
+    
+    success_url = reverse_lazy('manage_products')
+
+    def form_valid(self, form):
+        """
+        Custom form_valid function adding a success message for display.
+        """
+        messages.add_message(
+            self.request, messages.SUCCESS, "You successfully deleted the Poster product"
+        )
+
+        return super().form_valid(form)
+
+class DeleteCategoryView(DeleteView):
+    """
+    View for Admin to delete a book product
+    """
+    model = Category
+    fields = '__all__'
+    template_name = 'crud/delete/delete-category.html'
+    
+    success_url = reverse_lazy('manage_products')
+
+    def form_valid(self, form):
+        """
+        Custom form_valid function adding a success message for display.
+        """
+        messages.add_message(
+            self.request, messages.SUCCESS, "You successfully deleted the Category"
+        )
+
+        return super().form_valid(form)
+
+class DeleteGenreView(DeleteView):
+    """
+    View for Admin to delete a book product
+    """
+    model = Genre
+    fields = '__all__'
+    template_name = 'crud/delete/delete-genre.html'
+    
+    success_url = reverse_lazy('manage_products')
+
+    def form_valid(self, form):
+        """
+        Custom form_valid function adding a success message for display.
+        """
+        messages.add_message(
+            self.request, messages.SUCCESS, "You successfully deleted the Genre"
         )
 
         return super().form_valid(form)

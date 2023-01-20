@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+ <link rel="stylesheet" href="{% static 'crud/css/crud.css' %}">
+{% endblock %}
+
+{% block extra_title %} | Admin | Delete Poster {% endblock %}
+
+<!--Main form content-->
+{% block content %}
+<div class="container crud-container">
+    <div class="card">
+        <div class="card-header bg-danger text-white text-center">
+            <h2>
+                <!--Card title-->
+                Delete Poster: {{ object }}
+            </h2>
+        </div>
+        <div class="card-body text-center">
+            <form method="POST">
+                {% csrf_token %}
+                <br>
+                <!--Warning flag-->
+                <div class="alert alert-danger" role="alert" style="width: 50%; margin: auto;">
+                    <i style="font-size: 200%;" class="fa-solid fa-triangle-exclamation"></i><br><br>
+                    WARNING: Deleted content cannot be recovered!<br>
+                    IT IS HIGHLY RECOMMENDED THAT YOU DO NOT DELETE THIS POSTER!
+                </div>
+                <br>
+                <!--Buttons spread apart to avoid accidental deletions-->
+                <div class="container">
+                    <div class="row">
+                        <!--Cancel button-->
+                        <div class="col-sm">
+                            <input type="button" class="btn btn-success btn-lg" value="Cancel"
+                                onClick="javascript:history.go(-1);">
+                        </div>
+                        <!--Delete button-->
+                        <div class="col-sm">
+                            <input type="submit" value="Delete" class="btn btn-outline-danger btn-lg">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <br>
+        <br>
+    </div>
+</div>
+{% endblock %}

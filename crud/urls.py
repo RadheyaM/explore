@@ -11,4 +11,8 @@ urlpatterns = [
     path('update-poster/<int:pk>', views.UpdatePosterView.as_view(), name='update_poster'),
     path('update-category/<int:pk>', views.UpdateCategoryView.as_view(), name='update_category'),
     path('update-genre/<int:pk>', views.UpdateGenreView.as_view(), name='update_genre'),
+    path('delete-book/<int:pk>/', views.DeleteBookView.as_view(), name='delete_book'),
+    path('delete-poster/<int:pk>', views.DeletePosterView.as_view(), name='delete_poster'),
+    path('delete-category/<int:pk>', views.DeleteCategoryView.as_view(), name='delete_category'),
+    path('delete-genre/<int:pk>', views.DeleteGenreView.as_view(), name='delete_genre'),
 ]
