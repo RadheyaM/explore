@@ -35,6 +35,9 @@
                         </div>
                         <div class="col-lg-3 text-right">
                             Subtotal: £{{ item.subtotal }}
+                            <a href="{% url 'remove_from_basket' item.poster.code item.material_size %}" class="btn btn-sm btn-outline-danger remove-item" id="remove_{{ item.code}}_{{item.material_size}}">
+                                remove
+                            </a>
                         </div>
                     </div>
                 {% else %}
@@ -45,7 +48,7 @@
                         <div class="col-lg-3">
                             <h4> {{ item.book.title }}</h4>
                             <p><strong> {{ item.book.author }}</strong></p>
-                            <p class="badge badge-info">{{ item.product.genre.name }}</p>
+                            <p class="badge badge-info">{{ item.book.genre.name }}</p>
                         </div>
                         <div class="col-lg-3 text-center">
                             <p>Quantity: {{ item.quantity }}</p>
@@ -53,6 +56,9 @@
                         </div>
                         <div class="col-lg-3 text-right">
                             Subtotal: £{{ item.subtotal }}
+                            <a href="{% url 'remove_from_basket' item.book.code 'nothing' %}" class="btn btn-sm btn-outline-danger remove-item" id="remove_{{ item.code}}">
+                                remove
+                            </a>
                         </div>
                     </div>
                 {% endif %}
@@ -94,4 +100,16 @@
             {% endif %}
         </div>
     </section>
+{% endblock %}
+
+{% block post_load_js %}
+    <script type="text/javasript">
+        $('.remove-item').click(function(e) {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var materialSize = $(this).attr('id').split('remove_')[2];
+            var url = `/basket/remove/${itemId}/${materialSize}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken, 'product_material_size': materialSize}
+        })
+    </script>
 {% endblock %}

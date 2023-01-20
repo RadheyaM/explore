@@ -50,7 +50,7 @@ def basket_contents(request):
                 if material_size == 'Plastic A2':
                     price = Decimal(20.00)
                 if material_size == 'Metal A4':
-                    price = Decimal(15.00)
+                    price = Decimal(25.00)
                 if material_size == 'Metal A3':
                     price = Decimal(30.00)
                 if material_size == 'Metal A2':
