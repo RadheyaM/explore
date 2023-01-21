@@ -1,6 +1,7 @@
 /* Code from boutique ado */
 .checkout-container {
     flex: 1 0 auto;
+    margin-bottom: 50px;
 }
 
 .StripeElement,

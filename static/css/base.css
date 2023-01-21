@@ -152,6 +152,16 @@ hr {
     right: 0;
 }
 
+.badge-info {
+    background: var(--dark-blue);
+    color: var(--yellow);
+}
+
+.badge-light {
+    background: var(--yellow);
+    color: var(--dark-blue);
+}
+
 footer {
     width: 100%;
     background-color: var(--dark-blue);

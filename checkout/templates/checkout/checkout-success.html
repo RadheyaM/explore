@@ -16,23 +16,64 @@
     <div class="row">
         <div class="col text-center">
             <hr>
-            <h2 class="mb-4">Thanks a Million!</h2>
+            <h3 class="mb-4">THANKS A MILLION!</h3>
+            <h2>YOUR ORDER SUMMARY</h2>
             <hr>
-            <p>Your order info is below.  A confirmation email will be sent to {{ order.email }}.
+            <h4 class="mb-4">A confirmation email will be sent to <strong class="badge badge-light">{{ order.email }}</strong></h4>
         </div>
     </div>
-    <div class="row">
-       <div class="col-12 col-lg-6">
-            <p>ORDER NO: {{ order.order_number }}</p>
-            <p>ORDERED BY: {{ order.full_name }}</p>
-            <p>ORDER DATE: {{ order.date }}</p>
+    <div class="row d-flex justify-content-center">
+       <div class="col-12 col-md-6 col-lg-6 text-left">
+            <span class="badge badge-info mb-3">ORDER NO:</span>&nbsp;<h6>{{ order.order_number }}</h6>
+            <span class="badge badge-info mb-3">ORDERED BY:</span>&nbsp;<h6>{{ order.full_name }}</h6>
+            <span class="badge badge-info mb-3">ORDER DATE:</span>&nbsp;<h6>{{ order.date }}</h6>
+            <span class="badge badge-info mb-3">TOTAL:</span>&nbsp;<h6>£{{ order.order_total }}</h6>
+            <span class="badge badge-info mb-3">DELIVERY COST:</span>&nbsp;<h6>£{{ order.delivery_cost }}</h6>
+            <span class="badge badge-info mb-3">GRAND TOTAL:</span>&nbsp;<h6>£{{ order.grand_total }}</h6>
+       </div>
+       <div class="col-12 col-md-6 col-lg-6 text-left">
+            <span class="badge badge-info mb-3">Phone:</span>&nbsp;<h6>{{ order.phone_number }}</h6>
+            <span class="badge badge-info mt-5 mb-3">Delivery Address</span>&nbsp;<h6>{{ order.street_address1 }}</h6>
+            <h6>{{ order.street_address2 }}</h6>
+            <h6>{{ order.town_or_city }}</h6>
+            <h6>{{ order.postcode }}</h6>
+            <h6>{{ order.county }}</h6>
+            <h6>{{ order.country }}</h6>
        </div>
     </div>
     {% for product in order.lineitems.all %}
-        <div class="row">
-            <div class="col-12 col-lg-6">
-                <p>ORDER NO: {{ order.order_number }}</p>
-            </div>
+    <hr>
+    <h4 class="mb-3 badge badge-info">PRODUCT NO.{{ forloop.counter }}</h4>
+        <div class="row w-100 d-flex">
+            {% if product.book %}
+                <div class="col-12 col-md-4 col-lg-5 text-left">
+                    <span class="badge badge-light mb-3">TITLE:</span>&nbsp;<h6>{{ product.book.title }}</h6>
+                    <span class="badge badge-light mb-3">AUTHOR:</span>&nbsp;<h6>{{ product.book.author }}</h6>
+                    <span class="badge badge-light mb-3">PRODUCT CODE:</span>&nbsp;<h6>{{ product.book.code }}</h6>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 text-left">
+                    <span class="badge badge-light mb-3">GENRE:</span>&nbsp;<h6>{{ product.book.genre.name }}</h6>
+                    <span class="badge badge-light mb-3">CATEGORY:</span>&nbsp;<h6>{{ product.book.category.name }}</h6>
+                    <span class="badge badge-light mb-3">ORDER QTY:</span>&nbsp;<h6>{{ product.quantity }}</h6>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 text-right">
+                    <span class="badge badge-light mb-3">LINE TOTAL:</span>&nbsp;<h6>£{{ product.lineitem_total }}</h6>
+                </div>
+            {% else %}
+                <div class="col-12 col-md-4 col-lg-5 text-left">
+                    <span class="badge badge-light mb-3">NAME:</span>&nbsp;<h6>{{ product.poster.name }}</h6>
+                    <span class="badge badge-light mb-3">MATERIAL &amp; SIZE</span><h6>{{ product.material_size }}</h6>
+                    <span class="badge badge-light mb-3">PRODUCT CODE:</span>&nbsp;<h6>{{ product.poster.code }}</h6>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 text-left">
+                    <span class="badge badge-light mb-3">GENRE:</span>&nbsp;<h6>{{ product.poster.genre.name }}</h6>
+                    <span class="badge badge-light mb-3">CATEGORY:</span>&nbsp;<h6>{{ product.poster.category.name }}</h6>
+                    <span class="badge badge-light mb-3">ORDER QTY:</span>&nbsp;<h6>{{ product.quantity }}</h6>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 text-right">
+                    <span class="badge badge-light mb-3">LINE TOTAL:</span>&nbsp;<h6>£{{ product.lineitem_total }}</h6>
+                </div>
+            {% endif %}
         </div>
     {% endfor %}
 </section>
