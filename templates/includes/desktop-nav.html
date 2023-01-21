@@ -29,6 +29,19 @@
     </div>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-5">
+                <a class="nav-link active"
+                          {% if user.is_authenticated %} 
+                              href="{% url 'wishlist' %}"
+                          {% else %}
+                              href="{% url 'account_signup' %}"
+                          {% endif %}>
+                  <div class="text-center">
+                      <div><i class="fa-solid fa-heart"></i></div>
+                        <p>&nbsp;Wishlist</p>
+                  </div>
+                </a>
+            </li>
             <li class="nav-item dropdown mr-5">
                 <a class="nav-link active" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                   <div class="text-center">

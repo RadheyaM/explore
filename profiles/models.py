@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from products.models import Books, Posters
     
 from django_countries.fields import CountryField
 
@@ -34,3 +35,15 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
         # Existing users: just save the profile
     instance.userprofile.save()
+
+
+class Wishlist(models.Model):
+    
+    name = models.CharField(max_length=20)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    book = models.ForeignKey(Books, on_delete=models.CASCADE, blank=True, null=True)
+    poster = models.ForeignKey(Posters, on_delete=models.CASCADE, blank=True, null=True)
+    product = models.CharField(max_length=64, blank=False, null=False)
+
+    def __str__(self):
+        return self.name

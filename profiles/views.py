@@ -17,6 +17,7 @@ def profile(request):
             form.save()
             messages.success(request, 'You successfully updated your profile!')
 
+    template = 'profile/profile.html'
     form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
     context = {
@@ -24,4 +25,12 @@ def profile(request):
         'orders': orders,
     }
 
-    return render(request, 'profile/profile.html', context)
+    return render(request, template, context)
+
+def wishlist(request):
+    """
+    render the wishlist page
+    """
+    template = 'profile/wishlist.html'
+
+    return render(request, template)
