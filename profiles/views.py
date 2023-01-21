@@ -7,11 +7,8 @@ from .forms import UserProfileForm
 
 from products.models import Books, Posters
 
+def delivery_address(request):
 
-def profile(request):
-    """
-    A view to show the user profile page
-    """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == "POST":
@@ -20,11 +17,22 @@ def profile(request):
             form.save()
             messages.success(request, 'You successfully updated your profile!')
 
-    template = 'profile/profile.html'
+    template = 'profile/delivery-details.html'
     form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+def order_history(request):
+    
+    template = 'profile/order-history.html'
+    profile = get_object_or_404(UserProfile, user=request.user)
+    orders = profile.orders.all()
+
+    context = {
         'orders': orders,
     }
 
@@ -43,6 +51,7 @@ def wishlist(request):
     }
 
     return render(request, template, context)
+
 
 def edit_book_wishlist(request, id):
     """

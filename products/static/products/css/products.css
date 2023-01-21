@@ -15,27 +15,6 @@ products & product detail pages
     margin-top: 50px;
 }
 
-.book-poster-toggle {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.book-poster-toggle div {
-    border-radius: 20px;
-    margin: 1rem;
-    cursor: pointer;
-}
-
-.book-poster-toggle div.active,
-.book-poster-toggle div.active > a {
-    background: var(--orange);
-    color: white;
-}
-
-.book-poster-toggle div:hover{
-    border: 1px solid white;
-}
 .book-card {
     background: black;
 }

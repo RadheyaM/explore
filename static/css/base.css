@@ -81,6 +81,32 @@ hr {
     font-size: 0.75rem;
 }
 
+/* page toggle buttons */
+.page-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.page-toggle div:hover{
+    border: 1px solid white;
+}
+
+.page-toggle div {
+    border-radius: 20px;
+    margin: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-toggle div.active,
+.page-toggle div.active > a {
+    background: var(--orange);
+    color: white;
+}
+
 /* custom-link code learned from Kevin Powell on Youtube */
 .custom-link,
 .custom-link:hover {

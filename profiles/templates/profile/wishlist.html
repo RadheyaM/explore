@@ -1,21 +1,17 @@
-{% extends "base.html" %}
+{% extends 'profile/profile-base.html' %}
 {% load static %}
-
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profiles/css/profiles.css' %}">
-{% endblock %}
 
 {% block extra_title %}
     | Wishlist
 {% endblock %}
 
+{% block wishlist_active %}active{% endblock %}
+
 {% block content %}
-    <section class="container profile-container">
         {% for book in books %}
             <h1>Book: {{ book.title }}</h1>
         {% endfor %}
         {% for poster in posters %}
             <h1>Book: {{ poster.name }}</h1>
         {% endfor %}
-    </section>
 {% endblock %}
