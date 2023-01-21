@@ -21,6 +21,7 @@
                 <h2 class="mb-3">{{ poster.name}}</h2>
                 <h4 class="badge badge-info mb-3">{{ poster.genre.name }}</h4>
                 <p> {{ poster.description }}</p>
+                <a href="{% url 'edit_poster_wishlist' poster.id %}" class="btn btn-outline-info">Add To Wishlist</a>
                 {% include 'products/includes/add-poster-to-basket.html' %}
             </div>
         </div>

@@ -11,5 +11,11 @@
 
 {% block content %}
     <section class="container profile-container">
+        {% for book in books %}
+            <h1>Book: {{ book.title }}</h1>
+        {% endfor %}
+        {% for poster in posters %}
+            <h1>Book: {{ poster.name }}</h1>
+        {% endfor %}
     </section>
 {% endblock %}

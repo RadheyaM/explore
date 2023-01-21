@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 
 
 class Category(models.Model):
@@ -41,6 +43,7 @@ class Books(models.Model):
     thumbnail = models.ImageField(null=True, blank=True, verbose_name="Book Cover Thumbnail Image")
     image_url = models.URLField(max_length=1024, null=True, blank=True, help_text="Image URL Address")
     image = models.ImageField(null=True, blank=True, verbose_name="Book Cover Image")
+    user_book_wishlist = models.ManyToManyField(User, related_name="user_book_wishlist", blank=True)
 
     def __str__(self):
         return self.title
@@ -59,6 +62,7 @@ class Posters(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+    user_poster_wishlist = models.ManyToManyField(User, related_name="user_poster_wishlist", blank=True)
 
     def __str__(self):
         return self.name

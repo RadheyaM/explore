@@ -7,8 +7,6 @@ from products.models import Books, Posters
     
 from django_countries.fields import CountryField
 
-
-
 class UserProfile(models.Model):
     """
     User profile for delivery information and order history

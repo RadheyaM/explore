@@ -25,10 +25,12 @@
                 <p> {{ book.description }}</p>
                 <p> {{ book.rating }} </p>
                 <p><strong>£{{ book.price }}</strong></p>
+                <a href="{% url 'edit_book_wishlist' book.id %}" class="btn btn-outline-info">Add To Wishlist</a>
                 {% include 'products/includes/add-book-to-basket.html' %}
             </div>
         </div>
     </section>
+    <!--You might also like... section-->
     <section class="bought-together">
         <hr>
         <div class="row text-center d-flex justify-content-center align-items-center">
