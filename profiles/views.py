@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.urls import reverse_lazy
 
-from .models import UserProfile, Contact
+from .models import UserProfile, Contact, SiteReview
 from .forms import UserProfileForm
 
 from products.models import Books, Posters
@@ -100,6 +100,27 @@ class ContactUs(CreateView):
         """
         messages.add_message(
             self.request, messages.SUCCESS, "Thank you for your message! We will respond as soon as possible"
+        )
+
+        return super().form_valid(form)
+
+class CreateSiteReview(CreateView):
+    """
+    View for a User to Create a site reivew
+    """
+    model = SiteReview
+    fields = ('name', 'title', 'rating', 'body',)
+    template_name = 'profile/site-review.html'
+    success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        """
+        Custom form_valid function adding a success message for display.
+        """
+        messages.add_message(
+            self.request, 
+            messages.SUCCESS, 
+            "Thank you for your review! Once approved it will be displayed on the site!"
         )
 
         return super().form_valid(form)

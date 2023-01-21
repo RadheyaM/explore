@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/allauth.css' %}">
+{% endblock %}
+
+{% block extra_title %}
+    | Review Us
+{% endblock %}
+
+{% block content %}
+    <section class="allauth-container">
+        <div class="row d-flex justify-content-center m-2">
+            <div class="col-12 col-lg-8 p-3">
+                <div class="w-50 m-auto">
+                    <h2>We love getting your feedback!</h2>
+                </div>
+            </div>
+                <div class="col-12 col-lg-8">
+                    <div class="w-50 m-auto">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.non_form_errors }}
+                        {% for field in form %}
+                            {{ field.errors }}
+                            {{ field | as_crispy_field }}
+                        {% endfor %}
+                        <br>
+                        <!--Buttons-->
+                        <input type="submit" value="Send" class="btn btn-success">
+                        <input type="button" class="btn btn-secondary" value="Cancel" onClick="javascript:history.go(-1);">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
