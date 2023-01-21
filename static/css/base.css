@@ -76,6 +76,15 @@ hr {
     font-size: 2rem;
 }
 
+.nav-link {
+    padding: 0;
+    margin: 0.5rem 0 0 0.5rem
+}
+
+.nav-link:hover {
+    color: var(--orange);
+}
+
 .hidden {
     display: none;
 }
@@ -94,10 +103,7 @@ hr {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
-}
-
-.page-toggle div:hover{
-    border: 1px solid white;
+    font-size: 2rem;
 }
 
 .page-toggle div {
@@ -107,6 +113,14 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(1);
+}
+
+.page-toggle div.active:hover {
+    background-color: var(--orange);
+    color: var(--orange);
+    transform: scale(1.03);
+    transition: 200ms ease-in-out;
 }
 
 .page-toggle div.active,
@@ -119,10 +133,8 @@ hr {
 .custom-link,
 .custom-link:hover {
     text-decoration: none;
-    color: var(--orange);
     position: relative;
-    font-size: 2rem;
-    color: white
+    color: white;
 }
 
 .custom-link::after {
@@ -160,6 +172,18 @@ hr {
 .badge-light {
     background: var(--yellow);
     color: var(--dark-blue);
+}
+
+.btn-outline-primary:hover {
+    background: white;
+    color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
+.btn-outline-primary {
+    background: var(--dark-blue);
+    color: white;
+    border-color: var(--dark-blue);
 }
 
 footer {
