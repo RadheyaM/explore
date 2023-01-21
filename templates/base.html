@@ -35,8 +35,8 @@
     <title>Explore {% block extra_title%}| Books & Posters{% endblock %}</title>
   </head>
   <body>
-    {% include 'includes/top-banner.html' %}
     {% include 'includes/desktop-nav.html' %}
+    {% include 'includes/top-banner.html' %}
     {% if messages %}
       <div class="container message-container">
           {% for message in messages %}

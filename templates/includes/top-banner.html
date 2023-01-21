@@ -1,7 +1,6 @@
 <div class="row top-banner">
     <div class="col-6 subscribe-banner">
         {% if user.is_authenticated %}
-            Did you know you get points back on all your orders???
         {% else %}
             <a href="{% url 'account_signup' %}" class="btn btn-sm btn-action">Create Account</a>
             GET 10% OFF YOUR FIRST ORDER!

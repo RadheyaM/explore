@@ -47,7 +47,7 @@ hr {
     display: flex;
     height: 40px;
     width:100%;
-    background: var(--yellow);
+    background: var(--dark-blue);
     margin: 0;
     padding: 0;
     text-align: right;
@@ -62,6 +62,14 @@ hr {
 
 .navbar {
     background-color: black;
+}
+
+.navbar ul {
+    align-items: center;
+}
+
+.navbar i {
+    font-size: 1.25rem;
 }
 
 .navbar-brand {
@@ -146,7 +154,7 @@ hr {
 
 footer {
     width: 100%;
-    background-color: var(--blue);
+    background-color: var(--dark-blue);
     flex-shrink: 0;
 }
 

@@ -29,7 +29,7 @@
     </div>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item mr-5">
+            <li class="nav-item mr-5 text-center">
                 <a class="nav-link active"
                           {% if user.is_authenticated %} 
                               href="{% url 'wishlist' %}"
@@ -38,26 +38,26 @@
                           {% endif %}>
                   <div class="text-center">
                       <div><i class="fa-solid fa-heart"></i></div>
-                        <p>&nbsp;Wishlist</p>
+                        <p>&nbsp;Wishlist&nbsp;</p>
                   </div>
                 </a>
             </li>
-            <li class="nav-item dropdown mr-5">
+            <li class="nav-item dropdown mr-5 text-center">
                 <a class="nav-link active" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                   <div class="text-center">
                     {% if user.is_authenticated %}
-                      <div><i class="fa-regular fa-face-smile-beam"></i></div>
-                        <p>&nbsp;{{ user }}</p>
+                      <div class="text-center"><i class="fa-regular fa-face-smile-beam"></i></div>
+                        <p>&nbsp;My Account&nbsp;<i class="fa-solid fa-sort-down"></i></p>
                     {% else %}
                     <i class="fa-solid fa-door-open"></i>
-                    <p>&nbsp;Login</p>
+                    <p>&nbsp;Login&nbsp;<i class="fa-solid fa-sort-down"></i></p>
                     {% endif %}
                   </div>
                 </a>
                 <div class="dropdown-menu">
                     {% if user.is_authenticated %}
                         {% if user.is_superuser %}
-                            <a class="dropdown-item" href="{% url 'manage_products' %}"><i class="fa-solid fa-user"></i>&nbsp;Manage Products</a>
+                            <a class="dropdown-item" href="{% url 'manage_products' %}"><i class="fa-solid fa-list-check"></i>&nbsp;Manage Products</a>
                         {% endif %}
                         <a class="dropdown-item" href="{% url 'profile' %}"><i class="fa-solid fa-user"></i>&nbsp;My Profile</a>
                         <a class="dropdown-item" href="{% url 'account_logout' %}"><i class="fa-solid fa-person-walking-arrow-right"></i>&nbsp;Logout</a>
@@ -67,7 +67,7 @@
                     {% endif %}
                 </div>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item active text-center">
               <a class="nav-link" data-toggle="collapse" href="#basket-sidenav" role="button" aria-expanded="false" aria-controls="basket-sidenav">
                   <div class="text-center">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -77,9 +77,9 @@
                   </div>
                   <p>
                       {% if grand_total %}
-                        £{{ grand_total|floatformat:2 }}
+                        £{{ grand_total|floatformat:2 }}&nbsp;<i class="fa-solid fa-sort-down"></i>
                       {% else %}
-                        £0.00
+                        £0.00&nbsp;<i class="fa-solid fa-sort-down"></i>
                       {% endif %}
                   </p>
               </a>
