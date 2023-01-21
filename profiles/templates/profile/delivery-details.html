@@ -7,3 +7,14 @@
 
 
 {% block address_active %}active{% endblock %}
+
+{% block address_content %}
+    <div class="col-12 col-lg-6 p-5">
+        <p>Default Delivery Information</p>
+        <form action="{% url 'profile' %}" method="POST" id="profile-form">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn btn-action rounded-0">Update Info</button>
+        </form>
+    </div>
+{% endblock %}

@@ -9,7 +9,7 @@
     | {{user}}'s Profile
 {% endblock %}
 
-{% block profile_content %}
+{% block content %}
     <section class="container profile-container">
         <div class="row d-flex flex-column m-5">
             <div class="row page-toggle">
@@ -18,19 +18,23 @@
                         Profile
                     </a>
                 </div>
-                <div class="col-6 col-lg-3 text-center{% block history_active %}{% endblock %}">
+                <div class="col-6 col-lg-3 text-center {% block history_active %}{% endblock %}">
                     <a class="custom-link" href="{% url 'order_history' %}">
                         Order History
                     </a>
                 </div>
-                <div class="col-6 col-lg-3 text-center{% block wishlist_active %}{% endblock %}">
+                <div class="col-6 col-lg-3 text-center {% block wishlist_active %}{% endblock %}">
                     <a class="custom-link" href="{% url 'wishlist'  %}">
                         My Wishlist
                     </a>
                 </div>
             </div>
+            {% block address_content %}
+            {% endblock %}
+            {% block order_content %}
+            {% endblock %}
+            {% block wishlist_content %}
+            {% endblock %}
         </div>
-        {% block content %}
-        {% endblock %}
     </section>
 {% endblock %}
