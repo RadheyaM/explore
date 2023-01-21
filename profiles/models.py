@@ -46,3 +46,20 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class SiteReview(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Site Rewiew'
+
+    RATING = ((1, 1), (2, 2), (3, 3), (4, 4), (5, 5))
+
+    name = models.CharField(max_length=50, help_text='This name will be displayed as the author on the published review.', verbose_name='Your Name')
+    title = models.CharField(max_length=64, help_text='What is the title of your review?', verbose_name='Review Title')
+    rating = models.IntegerField(choices=RATING, help_text='Your rating out of 5 stars', verbose_name="Rate Us")
+    body = models.TextField(max_length=1064, help_text='Write your review here', verbose_name='Your Review')
+    admin_approved = models.BooleanField(default='False')
+
+    def __str__(self):
+        return self.title
