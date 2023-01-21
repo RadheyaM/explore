@@ -7,7 +7,7 @@
     background-color: black;
     background-size: cover;
     
-    display: flex;
+    flex-direction: row;
 }
 
 .allauth-form-row {

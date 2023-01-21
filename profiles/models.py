@@ -33,3 +33,16 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
         # Existing users: just save the profile
     instance.userprofile.save()
+
+class Contact(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Contact'
+
+    email = models.EmailField(help_text='We will respond to this address.', verbose_name='Your Email Address')
+    reason = models.CharField(max_length=64, help_text='Why are you contacting us today?', verbose_name='Message Subject')
+    body = models.TextField(max_length=1064, help_text='Write your message here.', verbose_name='Message')
+    admin_responded = models.BooleanField(default='False')
+
+    def __str__(self):
+        return self.email

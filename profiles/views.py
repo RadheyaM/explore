@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.views.generic.edit import CreateView
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.urls import reverse_lazy
 
-from .models import UserProfile
+from .models import UserProfile, Contact
 from .forms import UserProfileForm
 
 from products.models import Books, Posters
@@ -81,4 +83,24 @@ def edit_poster_wishlist(request, id):
         messages.success(request, f'Added to Wishlist.')
         
     return redirect(reverse('wishlist'))
+
+
+class ContactUs(CreateView):
+    """
+    View for a User to Create a contact message
+    """
+    model = Contact
+    fields = ('email', 'reason', 'body',)
+    template_name = 'profile/contact.html'
+    success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        """
+        Custom form_valid function adding a success message for display.
+        """
+        messages.add_message(
+            self.request, messages.SUCCESS, "Thank you for your message! We will respond as soon as possible"
+        )
+
+        return super().form_valid(form)
     
