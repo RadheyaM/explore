@@ -9,4 +9,30 @@
 {% block history_active %}active{% endblock %}
 
 {% block order_content %}
+    <div class="col-12 col-lg-8 d-flex justify-content-center m-auto">
+        <div class="m-auto">
+            <table class="table table-responsive text-light m-auto">
+                <thead>
+                    <tr>
+                        <th><span class="badge badge-light mb-3">Order #</span></th>
+                        <th><span class="badge badge-light mb-3">Order Date</span></th>
+                        <th><span class="badge badge-light mb-3">Grand Total</span></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                    <tr>
+                        <td><span class="badge badge-info mb-3">{{ order.order_number }}</span></td>
+                        <td><span class="badge badge-info mb-3">{{ order.date }}</span></td>
+                        <td><span class="badge badge-info mb-3">£{{ order.grand_total }}</span></td>
+                        <td><a href="{% url 'order_history_detail' order.order_number %}" class="btn btn-sm btn-outline-primary">View Detail</a></td>
+                    </tr>
+                    {% empty %}
+                        <div class="m-auto alert-info">There are currently no orders in your order history.</div>
+                    {% endfor %} 
+                </tbody>
+            </table>
+        </div>
+    </div>
 {% endblock %}

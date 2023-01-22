@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.urls import reverse_lazy
 
+from checkout.models import Order
 from .models import UserProfile, Contact, SiteReview
 from .forms import UserProfileForm
 
@@ -36,6 +37,18 @@ def order_history(request):
 
     context = {
         'orders': orders,
+    }
+
+    return render(request, template, context)
+
+def order_history_detail(request, order_number):
+    
+    template = 'checkout/checkout-success.html'
+    order = get_object_or_404(Order, order_number=order_number)
+
+    context = {
+        'order': order,
+        'from_profile': True,
     }
 
     return render(request, template, context)

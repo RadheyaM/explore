@@ -16,10 +16,21 @@
     <div class="row">
         <div class="col text-center">
             <hr>
-            <h3 class="mb-4">THANKS A MILLION!</h3>
-            <h2>YOUR ORDER SUMMARY</h2>
+            {% if from_profile %}
+                <h3 class="mb-4">THANKS A MILLION ONCE AGAIN!</h3>
+                <h2>YOUR ORDER HISTORY SUMMARY</h2>
+                <a href="{% url 'order_history' %}" class="btn btn-lg btn-outline-primary">Back To Order History</a>
+            {% else %}
+                <h3 class="mb-4">THANKS A MILLION!</h3>
+                <h2>YOUR ORDER SUMMARY</h2>
+            {% endif %}
             <hr>
-            <h4 class="mb-4">A confirmation email will be sent to <strong class="badge badge-light">{{ order.email }}</strong></h4>
+            {% if from_profile %}
+                <h4 class="mb-4">An order confirmation email was sent to <strong class="badge badge-light">{{ order.email }}</strong></h4>
+            {% else %}
+                <h4 class="mb-4">A confirmation email will be sent to <strong class="badge badge-light">{{ order.email }}</strong></h4>
+            {% endif %}
+            
         </div>
     </div>
     <div class="row d-flex justify-content-center">

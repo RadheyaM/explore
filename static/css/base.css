@@ -85,6 +85,15 @@ hr {
     color: var(--orange);
 }
 
+.dropdown-item {
+    color: var(--dark-blue) !important;
+}
+
+.dropdown-item:hover {
+    color: var(--orange)!important;
+    background: var (--dark-blue);
+}
+
 .hidden {
     display: none;
 }

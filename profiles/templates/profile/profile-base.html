@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-6 col-lg-3 text-center {% block history_active %}{% endblock %}">
                     <a class="custom-link" href="{% url 'order_history' %}">
-                        Order History
+                        Orders
                     </a>
                 </div>
                 <div class="col-6 col-lg-3 text-center {% block wishlist_active %}{% endblock %}">
@@ -29,12 +29,12 @@
                     </a>
                 </div>
             </div>
-            {% block address_content %}
-            {% endblock %}
-            {% block order_content %}
-            {% endblock %}
-            {% block wishlist_content %}
-            {% endblock %}
         </div>
+        {% block address_content %}
+        {% endblock %}
+        {% block order_content %}
+        {% endblock %}
+        {% block wishlist_content %}
+        {% endblock %}
     </section>
 {% endblock %}

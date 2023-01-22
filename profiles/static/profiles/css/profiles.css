@@ -1,3 +1,7 @@
 .profile-container {
     flex: 1 0 auto;
 }
+
+.badge {
+    font-size: 1rem;
+}
