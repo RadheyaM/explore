@@ -170,7 +170,7 @@ hr {
     z-index: 999;
     margin-top: 100px;
     width: 50%;
-    right: 0;
+    right: 25%;
 }
 
 .badge-info {
@@ -199,6 +199,10 @@ footer {
     width: 100%;
     background-color: var(--dark-blue);
     flex-shrink: 0;
+}
+
+.hidden {
+    display: none;
 }
 
 /*===================================
