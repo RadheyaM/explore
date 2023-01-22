@@ -45,14 +45,23 @@ hr {
 
 .top-banner {
     display: flex;
-    height: 40px;
+    height: fit-content;
     width:100%;
     background: var(--dark-blue);
     margin: 0;
-    padding: 0;
+    padding: 0.5rem;
     text-align: right;
     align-items: center;
     padding-right: 10px;
+}
+
+.highlight {
+    color: var(--orange);
+    
+}
+
+.prezzie {
+    font-size: 1.25rem;
 }
 
 .subscribe-banner {
@@ -199,12 +208,10 @@ footer {
     width: 100%;
     background-color: var(--dark-blue);
     flex-shrink: 0;
+    font-size: 0.9rem;
+    font-weight: 200;
+    min-height: 200px;
 }
-
-.hidden {
-    display: none;
-}
-
 /*===================================
 basket
 ===================================*/

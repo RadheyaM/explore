@@ -1,5 +1,9 @@
 .crud-container {
     flex: 1 0 auto;
-    height: 100vh;
     color: black;
+}
+
+.crud-container-sm {
+    height: 100vh;
+    flex: 1 0 auto;
 }
