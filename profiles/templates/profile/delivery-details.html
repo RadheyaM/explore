@@ -9,7 +9,7 @@
 {% block address_active %}active{% endblock %}
 
 {% block address_content %}
-    <div class="col-12 col-lg-6 p-5">
+    <div class="col-12 col-lg-6 m-auto">
         <p>Default Delivery Information</p>
         <form action="{% url 'profile' %}" method="POST" id="profile-form">
             {% csrf_token %}

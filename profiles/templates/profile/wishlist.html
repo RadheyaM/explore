@@ -8,10 +8,40 @@
 {% block wishlist_active %}active{% endblock %}
 
 {% block wishlist_content %}
-        {% for book in books %}
-            <h1>Book: {{ book.title }}</h1>
-        {% endfor %}
-        {% for poster in posters %}
-            <h1>Book: {{ poster.name }}</h1>
-        {% endfor %}
+    {% for poster in posters %}
+        <div class="row">         
+            <div class="col-lg-4 m-auto p-3 d-flex justify-content-center justify-content-lg-end">
+                <img class="poster-thumbnail mb-4" src="{{ poster.image.url }}">
+            </div>
+            <div class="col-lg-8 m-auto p-3 text-center">
+                <h4> {{ poster.name }}</h4>
+                <h6>{{ poster.material_size }}</h6>
+                <p class="badge badge-info">{{ poster.genre.name }}</p>
+                <a href="{% url 'edit_poster_wishlist' poster.id %}" class="btn btn-outline-danger">Remove</a>
+            </div>
+        </div>
+    {% empty %}
+        {% if books %}
+        {% else %}
+            <div class="m-auto w-50">
+                <div class="alert alert-info text-center">There are currently no items in your wishlist.</div>
+                <div class="m-auto w-50 text-center">
+                    <a href="{% url 'books' %}" class=" btn btn-lg btn-action">Explore</a>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+    {%for book in books%}
+        <div class="row">
+            <div class="col-lg-4 m-auto p-3 d-flex justify-content-center justify-content-lg-end">
+                <img class="mb-4" src="{{ book.thumbnail.url }}">
+            </div>
+            <div class="col-lg-8 m-auto p-3 text-center">
+                <h4> {{ book.title }}</h4>
+                <p><strong> {{ book.author }}</strong></p>
+                <p class="badge badge-info">{{ book.genre.name }}</p>
+                <a href="{% url 'edit_book_wishlist' book.id %}" class="btn btn-outline-danger">Remove</a>
+            </div>
+        </div>
+    {% endfor %}
 {% endblock %}

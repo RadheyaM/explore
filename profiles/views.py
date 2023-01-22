@@ -80,7 +80,7 @@ def edit_book_wishlist(request, id):
         product.user_book_wishlist.add(request.user)
         messages.success(request, f'Added to Wishlist.')
         
-    return redirect(reverse('wishlist'))
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
     
 
 def edit_poster_wishlist(request, id):
