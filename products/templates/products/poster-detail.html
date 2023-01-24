@@ -10,7 +10,7 @@
         <div class="row product-row d-flex">
             {% if poster.image %}
                 <a href="{% url 'poster_detail' poster.id %}">
-                    <img src="{{ poster.image.url }}" class="card-img-top book-card-image" alt="{{ poster.name }}">
+                    <img src="{{ poster.image.url }}" class="card-img-top poster-image" alt="{{ poster.name }}">
                 </a>
             {% else %}
                 <a href="{% url 'poster_detail' poster.id %}">
@@ -38,28 +38,30 @@
             <h6>You might also like ... </h6>
         </div>
         <hr>
-        <div class="row explore d-flex">
-            {% for poster in recommend|slice:3 %}
-            <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
-                <div class="card book-card border-0 mt-2">
-                    <a href="{% url 'poster_detail' poster.id %}">
-                        <img src="{{ poster.image.url }}" class="card-img-top book-card-image" alt="{{ poster.name }}">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ poster.name }}</h5>
-                        <p class="badge badge-info"> {{ poster.genre.name }} </p>
-                        <p><strong>£{{ poster.price }}</strong></p>
-                        <a href="{% url 'poster_detail' poster.id %}" class="btn btn-primary">View</a>
-                        {% if user.is_authenticated %}
-                            {% if user.is_superuser %}
-                                <a href="{% url 'update_poster' poster.id %}" class="btn btn-sm btn-outline-success">Admin: Update</a>
-                                <a href="{% url 'manage_products' %}" class="btn btn-sm btn-outline-danger">Admin: Delete</a>
+        <div class="container explore d-flex justify-content-center">
+            <div class="row">
+                {% for poster in recommend|slice:3 %}
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                    <div class="card product-card border-0 mt-2">
+                        <a href="{% url 'poster_detail' poster.id %}">
+                            <img src="{{ poster.image.url }}" class="card-img-top poster-card-image" alt="{{ poster.name }}">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ poster.name }}</h5>
+                            <p class="badge badge-info"> {{ poster.genre.name }} </p>
+                            <p><strong>£{{ poster.price }}</strong></p>
+                            <a href="{% url 'poster_detail' poster.id %}" class="btn btn-primary">View</a>
+                            {% if user.is_authenticated %}
+                                {% if user.is_superuser %}
+                                    <a href="{% url 'update_poster' poster.id %}" class="btn btn-sm btn-outline-success">Admin: Update</a>
+                                    <a href="{% url 'manage_products' %}" class="btn btn-sm btn-outline-danger">Admin: Delete</a>
+                                {% endif %}
                             {% endif %}
-                        {% endif %}
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </section>
 {% endblock %}

@@ -26,7 +26,7 @@ products & product detail pages
 
 .poster-card-image {
     height:300px;
-    width: 300px;
+    width: 250px;
 }
 
 .card-title {
@@ -41,11 +41,20 @@ products & product detail pages
 .book-image {
     max-width: 350px;
     max-height: 500px;
+    margin-right: 50px;
+}
+
+.poster-image {
+    height: 450px;
+    width: 400px;
+    margin-right: 50px;
 }
 
 .bought-together {
+    height: auto;
     flex: 1 0 auto;
-    width: 100%;
+    margin-bottom: 120px;
+    margin-top: 50px;
 }
 
 .explore {
