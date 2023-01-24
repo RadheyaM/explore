@@ -6,6 +6,7 @@ from django.dispatch import receiver
 from products.models import Books, Posters
     
 from django_countries.fields import CountryField
+from django.utils import timezone
 
 class UserProfile(models.Model):
     """
@@ -63,3 +64,13 @@ class SiteReview(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class SubscribeEmail(models.Model):
+
+    email = models.EmailField(help_text='We will respond to this address.', verbose_name='Your Email Address', unique=True)
+    created = models.DateTimeField('Date Created', default=timezone.now)
+
+    
+    def __str__(self):
+        return self.email

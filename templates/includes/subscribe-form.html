@@ -1,7 +1,8 @@
 <div class="m-auto">
-    <form>
-        <label for="email">Subscribe for deals</label>
-        <input type="email" name="subscribe-email" id="email" placeholder="Your Email...">
+    <form class="form-inline" method="POST" action="{% url 'subscribe' %}">
+        {% csrf_token %}
+        <label for="email">Subscribe to Newsletter</label>
+        <input type="email" class="form-control" name="subscribe-email" id="subscribe-email" placeholder="Your Email..." required>
         <button type="submit" class="btn btn-sm btn-action">Submit</button>
     </form>
 </div>

@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
 from django.views.generic.edit import CreateView
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.urls import reverse_lazy
 
 from checkout.models import Order
-from .models import UserProfile, Contact, SiteReview
+from .models import UserProfile, Contact, SiteReview, SubscribeEmail
 from .forms import UserProfileForm
 
 from products.models import Books, Posters
@@ -137,4 +139,29 @@ class CreateSiteReview(CreateView):
         )
 
         return super().form_valid(form)
-    
+
+
+def subscribe(request):
+    if request.method == 'POST':
+        email = request.POST.get('subscribe-email', None)
+
+        if not email:
+            messages.error(request, 'You must enter a valid email address.')
+            return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+        subscribed = SubscribeEmail.objects.filter(email=email).first()
+        if subscribed:
+            messages.error(request, f"the email address: {email} is already registered for our newsletter.")
+            return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+        try:
+            validate_email(email)
+        except ValidationError as e:
+            messages.error(reques, e.messages[0])
+            return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+        subscribe_emails_model = SubscribeEmail()
+        subscribe_emails_model.email = email
+        subscribe_emails_model.save()
+        messages.success(request, f"{email} has been signed up to receive our newsletter")
+        return HttpResponseRedirect(request.META['HTTP_REFERER'])

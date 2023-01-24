@@ -1,7 +1,10 @@
 from django.contrib import admin
-from .models import UserProfile, Contact, SiteReview
+from .models import UserProfile, Contact, SiteReview, SubscribeEmail
 
-# Register your models here.
+class SubscribeEmailAdmin(admin.ModelAdmin):
+    list_display = ('email', 'created')
+
 admin.site.register(UserProfile)
 admin.site.register(Contact)
 admin.site.register(SiteReview)
+admin.site.register(SubscribeEmail, SubscribeEmailAdmin)
