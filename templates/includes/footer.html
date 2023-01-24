@@ -1,10 +1,30 @@
 <footer class="d-flex text-light pt-3 pb-3">
-    <div class="col-12 col-lg-4"></div>
-    <div class="col-12 col-lg-4 d-flex flex-column align-items-center">
-        <div class="row w-100 h-50">
+    <div class="col-4 col-lg-4 pr-5 d-flex justify-content-center">
+        <div class="m-auto text-left">
+            <h6>Site Links</h6>
+            <a href="{% url 'home' %}">Home</a><br>
+            {% if user.is_authenticated %}
+                <a href="{% url 'profile' %}">Profile</a><br>
+                <a href="{% url 'wishlist' %}">Wishlist</a><br>
+            {% else %}
+                <a href="{% url 'account_login' %}">Login</a><br>
+                <a href="{% url 'account_signup' %}">Sign-up</a><br>
+            {% endif %}
+            <a href="{% url 'basket' %}">Basket</a><br>
+        </div>
+        <div class="m-auto text-left">
+            <a href="{% url 'books' %}">Books</a><br>
+            <a href="{% url 'posters' %}">Posters</a><br>
+            <a href="{% url 'contact' %}">Get In Touch</a><br>
+            <a href="{% url 'site_review' %}">Review Us</a><br>
+            <a href="{% url 'about' %}">About Us</a>
+        </div>
+    </div>
+    <div class="col-4 col-lg-4 d-flex flex-column justify-content-center">
+        <div class="row">
             {% include 'includes/subscribe-form.html' %}
         </div>
-        <div class="row w-100 h-50 text-center">
+        <div class="row text-center">
             <div class="m-auto">
                 <i class="fa-brands fa-facebook p-2"></i>
                 <i class="fa-brands fa-twitter p-2"></i>
@@ -16,7 +36,7 @@
             </div>
         </div>
     </div>
-    <div class="col-12 col-lg-4 d-flex flex-column pr-5">
+    <div class="col-4 col-lg-4 pr-5 d-flex justify-content-center">
         <div class="m-auto text-left">
             <h6>Partner Sites</h6>
             <a href="https://radheyam.github.io/p1-chess-space/index.html" target="_blank" rel="A related site">ChessSpace</a><br>
