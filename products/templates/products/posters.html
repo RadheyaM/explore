@@ -22,11 +22,11 @@
             </div>
             <div>
                {% for genre in genres %}
-                  <h6><small>{{ posters|length }}&nbsp;posters available in genre&nbsp|&nbsp;</small><strong class="badge badge-info">{{ genre }}</strong></h6>
+                  <h6><small class="badge badge-light">{{ posters|length }}&nbsp;posters available in genre:</small>&nbsp;<strong class="badge badge-info">{{ genre }}</strong></h6>
                {% endfor %}
             </div>
             <div>
-               <small>Genres available</small>
+               <small class="badge badge-light">Genres available:</small>
                {% for genre in all_genres %}
                   <a href="{% url 'posters' %}?genre={{genre}}" class="btn btn-outline-primary m-2"><strong>{{ genre }}</strong></a>
                {% endfor %}
@@ -36,10 +36,10 @@
         <div class="row product-row">
                 {% for poster in posters %}
                 <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
-                    <div class="card book-card border-0 mt-2">
+                    <div class="card product-card border-0 mt-2">
                         {% if poster.image %}
                             <a href="{% url 'poster_detail' poster.id %}">
-                                <img src="{{ poster.image.url }}" class="card-img-top book-card-image" alt="{{ poster.name }}">
+                                <img src="{{ poster.image.url }}" class="card-img-top poster-card-image" alt="{{ poster.name }}">
                             </a>
                         {% else %}
                             <a href="{% url 'poster_detail' poster.id %}">

@@ -15,12 +15,17 @@ products & product detail pages
     margin-top: 50px;
 }
 
-.book-card {
+.product-card {
     background: black;
 }
 
 .book-card-image {
-    height:450px;
+    height:300px;
+    width: 200px;
+}
+
+.poster-card-image {
+    height:300px;
     width: 300px;
 }
 
