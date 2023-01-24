@@ -4,7 +4,7 @@
         "model": "products.posters",
         "fields": {
             "name": "United Kingdom Royal Coat of Arms",
-            "product_code": "Q8SG-RYFY-GST9-YFZQ",
+            "code": "Q8SG-RYFY-GST9-YFZQ",
             "category": 2,
             "genre": 6,
             "description": "The royal coat of arms of the United Kingdom, or the royal arms for short, is the arms of dominion of the British monarch,[1][2] currently King Charles III. These arms are used by the King in his official capacity as monarch of the United Kingdom. Variants of the royal arms are used by other members of the British royal family, by the Government of the United Kingdom in connection with the administration and government of the country, and some courts and legislatures in a number of Commonwealth realms. A Scottish version of the royal arms is used in and for Scotland. The arms in banner form serve as basis for the monarch's official flag, the Royal Standard.",
@@ -18,7 +18,7 @@
         "model": "products.posters",
         "fields": {
             "name": "French Coat of Arms",
-            "product_code": "QJEA-66HU-Z9NZ-MWTE",
+            "code": "QJEA-66HU-Z9NZ-MWTE",
             "category": 2,
             "genre": 6,
             "description": "The current Constitution of France does not specify a national emblem.[4] The unofficial coat of arms of France depicts a lictor's fasces upon branches of laurel and oak, as well as a ribbon bearing the national motto of Liberté, égalité, fraternité. This composition was created in 1905 by heraldic painter-engraver Maurice de Meyère and was first used by the French Third Republic.",
@@ -32,7 +32,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Russian Coat of Arms",
-            "product_code": "J9BP-G85T-XHFW-SSDF",
+            "code": "J9BP-G85T-XHFW-SSDF",
             "category": 2,
             "genre": 6,
             "description": "The coat of arms of Russia derives from the earlier coat of arms of the Russian Empire which was abolished with the Russian Revolution in 1917. Though modified more than once since the reign of Ivan III (1462–1505), the current coat of arms is directly derived from its medieval original, with the double-headed eagle having Byzantine and earlier antecedents. The general tincture corresponds to the early fifteenth-century standard.",
@@ -46,7 +46,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Great Seal of the United States",
-            "product_code": "6V99-QJ5N-MBLU-3X3L",
+            "code": "6V99-QJ5N-MBLU-3X3L",
             "category": 2,
             "genre": 6,
             "description": "The Great Seal is a principal national symbol of the United States. The phrase is used both for the physical seal itself, which is kept by the United States Secretary of State, and more generally for the design impressed upon it. The obverse of the Great Seal depicts the national coat of arms of the United States[1] while the reverse features an unfinished pyramid topped by an Eye of Providence. The year of the U.S. Declaration of Independence, 1776, is noted in Roman numerals at the base of the pyramid. The seal contains three Latin phrases: E Pluribus Unum ('Out of many, one'), Annuit cœptis ('Providence has favored our undertakings'), and Novus ordo seclorum ('New order of the ages').",
@@ -60,7 +60,7 @@
         "model": "products.posters",
         "fields": {
             "name": "German Coat of Arms",
-            "product_code": "B5CK-W3RN-YGW8-8REQ",
+            "code": "B5CK-W3RN-YGW8-8REQ",
             "category": 2,
             "genre": 6,
             "description": "The coat of arms of Germany displays a black eagle with a red beak, a red tongue and red feet on a golden field, which is blazoned: Or, an eagle displayed sable beaked langued and membered gules. This is the Bundesadler (German for 'Federal Eagle'), formerly known as Reichsadler (German for 'Imperial Eagle'). It is one of the oldest coats of arms in the world, and today the oldest national symbol used in Europe.",
@@ -74,7 +74,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Belgian Coat of Arms",
-            "product_code": "E7E3-D9WH-FEKH-Q3ZD",
+            "code": "E7E3-D9WH-FEKH-Q3ZD",
             "category": 2,
             "genre": 6,
             "description": "The coat of arms of Belgium bears a lion or, known as Leo Belgicus (Latin for the Belgian lion), as its charge. This is in accordance with article 193 (originally 125) of the Belgian Constitution: The Belgian nation takes red, yellow and black as colours, and as state coat of arms the Belgian lion with the motto UNITY MAKES STRENGTH. A royal decree of 17 March 1837 determines the achievement to be used in the greater and the lesser version, respectively",
@@ -88,7 +88,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Dutch Coat of Arms",
-            "product_code": "8K3P-F2L2-PRST-M3SV",
+            "code": "8K3P-F2L2-PRST-M3SV",
             "category": 2,
             "genre": 6,
             "description": "The coat of arms of the Kingdom of the Netherlands was originally adopted in 1815 and later modified in 1907. The arms are a composite of the arms of the former Dutch Republic and the arms of the House of Nassau, it features a checkered shield with a lion grasping a sword in one hand and a bundle of arrows in the other and is the heraldic symbol of the monarch (King Willem-Alexander) and the country. The monarch uses a version of the arms with a mantle (Dutch: Koninklijk wapen) while the government of the Netherlands uses a smaller version without the mantle (cloak) or the pavilion, sometimes only the shield and crown are used (Dutch: Rijkswapen). The components of the coats of arms were regulated by Queen Wilhelmina in a royal decree of 10 July 1907, affirmed by Queen Juliana in a royal decree of 23 April 1980",
@@ -102,7 +102,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Austrian Coat of Arms",
-            "product_code": "8G4U-5YEB-UECF-YZ5X",
+            "code": "8G4U-5YEB-UECF-YZ5X",
             "category": 2,
             "genre": 6,
             "description": "The current coat of arms of the Republic of Austria has been in use in its first forms by the First Republic of Austria since 1919. Between 1934 and the German annexation in 1938, the Federal State (Bundesstaat Österreich) used a different coat of arms, which consisted of a double-headed eagle.",
@@ -116,7 +116,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Polish Coat of Arms",
-            "product_code": "3Q52-GZFG-6LJ5-4HJ2",
+            "code": "3Q52-GZFG-6LJ5-4HJ2",
             "category": 2,
             "genre": 6,
             "description": "In Poland, the coat of arms as a whole is referred to as godło both in official documents and colloquial speech,[1] despite the fact that other coats of arms are usually called a herb (e.g. the Nałęcz herb or the coat of arms of Finland). This stems from the fact that in Polish heraldry, the word godło (plural: godła) means only a heraldic charge (in this particular case a white crowned eagle) and not an entire coat of arms, but it is also an archaic word for a national symbol of any sort.[2] In later legislation only the herb retained this designation; it is unknown why.",
@@ -130,7 +130,7 @@
         "model": "products.posters",
         "fields": {
             "name": "King of Spain Coat of Arms",
-            "product_code": "GY5H-EZGE-3NFK-NJA4",
+            "code": "GY5H-EZGE-3NFK-NJA4",
             "category": 2,
             "genre": 6,
             "description": "The tradition and art of heraldry first appeared in Spain at about the beginning of the eleventh century AD and its origin was similar to other European countries: the need for knights and nobles to distinguish themselves from one another on the battlefield, in jousts and in tournaments. Knights wore armor from head to toe and were often in leadership positions, so it was essential to be able to identify them on the battlefield.",
@@ -144,7 +144,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Map of Ireland 1450",
-            "product_code": "G2ZW-UYWJ-J5LF-G6Y3",
+            "code": "G2ZW-UYWJ-J5LF-G6Y3",
             "category": 2,
             "genre": 7,
             "description": "In 1172, Pope Alexander III further encouraged Henry to advance the integration of the Irish Church with Rome. Henry was authorised to impose a tithe of one penny per hearth as an annual contribution. This church levy called Peter's Pence, is extant in Ireland as a voluntary donation. In turn, Henry assumed the title of Lord of Ireland which Henry conferred on his younger son, John Lackland, in 1185. This defined the Anglo-Norman administration in Ireland as the Lordship of Ireland.[citation needed] When Henry's successor died unexpectedly in 1199, John inherited the crown of England and retained the Lordship of Ireland. Over the century that followed, Norman feudal law gradually replaced the Gaelic Brehon Law across large areas, so that by the late 13th century the Norman-Irish had established a feudal system throughout much of Ireland. Norman settlements were characterised by the establishment of baronies, manors, towns and the seeds of the modern county system. A version of the Magna Carta (the Great Charter of Ireland), substituting Dublin for London and the Irish Church for, the English church at the time, the Catholic Church, was published in 1216 and the Parliament of Ireland was founded in 1297.",
@@ -158,7 +158,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Population England & Wales",
-            "product_code": "H2AY-36WD-CS34-R69R",
+            "code": "H2AY-36WD-CS34-R69R",
             "category": 2,
             "genre": 7,
             "description": "Population of England and Wales by administrative areas. Their size shows their population, with some approximation. Each group of squares in the map key is 20 % of total number of districts.",
@@ -172,7 +172,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Minimalist Map of France",
-            "product_code": "G2HB-BXNR-ZD76-RLQ3",
+            "code": "G2HB-BXNR-ZD76-RLQ3",
             "category": 2,
             "genre": 7,
             "description": "Since 2016, France is mainly divided into 18 administrative regions: 13 regions in metropolitan France (including the territorial collectivity of Corsica),[112] and five located overseas.[84] The regions are further subdivided into 101 departments,[113] which are numbered mainly alphabetically. This number is used in postal codes and was formerly used on French vehicle number plates. Among the 101 departments of France, five (French Guiana, Guadeloupe, Martinique, Mayotte, and Réunion) are in overseas regions (ROMs) that are also simultaneously overseas departments (DOMs), enjoy the same status as metropolitan departments and are an integral part of the European Union.",
@@ -186,7 +186,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Physical Map of Germany",
-            "product_code": "X73U-6LGT-9U35-EATG",
+            "code": "X73U-6LGT-9U35-EATG",
             "category": 2,
             "genre": 7,
             "description": "Topographic map of Germany (Borders of the States of Germany approximately as of 1990)",
@@ -200,7 +200,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Provences of German Austria",
-            "product_code": "QE87-6TCP-C3QD-MU9W",
+            "code": "QE87-6TCP-C3QD-MU9W",
             "category": 2,
             "genre": 7,
             "description": "German-speaking provinces claimed by German-Austria in 1918: The border of the subsequent Second Republic of Austria is outlined in red.",
@@ -214,7 +214,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Topographic Map of Russia",
-            "product_code": "9EFR-4HSN-4L2D-EVSY",
+            "code": "9EFR-4HSN-4L2D-EVSY",
             "category": 2,
             "genre": 7,
             "description": "Russia's vast landmass stretches over the easternmost part of Europe and the northernmost part of Asia.[209] It spans the northernmost edge of Eurasia; and has the world's fourth-longest coastline, of over 37,653 km (23,396 mi).[f][211] Russia lies between latitudes 41° and 82° N, and longitudes 19° E and 169° W, extending some 9,000 km (5,600 mi) east to west, and 2,500 to 4,000 km (1,600 to 2,500 mi) north to south. Russia, by landmass, is larger than three continents,[g] and has the same surface area as Pluto.",
@@ -228,7 +228,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Topographic Map of Brazil",
-            "product_code": "4NQV-49TG-HEEY-R52S",
+            "code": "4NQV-49TG-HEEY-R52S",
             "category": 2,
             "genre": 7,
             "description": "Brazil occupies a large area along the eastern coast of South America and includes much of the continent's interior, sharing land borders with Uruguay to the south; Argentina and Paraguay to the southwest; Bolivia and Peru to the west; Colombia to the northwest; and Venezuela, Guyana, Suriname and France (French overseas region of French Guiana) to the north. It shares a border with every South American country except Ecuador and Chile.",
@@ -242,7 +242,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Topographic Map of Australia",
-            "product_code": "2AWF-YP87-LHAD-A2KZ",
+            "code": "2AWF-YP87-LHAD-A2KZ",
             "category": 2,
             "genre": 7,
             "description": "Surrounded by the Indian and Pacific oceans, Australia is separated from Asia by the Arafura and Timor seas, with the Coral Sea lying off the Queensland coast, and the Tasman Sea lying between Australia and New Zealand. The world's smallest continent and sixth largest country by total area, Australia—owing to its size and isolation—is often dubbed the 'island continent' and is sometimes considered the world's largest island.[139] Australia has 34,218 km (21,262 mi) of coastline (excluding all offshore islands),[140] and claims an extensive Exclusive Economic Zone of 8,148,250 square kilometres (3,146,060 sq mi). This exclusive economic zone does not include the Australian Antarctic Territory.",
@@ -256,7 +256,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Regions of New Zealand",
-            "product_code": "J52R-LV4Y-PT75-GXEZ",
+            "code": "J52R-LV4Y-PT75-GXEZ",
             "category": 2,
             "genre": 7,
             "description": "The early European settlers divided New Zealand into provinces, which had a degree of autonomy. Because of financial pressures and the desire to consolidate railways, education, land sales, and other policies, government was centralised and the provinces were abolished in 1876. The provinces are remembered in regional public holidays and sporting rivalries.",
@@ -270,7 +270,7 @@
         "model": "products.posters",
         "fields": {
             "name": "Climate Map of South Africa",
-            "product_code": "XUK7-V35G-QZEQ-UKVZ",
+            "code": "XUK7-V35G-QZEQ-UKVZ",
             "category": 2,
             "genre": 7,
             "description": "South Africa has a generally temperate climate because it is surrounded by the Atlantic and Indian Oceans on three sides, because it is located in the climatically milder Southern Hemisphere, and because its average elevation rises steadily toward the north (toward the equator) and further inland. This varied topography and oceanic influence result in a great variety of climatic zones. The climatic zones range from the extreme desert of the southern Namib in the farthest northwest to the lush subtropical climate in the east along the border with Mozambique and the Indian Ocean. Winters in South Africa occur between June and August.",
