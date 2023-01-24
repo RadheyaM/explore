@@ -43,7 +43,7 @@
                             </a>
                         {% else %}
                             <a href="{% url 'poster_detail' poster.id %}">
-                                <img src="{{ MEDIA_URL }}/poster-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ poster.name }}">
+                                <img src="{{ MEDIA_URL }}poster-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ poster.name }}">
                             </a>
                         {% endif %}
                         <div class="card-body">
