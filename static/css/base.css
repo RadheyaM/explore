@@ -232,6 +232,10 @@ footer {
     background-color: #fff;
     border: 1px solid #ddd;
   }
+
+  #subscribe-modal {
+    color: black;
+  }
 /*===================================
 basket
 ===================================*/
