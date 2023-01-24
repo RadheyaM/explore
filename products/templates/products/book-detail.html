@@ -8,9 +8,15 @@
 {% block content %}
     <section class="container book-detail-section">
         <div class="row product-row d-flex">
-            <div class="col-lg-5">
-                <img src="{{ book.image.url }}" class="book-image">
-            </div>
+            {% if book.image %}
+                <a href="{% url 'book_detail' book.id %}">
+                    <img src="{{ book.image.url }}" class="card-img-top book-card-image" alt="{{ book.title }}">
+                </a>
+            {% else %}
+                <a href="{% url 'book_detail' book.id %}">
+                    <img src="/media/book-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ book.title }}">
+                </a>
+            {% endif %}
             <div class="col-lg-7 product-details">
                 {% if user.is_authenticated %}
                     {% if user.is_superuser %}
