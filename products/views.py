@@ -1,12 +1,17 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Books, Genre, Posters
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.http import HttpResponseRedirect
+from django.contrib import messages
+from django.db.models import Q
 
+
+from .models import Books, Genre, Posters
 
 def books(request):
     """
     A view to show all book products available for sale.
     """
     books = Books.objects.all()
+    search = None
     genres = None
     all_genres = Genre.objects.filter(pk__lte=5)
 
@@ -16,11 +21,35 @@ def books(request):
             books = books.filter(genre__name__in=genres)
             genres = Genre.objects.filter(name__in=genres)
 
+        if 'search' in request.GET:
+            search = request.GET['search']
+            if not search:
+                messages.error(request, 'You need to enter a search term in the search bar to search books.')
+                return redirect(reverse('books'))
+            
+            # might be overkill but would like to avoid the user getting no results.
+            search_terms = Q(
+                title__icontains=search
+                ) | Q(
+                    author__icontains=search
+                    ) | Q(
+                        genre__name__icontains=search
+                        ) | Q(
+                            subtitle__icontains=search
+                            ) | Q(description__icontains=search)
+
+            books = books.filter(search_terms)
+            
+            if books.count() == 0:
+                messages.info(request, f'No books found with search term "{search}"')
+                return redirect(reverse('books'))
+
     template = 'products/books.html'
     context = {
         'books': books,
         'genres': genres,
         'all_genres': all_genres,
+        'search': search
     }
 
     return render(request, template, context)
@@ -30,6 +59,7 @@ def posters(request):
     A view to show all poster products available for sale.
     """
     posters = Posters.objects.all()
+    search = None
     genres = None
     all_genres = Genre.objects.filter(pk__gte=6)
 
@@ -39,11 +69,31 @@ def posters(request):
             posters = posters.filter(genre__name__in=genres)
             genres = Genre.objects.filter(name__in=genres)
 
+        if 'search' in request.GET:
+            search = request.GET['search']
+            if not search:
+                messages.error(request, 'You need to enter a search term in the search bar to search posters.')
+                return redirect(reverse('posters'))
+            
+            search_terms = Q(
+                name__icontains=search
+                ) | Q(
+                    genre__name__icontains=search
+                    ) | Q(description__icontains=search)
+
+            posters = posters.filter(search_terms)
+
+            if posters.count() == 0:
+                messages.info(request, f'No posters found with search term "{search}"')
+                return redirect(reverse('posters'))
+
+
     template = 'products/posters.html'
     context = {
         'posters': posters,
         'genres': genres,
         'all_genres': all_genres,
+        'search': search,
     }
 
     return render(request, template, context)

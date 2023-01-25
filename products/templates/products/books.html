@@ -25,6 +25,23 @@
                   <h6><small class="badge badge-light">{{ books|length }}&nbsp;books available in genre:</small>&nbsp;<strong class="badge badge-info">{{ genre }}</strong></h6>
                {% endfor %}
             </div>
+            <div class="pb-3">
+                <form method="GET" action="{% url 'books' %}">
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="search" placeholder="Search Books">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-action" type="submit"><i class="fas fa-search"></i>&nbsp;Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            {% if search %}
+                <div class="text-center pb-3">
+                    <p><small class="badge badge-info">Search Term:</small>&nbsp;"{{ search }}"</p>
+                    <a href="{% url 'books' %}" class="btn btn-sm btn-outline-light">Clear Search Results</a>
+                </div>
+            {% else %}
+            {% endif %}
             <div>
                <small class="badge badge-light">All Genres:</small>
                {% for genre in all_genres %}
@@ -67,3 +84,4 @@
         </div>
     </div>
 {% endblock %}
+
