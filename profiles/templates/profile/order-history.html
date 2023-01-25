@@ -26,7 +26,7 @@
                         <td><span class="badge badge-info mb-3">{{ order.order_number }}</span></td>
                         <td><span class="badge badge-info mb-3">{{ order.date }}</span></td>
                         <td><span class="badge badge-info mb-3">£{{ order.grand_total }}</span></td>
-                        <td><a href="{% url 'order_history_detail' order.order_number %}" class="btn btn-sm btn-outline-primary">Detail</a></td>
+                        <td><a href="{% url 'order_history_detail' order.order_number %}" class="btn btn btn-action">Detail</a></td>
                     </tr>
                     {% empty %}
                         <div class="m-auto alert-info">There are currently no orders in your order history.</div>

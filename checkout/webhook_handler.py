@@ -84,7 +84,7 @@ class StripeWH_Handler:
                     street_address1=shipping_details.address.line1,
                     street_address2=shipping_details.address.line2,
                     county=shipping_details.address.state,
-                    original_bag=bag,
+                    original_basket=basket,
                     stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(basket).items():

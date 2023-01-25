@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
 {% endblock %}
 
+{% block extra_title%} {{ poster.name }}{% endblock %}
+
 {% block content %}
     <div class="container">
         <div class="row product-info-row d-flex flex-column m-5">
@@ -19,11 +21,6 @@
                         Posters
                     </a>
                 </div>
-            </div>
-            <div>
-               {% for genre in genres %}
-                  <h6><small class="badge badge-light">{{ posters|length }}&nbsp;posters available in genre:</small>&nbsp;<strong class="badge badge-info">{{ genre }}</strong></h6>
-               {% endfor %}
             </div>
             <div class="pb-3">
                 <form method="GET" action="{% url 'posters' %}">
@@ -42,6 +39,11 @@
                 </div>
             {% else %}
             {% endif %}
+            <div>
+                {% for genre in genres %}
+                   <h6><small class="badge badge-light">{{ posters|length }}&nbsp;posters available in genre:</small>&nbsp;<strong class="badge badge-info">{{ genre }}</strong></h6>
+                {% endfor %}
+             </div>
             <div>
                <small class="badge badge-light">Genres available:</small>
                {% for genre in all_genres %}
