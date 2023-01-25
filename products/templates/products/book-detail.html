@@ -26,14 +26,30 @@
                         <a href="{% url 'manage_products' %}" class="btn btn-sm btn-outline-danger">Admin: Delete</a>
                     {% endif %}
                 {% endif %}
-                <h2 class="mb-3">{{ book.title }}</h2>
+                <h2 class="mb-3">
+                    {% if user.is_authenticated %}
+                        {% if wishlist %}
+                            <i class="fa-solid fa-heart-circle-check"></i>
+                        {% endif %}
+                    {% endif %}
+                    {{ book.title }}
+                </h2>
                 <h4 class="mb-3">{{ book.author }}</h4>
                 <h4 class="badge badge-info mb-3">{{ book.genre.name }}</h4>
                 <h6 class="mb-3"> {{ book.subtitle }} </h6>
                 <p> {{ book.description }}</p>
                 <p><strong class="badge badge-light">{{ book.rating }}&nbsp;<i class="fa-solid fa-star"></i></strong></p>
                 <p><strong>£{{ book.price }}</strong></p>
-                <a href="{% url 'edit_book_wishlist' book.id %}" class="btn btn-outline-info">Add To Wishlist</a>
+                {% if user.is_authenticated %}
+                    {% if wishlist %}
+                        <a href="{% url 'edit_book_wishlist' book.id %}" class="btn btn-sm btn-outline-warning">Remove From Wishlist</a>
+                    {% else %}
+                        <a href="{% url 'edit_book_wishlist' book.id %}" class="btn btn-sm btn-info">Add To Wishlist</a>
+                    {% endif %}
+                {% else %}
+                    <a href="{% url 'account_login' %}" class="btn btn-sm btn-info">Wishlist</a><br>
+                    <small class="badge badge-info">login to use the wishlist!</small>
+                {% endif %}
                 {% include 'products/includes/add-book-to-basket.html' %}
             </div>
         </div>

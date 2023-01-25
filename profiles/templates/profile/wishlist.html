@@ -11,13 +11,16 @@
     {% for poster in posters %}
         <div class="row">         
             <div class="col-lg-4 m-auto p-3 d-flex justify-content-center justify-content-lg-end">
-                <img class="poster-thumbnail mb-4" src="{{ poster.image.url }}">
+                <a href="{% url 'poster_detail' poster.id %}">
+                    <img class="poster-thumbnail mb-4" src="{{ poster.image.url }}">
+                </a>
             </div>
             <div class="col-lg-8 m-auto p-3 text-center">
                 <h4> {{ poster.name }}</h4>
                 <h6>{{ poster.material_size }}</h6>
-                <p class="badge badge-info">{{ poster.genre.name }}</p>
-                <a href="{% url 'edit_poster_wishlist' poster.id %}" class="btn btn-outline-danger">Remove</a>
+                <p class="badge badge-info">{{ poster.genre.name }}</p><br>
+                <a href="{% url 'edit_poster_wishlist' poster.id %}" class="btn btn-sm btn-outline-danger">Remove</a>
+                <a href="{% url 'poster_detail' poster.id %}" class="btn btn-sm btn-outline-success">View</a>
             </div>
         </div>
     {% empty %}
@@ -34,13 +37,16 @@
     {%for book in books%}
         <div class="row">
             <div class="col-lg-4 m-auto p-3 d-flex justify-content-center justify-content-lg-end">
-                <img class="mb-4" src="{{ book.thumbnail.url }}">
+                <a href="{% url 'book_detail' book.id %}">
+                    <img class="mb-4" src="{{ book.thumbnail.url }}">
+                </a>
             </div>
             <div class="col-lg-8 m-auto p-3 text-center">
                 <h4> {{ book.title }}</h4>
                 <p><strong> {{ book.author }}</strong></p>
-                <p class="badge badge-info">{{ book.genre.name }}</p>
-                <a href="{% url 'edit_book_wishlist' book.id %}" class="btn btn-outline-danger">Remove</a>
+                <p class="badge badge-info">{{ book.genre.name }}</p><br>
+                <a href="{% url 'edit_book_wishlist' book.id %}" class="btn btn-sm btn-outline-danger">Remove</a>
+                <a href="{% url 'book_detail' book.id %}" class="btn btn-sm btn-outline-success">View</a>
             </div>
         </div>
     {% endfor %}

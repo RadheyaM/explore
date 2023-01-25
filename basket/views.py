@@ -16,8 +16,14 @@ def add_to_basket(request, item_id):
     """
     try:
         product = Books.objects.get(code=item_id)
+        if request.user.is_authenticated:
+            if product.user_book_wishlist.filter(id=request.user.id):
+                product.user_book_wishlist.remove(request.user)
     except:
         product = Posters.objects.get(code=item_id)
+        if request.user.is_authenticated:
+            if product.user_poster_wishlist.filter(id=request.user.id):
+                product.user_poster_wishlist.remove(request.user)
 
     quantity =  int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')

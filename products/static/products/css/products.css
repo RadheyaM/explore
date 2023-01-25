@@ -52,6 +52,10 @@ products & product detail pages
     margin-right: 50px;
 }
 
+.fa-heart-circle-check {
+    color: red;
+}
+
 .poster-image {
     height: 450px;
     width: 400px;

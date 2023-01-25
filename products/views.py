@@ -113,11 +113,18 @@ def book_detail(request, book_id):
     genre = book.genre
     genres = Books.objects.filter(genre=genre)
     recommend = genres.exclude(pk=book_id)
+    wishlist = False
+
+    if request.user.is_authenticated:
+        if book.user_book_wishlist.filter(id=request.user.id):
+            wishlist = True
+
 
     template = 'products/book-detail.html'
     context = {
         'book': book,
         'recommend': recommend,
+        'wishlist': wishlist
     }
 
     return render(request, template, context)
@@ -131,11 +138,18 @@ def poster_detail(request, poster_id):
     genre = poster.genre
     genres = Posters.objects.filter(genre=genre)
     recommend = genres.exclude(pk=poster_id)
+    wishlist = False
+    
+    if request.user.is_authenticated:
+        if poster.user_poster_wishlist.filter(id=request.user.id):
+            wishlist = True
+
 
     template = 'products/poster-detail.html'
     context = {
         'poster': poster,
         'recommend': recommend,
+        'wishlist': wishlist,
     }
 
     return render(request, template, context)

@@ -97,7 +97,7 @@ def edit_poster_wishlist(request, id):
         product.user_poster_wishlist.add(request.user)
         messages.success(request, f'Added to Wishlist.')
         
-    return redirect(reverse('wishlist'))
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
 
 class ContactUs(CreateView):
