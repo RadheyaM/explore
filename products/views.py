@@ -12,6 +12,7 @@ def books(request):
     """
     books = Books.objects.all()
     search = None
+    result_count = None
     genres = None
     all_genres = Genre.objects.filter(pk__lte=5)
 
@@ -36,11 +37,15 @@ def books(request):
                         genre__name__icontains=search
                         ) | Q(
                             subtitle__icontains=search
-                            ) | Q(description__icontains=search)
+                            ) | Q(
+                                description__icontains=search
+                                )
 
             books = books.filter(search_terms)
+            result_count = books.count()
             
-            if books.count() == 0:
+            if result_count == 0:
+                result_count == None
                 messages.info(request, f'No books found with search term "{search}"')
                 return redirect(reverse('books'))
 
@@ -49,7 +54,8 @@ def books(request):
         'books': books,
         'genres': genres,
         'all_genres': all_genres,
-        'search': search
+        'search': search,
+        'result_count': result_count
     }
 
     return render(request, template, context)

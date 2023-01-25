@@ -16,7 +16,10 @@ products & product detail pages
 }
 
 .product-card {
+    width: 380px;
     background: black;
+    align-items: center;
+    padding-top: 2rem;
 }
 
 .book-card-image {
@@ -30,7 +33,12 @@ products & product detail pages
 }
 
 .card-title {
-    height: 50px;
+    height: fit-content;
+    text-align: center;
+}
+
+.card-body {
+    text-align: center;
 }
 
 .book-detail-section {
