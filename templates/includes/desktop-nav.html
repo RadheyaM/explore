@@ -31,7 +31,7 @@
             </li>
             <li class="nav-item active mobile-nav-item">
                 {% if user.is_authenticated %} 
-                    <a class="nav-link custom-link" href="{% url 'account_reset_password' %}"><i class="fa-solid fa-key"></i>&nbsp;Change Password</a>
+                    <a class="nav-link custom-link" href="{% url 'account_change_password' %}"><i class="fa-solid fa-key"></i>&nbsp;Change Password</a>
                 {% else %}
                     <a class="nav-link custom-link" href="{% url 'account_login' %}"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;Login</a>
                 {% endif %}
