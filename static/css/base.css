@@ -207,6 +207,7 @@ hr {
     color: white;
     border-color: var(--dark-blue);
 }
+
 /*
 =============== Footer ================
 */
@@ -272,9 +273,11 @@ footer {
   #subscribe-modal {
     color: black;
   }
+
 /*===================================
 basket
 ===================================*/
+
 .basket-container {
     flex: 1 0 auto;
     margin: 2rem 0 2rem 0;
@@ -327,9 +330,10 @@ basket
     text-align: right;
 }
 
-/*===================================
-basket sidenav - Code W3Schools
-===================================*/
+/*================================================
+basket sidenav - Original code idea from W3Schools
+Added to by developer significantly.
+=================================================*/
 .sidenav {
     width: 300px;
     position: absolute;
@@ -343,13 +347,23 @@ basket sidenav - Code W3Schools
   }
 
 
+.sidenav-book-thumbnail {
+    height: 100px;
+    width: 70px;
+}
+
+.sidenav-book-thumbnail-container {
+    padding: 0 0 4rem 2rem;
+}
+
+.sidenav-poster-thumbnail {
+    height: 100px;
+    width: 100px;
+}
+
 /*===================================
            Media Queries
 ===================================*/
-
-  /* 
-     =============== Top Nav ===============
-    */
 
 @media screen and (max-width: 991px) {
     .nav-right {
@@ -459,7 +473,9 @@ basket sidenav - Code W3Schools
         padding: 1rem;
     }
 }
-
+/* 
+     =============== Smallest Screen Sizes ===============
+*/
 @media screen and (max-width: 385px) {
     .poster-thumbnail {
         height: 100px;

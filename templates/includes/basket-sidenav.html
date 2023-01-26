@@ -20,7 +20,7 @@
         {% if product.poster %}
         <div class="row m-2">
             <div class="col-6">
-                <img class="thumbnail-image" src="{{ product.poster.image.url }}" alt="{{ product.poster.name }}">
+                <img class="sidenav-poster-thumbnail" src="{{ product.poster.image.url }}" alt="{{ product.poster.name }}">
             </div>
             <div class="col-6">
                 <p><small class="small-text">{{ product.poster.name }}</small></p>
@@ -28,17 +28,19 @@
                 <p><small class="small-text">Qty:&nbsp;{{ product.quantity }}</small></p>
                 <p><small class="small-text">£{{ product.subtotal|floatformat:2 }}</small></p>
             </div>
+            <hr>
         </div>
         {% else %}
             <div class="row m-2">
-                <div class="col-6">
-                    <img class="thumbnail-image" src="{{ product.book.thumbnail.url }}" alt="{{ product.book.title }}">
+                <div class="col-6 sidenav-book-thumbnail-container">
+                    <img class="sidenav-book-thumbnail" src="{{ product.book.thumbnail.url }}" alt="{{ product.book.title }}">
                 </div>
                 <div class="col-6">
                     <p><small class="small-text">{{ product.book.title }}</small></p>
                     <p><small class="small-text">Qty:&nbsp;{{ product.quantity }}</small></p>
                     <p><small class="small-text">£{{ product.subtotal|floatformat:2 }}</small></p>
                 </div>
+                <hr>
             </div>
         {% endif %}
     {% empty %}
