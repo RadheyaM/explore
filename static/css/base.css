@@ -277,20 +277,54 @@ basket
 ===================================*/
 .basket-container {
     flex: 1 0 auto;
+    margin: 2rem 0 2rem 0;
+}
+
+.basket-buttons {
+    width: 100%;
+    margin: auto;
 }
 
 .basket-table {
-    height: 200px;
+    height: fit-content;
     width: 100%;
+    margin-bottom: 2rem;
+}
+
+.basket-image-container {
+    padding: 2rem 0 2rem 0;
 }
 
 .totals-row {
-    height: 300px;
+    height: fit-content;
 }
 
 .poster-thumbnail {
     height: 126px;
     width: 126px;
+}
+
+.basket-name-container {
+    padding-top: 2rem;
+}
+
+.basket-price-container {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.basket-subtotal-container {
+    text-align: right;
+    padding-top: 2rem;
+}
+
+.total-hr {
+    margin: 4px 0 4px 0;
+}
+
+.totals-row {
+    margin-top: 2rem;
+    text-align: right;
 }
 
 /*===================================
@@ -312,6 +346,10 @@ basket sidenav - Code W3Schools
 /*===================================
            Media Queries
 ===================================*/
+
+  /* 
+     =============== Top Nav ===============
+    */
 
 @media screen and (max-width: 991px) {
     .nav-right {
@@ -342,9 +380,31 @@ basket sidenav - Code W3Schools
     .prezzie {
         font-size: 0.75rem;
     }
+
+    /* 
+     =============== Basket ===============
+    */
+
+    .basket-container {
+        text-align: center;
+    }
+
+    .basket-buttons a {
+        font-size: 0.75rem;
+    }
+
+    .totals-row {
+        text-align: center;
+    }
+
+    .basket-subtotal-container {
+        text-align: center;
+    }
+
     /* 
      =============== Footer ===============
     */
+
     footer {
         width: 100%;
         height: fit-content;
