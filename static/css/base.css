@@ -271,3 +271,39 @@ basket sidenav - Code W3Schools
     padding-top: 20px;
     margin-top: 100px;
   }
+
+
+/*===================================
+           Media Queries
+===================================*/
+
+@media screen and (max-width: 991px) {
+    .nav-right {
+        display: none;
+
+    }
+    .mobile-nav {
+        display: flex;
+        height: fit-content;
+        width:100%;
+        background: var(--dark-blue);
+        margin: 0;
+        padding: 0.5rem;
+        text-align: right;
+        align-items: center;
+        padding-right: 10px;
+    }
+    
+    .subscribe-banner {
+        display: none;
+    }
+
+    .free-del-banner {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    .prezzie {
+        font-size: 0.75rem;
+    }
+}

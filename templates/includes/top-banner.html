@@ -1,5 +1,5 @@
 <div class="row top-banner">
-    <div class="col-6 subscribe-banner">
+    <div class="col-12 col-md-6 col-lg-6 subscribe-banner">
         {% if user.is_authenticated %}
             {% include 'includes/subscribe-form.html' %}
         {% else %}
@@ -7,5 +7,5 @@
             GET 10% OFF YOUR FIRST ORDER!
         {% endif %}
     </div>
-    <div class="col-6"><i class="fa-solid fa-gift prezzie"></i>&nbsp;&nbsp;<strong class="highlight">FREE DELIVERY&nbsp;</strong>ON ORDERS OVER <strong class="highlight">£50</strong></div>
+    <div class="col-12 col-lg-6 free-del-banner"><i class="fa-solid fa-gift prezzie"></i>&nbsp;&nbsp;<strong class="highlight">FREE DELIVERY&nbsp;</strong>ON ORDERS OVER <strong class="highlight">£50</strong></div>
 </div>

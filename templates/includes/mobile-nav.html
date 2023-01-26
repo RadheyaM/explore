@@ -1,0 +1,45 @@
+<div class="row mobile-nav">
+    <div class="col-4 pt-1">
+        <a class="custom-link"
+                        {% if user.is_authenticated %} 
+                            href="{% url 'wishlist' %}"
+                        {% else %}
+                            href="{% url 'account_signup' %}"
+                        {% endif %}>
+                <div class="text-center">
+                    <div><i class="fa-solid fa-heart"></i></div>
+                    <p>&nbsp;Wishlist&nbsp;</p>
+                </div>
+            </a>
+    </div>
+    <div class="col-4 pt-1">
+        <a class="custom-link" href="{% url 'profile' %}">
+            <div class="text-center">
+              {% if user.is_authenticated %}
+                <div class="text-center"><i class="fa-regular fa-face-smile-beam"></i></div>
+                <p>&nbsp;Account</p>
+              {% else %}
+                <i class="fa-solid fa-door-open"></i>
+                <p>&nbsp;Login&nbsp;<i class="fa-solid fa-sort-down"></i></p>
+              {% endif %}
+            </div>
+        </a>
+    </div>
+    <div class="col-4">
+        <a class="nav-link custom-link" data-toggle="collapse" href="#basket-sidenav" role="button" aria-expanded="false" aria-controls="basket-sidenav">
+            <div class="text-center">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  {% if product_count != 0 %}
+                      <span class="badge badge-primary">{{ product_count }}</span>
+                  {% endif %}
+                  <p>
+                    {% if grand_total %}
+                      £{{ grand_total|floatformat:2 }}&nbsp;<i class="fa-solid fa-sort-down"></i>
+                    {% else %}
+                      £0.00&nbsp;<i class="fa-solid fa-sort-down"></i>
+                    {% endif %}
+                </p>
+            </div>
+        </a>
+    </div>
+</div>
