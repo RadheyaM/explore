@@ -29,15 +29,14 @@
             {% for product in basket_items %}
                 {% if product.poster %}
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-4">
                         <br>
                         <img class="poster-thumbnail" src="{{ product.poster.image.url }}" alt="{{ product.poster.name  }}">
                         <br>
                     </div>
-                    <div class="col-1"></div>
-                    <div class="col-5">
+                    <div class="col-5 product-title pt-1">
                         <br>
-                        <p>{{ product.book.title }}</p>
+                        <p>{{ product.poster.name }}</p>
                         <p> {{ product.material_size }}</p>
                         <p class="badge badge-info">{{ product.poster.genre.name }}</p>
                         <br>
@@ -51,13 +50,12 @@
                 </div>
                 {% else %}
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-4 book-image-container">
                             <br>
-                            <img src="{{ product.book.thumbnail.url }}" alt="{{ product.book.title  }}">
+                            <img class="book-sm-thumbnail" src="{{ product.book.thumbnail.url }}" alt="{{ product.book.title  }}">
                             <br>
                         </div>
-                        <div class="col-1"></div>
-                        <div class="col-5 p-4">
+                        <div class="col-5 product-title">
                             <br>
                             <p>{{ product.book.title }}</p>
                             <p> {{ product.book.author }}</p>

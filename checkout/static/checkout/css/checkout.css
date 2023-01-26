@@ -2,6 +2,7 @@
 .checkout-container {
     flex: 1 0 auto;
     margin-bottom: 50px;
+    font-size: 0.75rem;
 }
 
 .StripeElement,
@@ -52,21 +53,21 @@ select option[value=""] {
     color: #aab7c4 !important;
 }
 
-#loading-overlay {
-	display: none;
-	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(23, 162, 184, .85);
-    z-index: 9999;
+.product-title {
+   padding-top: 1.5rem;
 }
 
-.loading-spinner {
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 100%;
+/*===================================
+           Media Queries
+===================================*/
+
+@media screen and (max-width: 385px) {
+
+    .checkout-container {
+        font-size: 0.75rem;
+    }
+
+    .product-title {
+        text-align: right;
+    }
 }

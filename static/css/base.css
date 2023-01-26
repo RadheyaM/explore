@@ -458,7 +458,20 @@ basket sidenav - Code W3Schools
         margin: auto;
         padding: 1rem;
     }
+}
 
+@media screen and (max-width: 385px) {
+    .poster-thumbnail {
+        height: 100px;
+        width: 100px;
+    }
 
+    .book-image-container {
+        padding: 0 0 0 2rem;
+    }
 
+    .book-sm-thumbnail {
+        height: 100px;
+        width: 70px;
+    }
 }
