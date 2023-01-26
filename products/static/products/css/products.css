@@ -11,6 +11,11 @@ products & product detail pages
     --hero-txt-bg: rgba(148, 121, 135, 0)
 }
 
+.product-detail-section {
+    height: auto;
+    flex: 1 0 auto;
+}
+
 .product-row {
     margin-top: 50px;
 }
@@ -39,11 +44,6 @@ products & product detail pages
 
 .card-body {
     text-align: center;
-}
-
-.book-detail-section {
-    height: auto;
-    flex: 1 0 auto;
 }
 
 .book-image {
@@ -77,4 +77,51 @@ products & product detail pages
 .explore-box {
     height: 100%;
     width: 33%;
+}
+
+/*===================================
+           Media Queries
+===================================*/
+
+@media screen and (max-width: 991px) {
+
+    .product-detail-section div,
+    .product-detail-section p,
+    .product-detail-section h2,
+    .product-detail-section h4,
+    .product-detail-section h5,
+    .product-detail-section h6 {
+        display: flex;
+    }
+
+    .product-detail-section,
+    .product-detail-section div,
+    .product-detail-section p,
+    .product-detail-section h2,
+    .product-detail-section h4,
+    .product-detail-section h5,
+    .product-detail-section h6 {
+        justify-content: center;
+    }
+
+    .product-row,
+    .product-details {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .book-image {
+        margin: 0;
+    }
+
+    .poster-image {
+        height: 300px;
+        width: 250px;
+        margin: 0;
+    }
+
+    .product-card {
+        width: 250px;
+    }
 }

@@ -8,12 +8,14 @@
 {% block extra_title%}| Posters{% endblock %}
 
 {% block content %}
-    <section class="container book-detail-section">
+    <section class="container product-detail-section">
         <div class="row product-row d-flex">
             {% if poster.image %}
-                <a href="{% url 'poster_detail' poster.id %}">
-                    <img src="{{ poster.image.url }}" class="card-img-top poster-image" alt="{{ poster.name }}">
-                </a>
+                <div class="m-auto">
+                    <a href="{% url 'poster_detail' poster.id %}">
+                        <img src="{{ poster.image.url }}" class="card-img-top poster-image" alt="{{ poster.name }}">
+                    </a>
+                </div>
             {% else %}
                 <a href="{% url 'poster_detail' poster.id %}">
                     <img src="/media/poster-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ poster.name }}">
@@ -22,22 +24,39 @@
             <div class="col-lg-7 product-details">
                 {% if user.is_authenticated %}
                     {% if user.is_superuser %}
-                        <a href="{% url 'update_poster' poster.id %}" class="btn btn-sm btn-outline-success">Admin: Update</a>
-                        <a href="{% url 'manage_products' %}" class="btn btn-sm btn-outline-danger">Admin: Delete</a>
+                        <div class="p-3">
+                            <a href="{% url 'update_poster' poster.id %}" class="btn btn-sm btn-outline-success m-2">Admin: Update</a>
+                            <a href="{% url 'manage_products' %}" class="btn btn-sm btn-outline-danger m-2">Admin: Delete</a>
+                        </div>
                     {% endif %}
                 {% endif %}
-                <h2 class="mb-3">{{ poster.name}}</h2>
-                <h4 class="badge badge-info mb-3">{{ poster.genre.name }}</h4>
+                <h2 class="mb-3">
+                    {% if user.is_authenticated %}
+                        {% if wishlist %}
+                            <i class="fa-solid fa-heart-circle-check"></i>
+                        {% endif %}
+                    {% endif %}
+                    {{ poster.name}}
+                </h2>
+                <div>
+                    <p class="badge badge-info mb-3">{{ poster.genre.name }}</p>
+                </div>
                 <p> {{ poster.description }}</p>
                 {% if user.is_authenticated %}
                     {% if wishlist %}
-                        <a href="{% url 'edit_poster_wishlist' poster.id %}" class="btn btn-sm btn-outline-warning">Remove From Wishlist</a>
+                        <div>
+                            <a href="{% url 'edit_poster_wishlist' poster.id %}" class="btn btn-sm btn-outline-warning">Remove From Wishlist</a>
+                        </div>
                     {% else %}
-                        <a href="{% url 'edit_poster_wishlist' poster.id %}" class="btn btn-sm btn-info">Add To Wishlist</a>
+                        <div>
+                            <a href="{% url 'edit_poster_wishlist' poster.id %}" class="btn btn-sm btn-info">Add To Wishlist</a>
+                        </div>
                     {% endif %}
                 {% else %}
-                    <a href="{% url 'account_login' %}" class="btn btn-sm btn-info">Wishlist</a><br>
-                    <small class="badge badge-info">login to use the wishlist!</small>
+                    <div>
+                        <a href="{% url 'account_login' %}" class="btn btn-sm btn-info">Wishlist</a><br>
+                        <small class="badge badge-info">login to use the wishlist!</small>
+                    </div>
                 {% endif %}
                 {% include 'products/includes/add-poster-to-basket.html' %}
             </div>
