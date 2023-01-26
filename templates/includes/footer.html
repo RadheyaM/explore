@@ -1,47 +1,49 @@
 <footer class="d-flex text-light pt-3 pb-3">
-    <div class="col-4 col-lg-4 pr-5 d-flex justify-content-center">
-        <div class="m-auto text-left">
-            <h6>Site Links</h6>
-            <a href="{% url 'home' %}">Home</a><br>
-            {% if user.is_authenticated %}
-                <a href="{% url 'profile' %}">Profile</a><br>
-                <a href="{% url 'wishlist' %}">Wishlist</a><br>
-            {% else %}
-                <a href="{% url 'account_login' %}">Login</a><br>
-                <a href="{% url 'account_signup' %}">Sign-up</a><br>
-            {% endif %}
-            <a href="{% url 'basket' %}">Basket</a><br>
-        </div>
-        <div class="m-auto text-left">
-            <a href="{% url 'books' %}">Books</a><br>
-            <a href="{% url 'posters' %}">Posters</a><br>
-            <a href="{% url 'contact' %}">Get In Touch</a><br>
-            <a href="{% url 'site_review' %}">Review Us</a><br>
-            <a href="{% url 'about' %}">About Us</a>
-        </div>
-    </div>
-    <div class="col-4 col-lg-4 d-flex flex-column justify-content-center">
-        <div class="row">
-            {% include 'includes/subscribe-form.html' %}
-        </div>
-        <div class="row text-center">
-            <div class="m-auto">
-                <i class="fa-brands fa-facebook p-2"></i>
-                <i class="fa-brands fa-twitter p-2"></i>
-                <i class="fa-brands fa-instagram p-2"></i>
-                <i class="fa-brands fa-snapchat p-2"></i>
-                <i class="fa-brands fa-whatsapp p-2"></i>
-                <i class="fa-brands fa-google-wallet p-2"></i>
-                <i class="fa-brands fa-google-plus-g p-2"></i>
+    <div class="row footer-row">
+        <div class="col-12 col-lg-4 d-flex site-links-col">
+            <div class="site-links-container">
+                <h6>Site Links</h6>
+                <a href="{% url 'home' %}">Home</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'profile' %}">Profile</a>
+                    <a href="{% url 'wishlist' %}">Wishlist</a>
+                {% else %}
+                    <a href="{% url 'account_login' %}">Login</a>
+                    <a href="{% url 'account_signup' %}">Sign-up</a>
+                {% endif %}
+                <a href="{% url 'basket' %}">Basket</a>
+            </div>
+            <div class="site-links-container">
+                <a href="{% url 'books' %}">Books</a>
+                <a href="{% url 'posters' %}">Posters</a>
+                <a href="{% url 'contact' %}">Get In Touch</a>
+                <a href="{% url 'site_review' %}">Review Us</a>
+                <a href="{% url 'about' %}">About Us</a>
             </div>
         </div>
-    </div>
-    <div class="col-4 col-lg-4 pr-5 d-flex justify-content-center">
-        <div class="m-auto text-left">
-            <h6>Partner Sites</h6>
-            <a href="https://radheyam.github.io/p1-chess-space/index.html" target="_blank" rel="A related site">ChessSpace</a><br>
-            <a href="https://radheyam.github.io/BookWyrm/" target="_blank" rel="A related site">BookWyrm</a><br>
-            <a href="https://btlshps.herokuapp.com/" target="_blank" rel="A related site">Btlshps</a>
+        <div class="col-12 col-lg-4 d-flex flex-column justify-content-center subscribe-col">
+            <div class="row subscribe-container">
+                {% include 'includes/subscribe-form.html' %}
+            </div>
+            <div class="row text-center social-media-container">
+                <div class="m-auto">
+                    <i class="fa-brands fa-facebook p-2"></i>
+                    <i class="fa-brands fa-twitter p-2"></i>
+                    <i class="fa-brands fa-instagram p-2"></i>
+                    <i class="fa-brands fa-snapchat p-2"></i>
+                    <i class="fa-brands fa-whatsapp p-2"></i>
+                    <i class="fa-brands fa-google-wallet p-2"></i>
+                    <i class="fa-brands fa-google-plus-g p-2"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 partner-sites-col">
+            <div class="partner-sites-container">
+                <h6>Partner Sites</h6>
+                <a href="https://radheyam.github.io/p1-chess-space/index.html" target="_blank" rel="A related site">ChessSpace</a>
+                <a href="https://radheyam.github.io/BookWyrm/" target="_blank" rel="A related site">BookWyrm</a>
+                <a href="https://btlshps.herokuapp.com/" target="_blank" rel="A related site">Btlshps</a>
+            </div>
         </div>
     </div>
 </footer>

@@ -103,6 +103,10 @@ hr {
     background: var (--dark-blue);
 }
 
+.mobile-nav {
+    display: none;
+}
+
 .hidden {
     display: none;
 }
@@ -203,18 +207,50 @@ hr {
     color: white;
     border-color: var(--dark-blue);
 }
+/*
+=============== Footer ================
+*/
 
 footer {
     width: 100%;
     height: 200px;
     overflow: hidden;
+    justify-content: center;
     background-color: var(--dark-blue);
     flex-shrink: 0;
     font-size: 0.9rem;
     font-weight: 200;
 }
 
-/* from W3 Schools */
+.footer-row {
+    width: 100%;
+}
+
+.site-links-col,
+.partner-sites-col {
+    height: fit-content;
+    justify-content: center;
+    flex-direction: row;
+    padding: 2rem;
+    text-align: center;
+}
+
+.site-links-container {
+    padding: 0 1rem 0 1rem;
+}
+
+.site-links-container a,
+.partner-sites-container a {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.social-media-container {
+    padding: 1rem;
+}
+
+/* from W3 Schools - subscribe form */
 .form-inline {
     display: flex;
     flex-flow: row wrap;
@@ -306,4 +342,63 @@ basket sidenav - Code W3Schools
     .prezzie {
         font-size: 0.75rem;
     }
+    /* 
+     =============== Footer ===============
+    */
+    footer {
+        width: 100%;
+        height: fit-content;
+        overflow: hidden;
+        background-color: var(--dark-blue);
+        flex-shrink: 0;
+        flex-direction: column;
+        font-size: 0.75rem;
+        font-weight: 200;
+    }
+
+    .site-links-col,
+    .partner-sites-col {
+        height: fit-content;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2rem;
+    }
+
+    .site-links-container,
+    .partner-sites-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .site-links-container a,
+    .partner-sites-container a {
+        padding: 0 0.5rem 0 0.5rem;
+    }
+
+    .subscribe-form-container {
+        justify-content: center;
+        padding: 0 0.5rem 0 0.5rem;
+    }
+
+    .form-inline {
+        padding: 0 0.5rem 0 0.5rem;
+        margin: auto;
+    }
+
+    .form-inline label {
+        margin: 0.5rem;
+    }
+
+    .form-inline input {
+        margin: auto;
+        width: 50%;
+    }
+
+    .form-inline .button-container {
+        margin: auto;
+        padding: 1rem;
+    }
+
+
+
 }
