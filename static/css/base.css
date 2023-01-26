@@ -224,8 +224,20 @@ footer {
     font-weight: 200;
 }
 
+footer a{
+    color: white;
+}
+
+footer a:hover {
+    color: var(--yellow);
+}
+
+
 .footer-row {
     width: 100%;
+    margin: auto;
+    padding: 0;
+    max-width: 1500px;
 }
 
 .site-links-col,
@@ -273,6 +285,11 @@ footer {
 
   #subscribe-modal {
     color: black;
+  }
+
+  .subscribe-form-container {
+    display: flex;
+    flex-direction: row;
   }
 
 /*===================================
@@ -470,14 +487,27 @@ Added to by developer significantly.
 
     .form-inline input {
         margin: auto;
-        width: 50%;
-    }
-
-    .form-inline .button-container {
-        margin: auto;
-        padding: 1rem;
+        width: 100%;
     }
 }
+
+@media screen and (max-width: 574px) {
+    .subscribe-form-container {
+        flex-direction: column;
+    }
+
+    .site-links-col {
+        padding: 0 0 1rem 0;
+        margin: auto;
+        text-align: center;
+    }
+
+    .partner-sites-col {
+        padding: 0;
+    }
+
+}
+
 /* 
      =============== Smallest Screen Sizes ===============
 */
