@@ -103,7 +103,8 @@ hr {
     background: var (--dark-blue);
 }
 
-.mobile-nav {
+.mobile-nav,
+.mobile-nav-item {
     display: none;
 }
 
@@ -368,8 +369,8 @@ Added to by developer significantly.
 @media screen and (max-width: 991px) {
     .nav-right {
         display: none;
-
     }
+    
     .mobile-nav {
         display: flex;
         height: fit-content;
@@ -380,6 +381,10 @@ Added to by developer significantly.
         text-align: right;
         align-items: center;
         padding-right: 10px;
+    }
+
+    .mobile-nav-item {
+        display: block;
     }
     
     .subscribe-banner {
