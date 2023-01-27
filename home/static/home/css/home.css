@@ -232,10 +232,11 @@
 .about-container {
     flex: 1 0 auto;
     padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .about-us-image {
-    background: url('/media/about-us.jpg') no-repeat center center fixed;
+    background: url('/media/about-us.jpg') repeat center center fixed;
     background-color: black;
     background-size: cover;
     position: scroll;
@@ -425,6 +426,10 @@
 
     .left-col-bottom-row {
         padding-top: 10rem;
+    }
+
+    .about-us-image {
+        height: 200px;
     }
 
 }
