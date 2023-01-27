@@ -231,13 +231,14 @@
 ==========================*/
 .about-container {
     flex: 1 0 auto;
+    padding-top: 3rem;
 }
 
 .about-us-image {
     background: url('/media/about-us.jpg') no-repeat center center fixed;
     background-color: black;
     background-size: cover;
-    position: relative;
+    position: scroll;
     width: 80%;
     height: 400px;
     padding: 0;
@@ -245,7 +246,7 @@
 }
 
 .ceo-quote {
-    padding: 2rem 2rem 2rem 0
+    padding: 3rem 2rem 2rem 0
 }
 
 .famous-people {
