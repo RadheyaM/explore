@@ -52,11 +52,11 @@
                 <p><strong>£{{ book.price }}</strong></p>
                 {% if user.is_authenticated %}
                     {% if wishlist %}
-                        <div>
+                        <div class="p-2">
                             <a href="{% url 'edit_book_wishlist' book.id %}" class="btn btn-sm btn-outline-warning">Remove From Wishlist</a>
                         </div>
                     {% else %}
-                        <div>
+                        <div class="p-2">
                             <a href="{% url 'edit_book_wishlist' book.id %}" class="btn btn-sm btn-info">Add To Wishlist</a>
                         </div>
                     {% endif %}
