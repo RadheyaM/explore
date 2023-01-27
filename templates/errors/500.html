@@ -6,11 +6,20 @@
 {% endblock %}
 
 {% block extra_title %}
-    | Contact Us
+    | 500 Server Error
 {% endblock %}
 
 {% block content %}
     <section class="allauth-container">
-        500!
+        <div class="allauth-form-row">
+            <div class="allauth-form-col">
+                <div class="m-auto">
+                    <h1>There was an error trying to execute your request</h1>
+                    <p>Please return home with the button below and try again</p>
+                    <p>If the issue persists let us know using our contact form.</p>
+                    <a href="{% url 'home' %}" class="btn btn-outline-light">Home</a>
+                </div>
+            </div>
+        </div>
     </section>
 {% endblock %}

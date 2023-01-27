@@ -6,11 +6,20 @@
 {% endblock %}
 
 {% block extra_title %}
-    | Contact Us
+    | 404 Page Not Found
 {% endblock %}
 
 {% block content %}
     <section class="allauth-container">
-        404!
+        <div class="allauth-form-row">
+            <div class="allauth-form-col">
+                <div class="m-auto">
+                    <h1>Page Not Found</h1>
+                    <p>The page you searched for is not recognised, please use the button below to return home and try again</p>
+                    <p>Any further issues let us know using our contact form</p>
+                    <a href="{% url 'home' %}" class="btn btn-outline-light">Home</a>
+                </div>
+            </div>
+        </div>
     </section>
 {% endblock %}
