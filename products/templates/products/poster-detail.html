@@ -80,7 +80,7 @@
                             <h5 class="card-title">{{ poster.name }}</h5>
                             <p class="badge badge-info"> {{ poster.genre.name }} </p>
                             <p><strong>£{{ poster.price }}</strong></p>
-                            <a href="{% url 'poster_detail' poster.id %}" class="btn btn-primary">View</a>
+                            <a href="{% url 'poster_detail' poster.id %}" class="btn btn-outline-primary">View</a>
                             {% if user.is_authenticated %}
                                 {% if user.is_superuser %}
                                     <a href="{% url 'update_poster' poster.id %}" class="btn btn-sm btn-outline-success">Admin: Update</a>

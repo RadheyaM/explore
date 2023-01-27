@@ -36,14 +36,14 @@ def order_history(request):
     template = 'profile/order-history.html'
     profile = get_object_or_404(UserProfile, user=request.user)
     orders = profile.orders.all()
-    no_small_screen_alert = True
+    small_screen_alert = True
 
     if orders.count() == 0:
-        no_small_screen_alert = False
+        small_screen_alert = False
 
     context = {
         'orders': orders,
-        'alert': no_small_screen_alert,
+        'alert': small_screen_alert,
     }
 
     return render(request, template, context)

@@ -1,3 +1,13 @@
+:root {
+    --light-blue: #8ECAE6;
+    --blue: #219EBC;
+    --dark-blue: #023047;
+    --yellow: #FFB703;
+    --orange: #FB8500;
+    --red: #d62828;
+    --hero-txt-bg: rgba(148, 121, 135, 0)
+}
+
 .crud-container {
     flex: 1 0 auto;
     color: black;
@@ -6,4 +16,8 @@
 .crud-container-sm {
     height: 100vh;
     flex: 1 0 auto;
+}
+
+th {
+    color: var(--yellow);
 }
