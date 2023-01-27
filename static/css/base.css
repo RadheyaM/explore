@@ -517,6 +517,17 @@ Added to by developer significantly.
         right: 0;
     }
 
+    .small-screen-table-alert {
+        display: block;
+        width: 75%;
+        margin: auto;
+        padding-bottom: 1rem;
+    }
+
+    .hide {
+       display: none;
+    }
+
 }
 
 /* 
