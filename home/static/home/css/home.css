@@ -9,7 +9,7 @@
     --yellow: #FFB703;
     --orange: #FB8500;
     --red: #d62828;
-    --hero-txt-bg: rgba(148, 121, 135, 0)
+    --hero-txt-bg: rgba(19, 18, 19, 0.5)
 }
 
 .hero-section {
@@ -46,7 +46,6 @@
     padding: 100px 200px 25px 200px;
     height: 200px;
     width: 100%;
-    background-color: var(--hero-txt-bg);
     color: white;
 }
 
@@ -61,7 +60,6 @@
 
 .hero-subtext {
     color: white;
-    background-color: var(--hero-txt-bg);
     height: auto;
     width: 100%;
     padding-top: 50px;
@@ -90,7 +88,7 @@
     align-items: center;
     width: 100%;
     height: 20vh;
-    min-height: 100px;
+    min-height: 150px;
     margin: 0;
 }
 
@@ -136,6 +134,96 @@
     transform: scale(1.05);
     transition: 200ms ease-in-out;
     color: var(--blue)
+}
+
+.story-of-civ-section {
+    height: 110vh;
+    min-height: fit-content;
+    width: 100%;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex: 1 0 auto;
+    padding: 0;
+    margin: 0;
+}
+
+.story-of-civ-row {
+    max-width: 1500px;
+    min-height: fit-content;
+    margin: auto;
+}
+
+.story-of-civ-section a {
+    color: var(--yellow);
+}
+
+.col-left {
+    padding-left: 2rem;
+    min-height: fit-content;
+}
+
+.col-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.col-right .row {
+    margin: auto;
+}
+
+.col-right .row h4 {
+    text-align: left;
+    color: var(--yellow);
+    max-width: 500px;
+    padding: 3rem;
+}
+
+.left-col-top-row,
+.left-col-bottom-row {
+    display: flex;
+    min-height: fit-content;
+    justify-content: center;
+    width: 100%;
+}
+
+.left-col-top-row {
+    height: 25%;
+    width: 100%;
+}
+
+.left-col-bottom-row {
+    height: 75%;
+    width: 100%;
+}
+
+.will-ariel-image {
+    margin: auto;
+    width: 500px;
+    height: 500px;
+}
+
+.left-col-bottom-row {
+    padding: 4rem 0 0 10rem;
+}
+
+.left-col-top-row h2 {
+    font-size: 3rem;
+    width: 100%;
+    color: var(--yellow);
+    padding: 1rem;
+}
+
+.left-col-top-row h3 {
+    font-size: 2.5rem;
+    width: 100%;
+    color: var(--yellow);
+    padding: 1rem;
+}
+
+.left-col-top-row h3 {
+    padding-left: 5rem;
 }
 
 /*=========================
@@ -189,6 +277,51 @@
            Media Queries
 ===================================*/
 
+@media screen and (max-width: 1024px) {
+
+    .story-of-civ-section {
+        padding: 1rem;
+        height: 1200px;
+    }
+    
+    .story-of-civ-row {
+        min-height: fit-content;
+        margin: auto;
+    }
+    
+    .story-of-civ-section a {
+        color: var(--yellow);
+    }
+    
+    .col-left {
+        padding-left: 0;
+    }
+    
+    .col-right .row {
+        margin: auto;
+    }
+    
+    .col-right .row h4 {
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .will-ariel-image {
+        margin: auto;
+        width: 500px;
+        height: 500px;
+    }
+    
+    .left-col-bottom-row {
+        padding: 5rem;
+    }
+    
+    .left-col-top-row h2, h3 {
+        text-align: center;
+        padding: 2rem;
+    }
+}
+
 @media screen and (max-width: 991px) {
 
     .hero-logo {
@@ -212,9 +345,19 @@
     .hero-badge {
         display: none;
     }
-}
 
-@media screen and (max-width: 991px) {
+    .story-of-civ-section {
+        padding: 0;
+        height: 1500px;
+    }
+
+    .left-col-bottom-row {
+        padding: 3rem 1rem 0 1rem;
+    }
+
+    .col-right {
+        flex-direction: row;
+    }
 
     .find-books i {
         font-size: 3rem;
@@ -239,4 +382,68 @@
     .find-books h4 {
         font-size: 0.8rem;
     }
+
+    .story-of-civ-section {
+        padding: 0;
+        height: 1200px;
+    }
+
+    .left-col-bottom-row {
+        display: none;
+    }
+
+    .col-right {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 664px) {
+    
+    .left-col-top-row h2 {
+        font-size: 2.5rem;
+        width: 100%;
+        color: var(--yellow);
+    }
+    
+    .left-col-top-row h3 {
+        font-size: 1,5rem;
+        width: 100%;
+        color: var(--yellow);
+    }
+
+    .col-right .row h4 {
+        padding: 3rem 0 0 0;
+    }
+    
+    .will-ariel-image {
+        margin: auto;
+        width: 300px;
+        height: 300px;
+    }
+
+    .left-col-bottom-row {
+        padding-top: 10rem;
+    }
+
+}
+
+@media screen and (max-width: 490px) {
+
+
+    .story-of-civ-section {
+        padding: 0;
+        height: 1500px;
+    }
+
+}
+
+
+@media screen and (max-width: 360px) {
+
+    .story-of-civ-section {
+        padding: 0;
+        height: 1650px;
+    }
+
 }
