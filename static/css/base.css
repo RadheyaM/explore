@@ -232,6 +232,9 @@ footer a:hover {
     color: var(--yellow);
 }
 
+footer a > i {
+    font-size: 1.5rem;
+}
 
 .footer-row {
     width: 100%;

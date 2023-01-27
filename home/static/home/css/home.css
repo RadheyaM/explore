@@ -2,9 +2,18 @@
 /*=========================
     homepage
 ==========================*/
+:root {
+    --light-blue: #8ECAE6;
+    --blue: #219EBC;
+    --dark-blue: #023047;
+    --yellow: #FFB703;
+    --orange: #FB8500;
+    --red: #d62828;
+    --hero-txt-bg: rgba(148, 121, 135, 0)
+}
 
 .hero-section {
-    display: block;
+    display: flex;
     height: 84vh;
     width: 100%;
     padding-top: 10px;
@@ -68,6 +77,65 @@
 .hero-badge {
     background: var(--dark-blue);
     color: white;
+}
+/*
+================ Find books section ==============
+*/
+
+.find-books {
+    background-color: var(--yellow);
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    min-height: 100px;
+    margin: 0;
+}
+
+.find-books-row {
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem 4rem 2rem 4rem;
+}
+
+.find-books-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.find-books-col-icon-row {
+    width: 100%;
+    margin: 0;
+}
+
+.find-books-col-title {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    padding: 2rem;
+}
+
+.find-books i {
+    font-size: 5rem;
+    color: var(--dark-blue);
+}
+
+.find-books a,
+.find-books i {
+    color: var(--dark-blue);
+    transform: scale(1);
+}
+
+.find-books a:hover,
+.find-books i:hover {
+    transform: scale(1.05);
+    transition: 200ms ease-in-out;
+    color: var(--blue)
 }
 
 /*=========================
@@ -143,5 +211,32 @@
 
     .hero-badge {
         display: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .find-books i {
+        font-size: 3rem;
+        color: var(--dark-blue);
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .find-books-row {
+        padding: 0;
+    }
+
+    .find-books-col-title {
+        padding: 0.2rem;
+    }
+
+    .find-books i {
+        font-size: 2.5rem;
+    }
+
+    .find-books h4 {
+        font-size: 0.8rem;
     }
 }
