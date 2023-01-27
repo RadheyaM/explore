@@ -509,6 +509,14 @@ Added to by developer significantly.
         padding: 0;
     }
 
+    .message-container {
+        position: absolute;
+        z-index: 999;
+        margin-top: 100px;
+        width: 100%;
+        right: 0;
+    }
+
 }
 
 /* 

@@ -17,6 +17,12 @@ def about_us(request):
     """
     return render(request, 'home/about.html')
 
+def privacy_policy(request):
+    """
+    A view to display the about us page
+    """
+    return render(request, 'home/privacy-policy.html')
+
 def handle_404(request, exception):
     return render(request, "errors/404.html")
 
