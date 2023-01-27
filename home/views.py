@@ -16,3 +16,12 @@ def about_us(request):
     A view to display the about us page
     """
     return render(request, 'home/about.html')
+
+def handle_404(request, exception):
+    return render(request, "errors/404.html")
+
+def handle_403(request, exception):
+    return render(request, "errors/403.html")
+
+def handle_500(request):
+    return render(request, "errors/500.html")
