@@ -11,7 +11,7 @@
     <section class="container product-detail-section">
         <div class="row product-row d-flex">
             {% if poster.image %}
-                <div class="m-auto">
+                <div class="poster-image-container">
                     <a href="{% url 'poster_detail' poster.id %}">
                         <img src="{{ poster.image.url }}" class="card-img-top poster-image" alt="{{ poster.name }}">
                     </a>

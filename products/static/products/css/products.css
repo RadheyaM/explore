@@ -18,6 +18,7 @@ products & product detail pages
 
 .product-row {
     margin-top: 50px;
+    padding-bottom: 4rem;
 }
 
 .product-card {
@@ -62,6 +63,11 @@ products & product detail pages
     margin-right: 50px;
 }
 
+.poster-image-container {
+    margin: auto;
+    padding-bottom: 4rem;
+}
+
 .bought-together {
     height: auto;
     flex: 1 0 auto;
@@ -79,36 +85,15 @@ products & product detail pages
     width: 33%;
 }
 
+.form-row {
+    width: 50%;
+    padding: 2rem 2rem 2rem 0;
+}
 /*===================================
            Media Queries
 ===================================*/
 
 @media screen and (max-width: 991px) {
-
-    .product-detail-section div,
-    .product-detail-section p,
-    .product-detail-section h2,
-    .product-detail-section h4,
-    .product-detail-section h5,
-    .product-detail-section h6 {
-        display: flex;
-    }
-
-    .product-detail-section,
-    .product-detail-section div,
-    .product-detail-section p,
-    .product-detail-section h2,
-    .product-detail-section h4,
-    .product-detail-section h5,
-    .product-detail-section h6 {
-        justify-content: center;
-    }
-
-    .product-row,
-    .product-details {
-        display: flex;
-        justify-content: center;
-    }
 
     .book-image {
         margin: 0;
@@ -126,12 +111,6 @@ products & product detail pages
 }
 
 @media screen and (max-width: 767px) {
-
-
-    .product-col {
-        display: flex;
-        justify-content: center;
-    }
 
     .product-details {
         margin: auto;
