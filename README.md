@@ -14,19 +14,34 @@ Explore is an online retail store operating on a business to customer strategy. 
     - [Customer Stories](#customer-stories)
     - [Owner Stories](#site-owner-stories)
 + [Planning and Development](#planning-and-development)
-    - [Initial Planning]()
-    - [Design Descisions]()
-    - [Business Strategy]()
-    - [Search Engine Optimisation]()
-+ [Features]()
-+ [Technologies]()
-+ [Testing]()
-    - [Code Validation]()
-    - [Functionality Testing]()
-    - [Errors, Bugs, Issues]()
-+ [Improvements]()
+    - [Development Milestones](#development-milestones)
+    - [Initial Wireframes](#initial-wireframes)
+    - [Colour Scheme](#colour-scheme)
+    - [Database Schema](#database-schema)
+    - [Business Strategy](#business-strategy)
+    - [Search Engine Optimisation](#seo)
++ [Features](#features)
+    - [Navigation](#navigation)
+    - [Homepage](#homepage)
+    - [Products Page](#products-page)
+    - [Product Detail](#product-detail)
+    - [Basket](#basket)
+    - [Checkout](#checkout)
+    - [Profile](#profile)
+    - [Accounts](#accounts)
+    - [Contact](#contact)
+    - [Admin](#admin)
++ [Technologies](#technologies)
++ [Testing](#testing)
+    - [Code Validation](#code-validation)
+    - [Functionality Testing](#functionality-testing)
+    - [Errors, Bugs, Issues](#issues)
++ [Improvements](#improvements)
 + [Deployment]()
 + [Credits]()
+    -[Code](#code)
+    -[Images](#images)
+    -[Acknowledgements](#acknowledgements)
 
 ## User Stories
 Who, What, Where, When, Why.
@@ -75,5 +90,83 @@ As an owner:
 - I want to give a professional and safe feeling to the site so that visitors feel comfortable making purchases.
 - I want to represent the community surrounding my products.
 - I want to suggest similar products to what a customer is currently viewing to get add on sales.
+- I want the customer to be able to get in touch and ask question, give feedback, to provide customer satisfaction.
 
 ## Planning and Development
+
+### Development Milestones
+
+- Create a basic site structure, home page, products page, navigation.
+- Load products to the site.
+- Implement essential functionality, basket, checkout, payment processing and confirmation.
+- Improve structure and styling on the basic layout.
+- Add extra features such as a wishlist, newsletter subscription, 10% offer on new account functionality.
+- Optimise site navigation features.
+- Add contact and about us pages.
+- Implement search engine optimisation.
+- Add community content, special features section to the homepage.
+- Add responsive design so the site looks good and works well on all screen sizes.
+
+### Initial Wireframes
+
+[Wireframes]()
+
+### Colour Scheme
+
+### Database Schema
+
+[Database Schema]()
+
+### Business Strategy
+[Facebook Page]()
+
+### SEO
+- Keywords
+- Meta Description
+- Site Title
+- Links
+- 404 Error Page
+- Robots.txt
+- Sitemap.xml
+
+## Features
+<!-- <img src="" height="" width=""> -->
+
+### Navigation
+### Homepage
+### Products Page
+### Product Detail
+### Basket
+### Checkout
+### Profile
+### Accounts
+### Contact
+### Admin
+
+## Technologies
+ - [Django version 3.2.16](https://docs.djangoproject.com/en/3.2/)
+ - See [requirements.txt](requirements.txt) -for a full list of Django Add-on modules used.
+ - Python 3.8.11
+ - HTML5
+ - CSS3
+ - Javascript
+ - [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) -css module
+ - [ElephantSQL](https://www.elephantsql.com) -Postgresql database service.
+ - [Git](https://git-scm.com) -version control
+ - [GitHub](https://github.com) -code repository
+ - [Amazon Web Services](https://aws.amazon.com/) -static hosting
+ - Deployed on [Heroku](https://devcenter.heroku.com)
+
+## Testing
+### Code Validation
+### Functionality Testing
+### Issues
+
+## Improvements
+
+## Deployment
+
+## Credits
+### Code
+### Images
+### Acknowledgements
