@@ -12,12 +12,14 @@
                 </div>
             </div>
         </div>
-        <div class="col-12">
-            <a href="{% url 'books' %}" class="btn btn-outline-light rounded-0 mt-5">
+    </div>
+    <div>
+        <div>
+            <a href="{% url 'books' %}" class="btn btn-outline-light">
                 <i class="fas fa-chevron-left"></i>&nbsp;Keep Browsing
             </a>
-            <input type="submit" class="btn btn-action rounded-0 mt-5" value="Add to Basket">
+            <input type="submit" class="btn btn-action" value="Add to Basket">
         </div>
-        <input type="hidden" name="redirect_url" value="{{ request.path }}">
     </div>
+    <input type="hidden" name="redirect_url" value="{{ request.path }}">
 </form>

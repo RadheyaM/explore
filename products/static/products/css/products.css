@@ -68,6 +68,11 @@ products & product detail pages
     padding-bottom: 4rem;
 }
 
+.book-image-container {
+    margin: auto;
+    padding-bottom: 6rem;
+}
+
 .bought-together {
     height: auto;
     flex: 1 0 auto;
@@ -94,6 +99,11 @@ products & product detail pages
 ===================================*/
 
 @media screen and (max-width: 991px) {
+
+    .book-image-container {
+        margin: auto;
+        padding-bottom: 3rem;
+    }
 
     .book-image {
         margin: 0;

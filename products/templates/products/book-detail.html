@@ -11,13 +11,13 @@
     <section class="container product-detail-section">
         <div class="row product-row d-flex">
             {% if book.image %}
-                <div class="m-auto">
+                <div class="m-auto book-image-container">
                     <a href="{% url 'book_detail' book.id %}">
                         <img src="{{ book.image.url }}" class="card-img-top book-image" alt="{{ book.title }}">
                     </a>
                 </div>
             {% else %}
-                <div class="m-auto">
+                <div class="m-auto book-image-container">
                     <a href="{% url 'book_detail' book.id %}">
                         <img src="{{ MEDIA_URL }}book-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ book.title }}">
                     </a>
