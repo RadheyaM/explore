@@ -64,15 +64,8 @@ class Books(models.Model):
         blank=True,
         help_text="A Url to the book on google books",
     )
-    thumbnail_url = models.URLField(
-        max_length=1024, 
-        null=True, blank=True, help_text="Thumbnail Url Address"
-    )
     thumbnail = models.ImageField(
         null=True, blank=True, verbose_name="Book Cover Thumbnail Image"
-    )
-    image_url = models.URLField(
-        max_length=1024, null=True, blank=True, help_text="Image URL Address"
     )
     image = models.ImageField(
         null=True, blank=True, verbose_name="Book Cover Image")
@@ -94,7 +87,6 @@ class Posters(models.Model):
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     user_poster_wishlist = models.ManyToManyField(
         User, related_name="user_poster_wishlist", blank=True

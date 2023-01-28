@@ -34,7 +34,7 @@
                         {% if product.poster.image %}
                             <img class="poster-thumbnail" src="{{ product.poster.image.url }}" alt="{{ product.poster.name }}">
                         {% else %}
-                            <img class="poster-thumbnail" src="media/poster-placeholder-image.jpg" alt="{{ product.poster.name }}">
+                            <img class="poster-thumbnail" src="{{ MEDIA_URL }}poster-placeholder-thumbnail.jpg" alt="{{ product.poster.name }}">
                         {% endif %}
                         <br>
                     </div>
@@ -59,7 +59,7 @@
                             {% if product.book.thumbnail %}
                                 <img class="book-sm-thumbnail" src="{{ product.book.thumbnail.url }}" alt="{{ product.book.title }}">
                             {% else %}
-                                <img class="book-sm-thumbnail" src="media/book-placeholder-image.jpg" alt="{{ product.book.title }}">
+                                <img class="book-sm-thumbnail" src="{{ MEDIA_URL }}book-placeholder-thumbnail.jpg" alt="{{ product.book.title }}">
                             {% endif %}
                             <br>
                         </div>

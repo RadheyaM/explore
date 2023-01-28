@@ -19,7 +19,7 @@
             {% else %}
                 <div class="m-auto">
                     <a href="{% url 'book_detail' book.id %}">
-                        <img src="media/book-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ book.title }}">
+                        <img src="{{ MEDIA_URL }}book-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ book.title }}">
                     </a>
                 </div>
             {% endif %}
@@ -89,7 +89,7 @@
                                 </a>
                             {% else %}
                                 <a href="{% url 'book_detail' book.id %}">
-                                    <img src="media/book-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ book.title }}">
+                                    <img src="{{ MEDIA_URL }}book-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ book.title }}">
                                 </a>
                             {% endif %}
                         </div>
