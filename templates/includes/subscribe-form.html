@@ -2,7 +2,7 @@
 <form class="form-inline" method="POST" action="{% url 'subscribe' %}">
     {% csrf_token %}
     <div class="subscribe-form-container">
-        <label for="email">Subscribe to Newsletter</label>
+        <label for="subscribe-email">Subscribe to Newsletter</label>
         <input type="email" class="form-control" name="subscribe-email" id="subscribe-email" placeholder="Your Email..." required>
         <div class="m-2 text-center">
             <button type="submit" class="btn btn-sm btn-action">Submit</button>

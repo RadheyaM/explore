@@ -43,8 +43,11 @@ Explore is an online retail store operating on a business to customer strategy. 
     -[Images](#images)
     -[Acknowledgements](#acknowledgements)
 
+
 ## User Stories
-Who, What, Where, When, Why.
+[Project Board](https://github.com/users/RadheyaM/projects/3/views/1) - for detailed user story progression and developer notes.
+
+<br>
 
 ### Developer Vision
 
