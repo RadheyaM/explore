@@ -386,6 +386,10 @@
 
 @media screen and (max-width: 750px) {
 
+    .hero-section {
+        height: 80vh;
+    }
+
     .find-books-row {
         padding: 0;
     }
@@ -459,6 +463,10 @@
         height: 1300px;
     }
 
+    .col-right .row h4 {
+        padding: 2rem;
+    }
+
     .about-container {
         padding-bottom: 35rem;
     }
@@ -473,4 +481,11 @@
         height: 1400px;
     }
 
+}
+
+@media screen and (min-height: 800px) {
+
+    .hero-section {
+        height: 60vh;
+    }
 }
