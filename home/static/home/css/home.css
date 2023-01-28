@@ -232,11 +232,11 @@
 .about-container {
     flex: 1 0 auto;
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 15rem;
 }
 
 .about-us-image {
-    background: url('/media/about-us.jpg') repeat center center fixed;
+    background: url('/media/about-us.jpg') no-repeat center center fixed;
     background-color: black;
     background-size: cover;
     width: 80%;
@@ -321,6 +321,10 @@
         text-align: center;
         padding: 2rem;
     }
+
+    .about-container {
+        padding-bottom: 20rem;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -363,6 +367,20 @@
     .find-books i {
         font-size: 3rem;
         color: var(--dark-blue);
+    }
+
+    .about-container {
+        padding-bottom: 30rem;
+    }
+
+    .mads-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mads-mikkelson-image {
+        margin: auto;
     }
 }
 
@@ -439,6 +457,10 @@
     .story-of-civ-section {
         padding: 0;
         height: 1500px;
+    }
+
+    .about-container {
+        padding-bottom: 35rem;
     }
 
 }

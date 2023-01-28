@@ -8,7 +8,7 @@
             </a>
     </div>
     <div class="col-4 pt-1">
-        <a class="nav-link custom-link" {% if user.is_authenticated %}href="{% url 'profile' %}"{% else %}href="{% url 'account_login' %}"{% endif %}>
+        <a class="nav-link custom-link"{% if user.is_authenticated %}href="{% url 'profile' %}"{% else %}href="{% url 'account_login' %}"{% endif %}>
             <div class="text-center">
               {% if user.is_authenticated %}
                 <div class="text-center"><i class="fa-brands fa-product-hunt"></i></div>
