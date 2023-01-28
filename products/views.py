@@ -6,6 +6,7 @@ from django.db.models import Q
 
 from .models import Books, Genre, Posters
 
+
 def books(request):
     """
     A view to show all book products available for sale.
@@ -17,48 +18,53 @@ def books(request):
     all_genres = Genre.objects.filter(pk__lte=5)
 
     if request.GET:
-        if 'genre' in request.GET:
-            genres = request.GET['genre'].split(',')
+        if "genre" in request.GET:
+            genres = request.GET["genre"].split(",")
             books = books.filter(genre__name__in=genres)
             genres = Genre.objects.filter(name__in=genres)
 
-        if 'search' in request.GET:
-            search = request.GET['search']
+        if "search" in request.GET:
+            search = request.GET["search"]
             if not search:
-                messages.error(request, 'You need to enter a search term in the search bar to search books.')
-                return redirect(reverse('books'))
-            
-            # might be overkill but would like to avoid the user getting no results.
-            search_terms = Q(
-                title__icontains=search
-                ) | Q(
-                    author__icontains=search
-                    ) | Q(
-                        genre__name__icontains=search
-                        ) | Q(
-                            subtitle__icontains=search
-                            ) | Q(
-                                description__icontains=search
-                                )
+                messages.error(
+                    request,
+                    """
+                    You need to enter a search term in
+                    the search bar to search books.
+                    """,
+                )
+                return redirect(reverse("books"))
+
+            # might be overkill but I would
+            # like to avoid the user getting no results.
+            search_terms = (
+                Q(title__icontains=search)
+                | Q(author__icontains=search)
+                | Q(genre__name__icontains=search)
+                | Q(subtitle__icontains=search)
+                | Q(description__icontains=search)
+            )
 
             books = books.filter(search_terms)
             result_count = books.count()
-            
             if result_count == 0:
-                result_count == None
-                messages.info(request, f'No books found with search term "{search}"')
-                return redirect(reverse('books'))
+                result_count = None
+                messages.info(
+                    request,
+                    f'No books found with search term "{search}"')
+                return redirect(reverse("books"))
 
-    template = 'products/books.html'
+    template = "products/books.html"
     context = {
-        'books': books,
-        'genres': genres,
-        'all_genres': all_genres,
-        'search': search,
-        'result_count': result_count
+        "books": books,
+        "genres": genres,
+        "all_genres": all_genres,
+        "search": search,
+        "result_count": result_count,
     }
 
     return render(request, template, context)
+
 
 def posters(request):
     """
@@ -70,36 +76,42 @@ def posters(request):
     all_genres = Genre.objects.filter(pk__gte=6)
 
     if request.GET:
-        if 'genre' in request.GET:
-            genres = request.GET['genre'].split(',')
+        if "genre" in request.GET:
+            genres = request.GET["genre"].split(",")
             posters = posters.filter(genre__name__in=genres)
             genres = Genre.objects.filter(name__in=genres)
 
-        if 'search' in request.GET:
-            search = request.GET['search']
+        if "search" in request.GET:
+            search = request.GET["search"]
             if not search:
-                messages.error(request, 'You need to enter a search term in the search bar to search posters.')
-                return redirect(reverse('posters'))
-            
-            search_terms = Q(
-                name__icontains=search
-                ) | Q(
-                    genre__name__icontains=search
-                    ) | Q(description__icontains=search)
+                messages.error(
+                    request,
+                    """
+                    You need to enter a search term in
+                    the search bar to search posters.
+                    """,
+                )
+                return redirect(reverse("posters"))
+            search_terms = (
+                Q(name__icontains=search)
+                | Q(genre__name__icontains=search)
+                | Q(description__icontains=search)
+            )
 
             posters = posters.filter(search_terms)
 
             if posters.count() == 0:
-                messages.info(request, f'No posters found with search term "{search}"')
-                return redirect(reverse('posters'))
+                messages.info(
+                    request,
+                    f'No posters found with search term "{search}"')
+                return redirect(reverse("posters"))
 
-
-    template = 'products/posters.html'
+    template = "products/posters.html"
     context = {
-        'posters': posters,
-        'genres': genres,
-        'all_genres': all_genres,
-        'search': search,
+        "posters": posters,
+        "genres": genres,
+        "all_genres": all_genres,
+        "search": search,
     }
 
     return render(request, template, context)
@@ -119,13 +131,8 @@ def book_detail(request, book_id):
         if book.user_book_wishlist.filter(id=request.user.id):
             wishlist = True
 
-
-    template = 'products/book-detail.html'
-    context = {
-        'book': book,
-        'recommend': recommend,
-        'wishlist': wishlist
-    }
+    template = "products/book-detail.html"
+    context = {"book": book, "recommend": recommend, "wishlist": wishlist}
 
     return render(request, template, context)
 
@@ -139,17 +146,16 @@ def poster_detail(request, poster_id):
     genres = Posters.objects.filter(genre=genre)
     recommend = genres.exclude(pk=poster_id)
     wishlist = False
-    
+
     if request.user.is_authenticated:
         if poster.user_poster_wishlist.filter(id=request.user.id):
             wishlist = True
 
-
-    template = 'products/poster-detail.html'
+    template = "products/poster-detail.html"
     context = {
-        'poster': poster,
-        'recommend': recommend,
-        'wishlist': wishlist,
+        "poster": poster,
+        "recommend": recommend,
+        "wishlist": wishlist,
     }
 
     return render(request, template, context)

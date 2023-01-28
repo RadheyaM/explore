@@ -19,7 +19,7 @@ var style = {
     }
 };
 var card = elements.create('card', {style: style});
-card.mount('#card-element')
+card.mount('#card-element');
 
 //Handle realtime validation errors on the card element
 card.addEventListener('change', function (event) {
@@ -43,7 +43,7 @@ var form = document.getElementById('payment-form');
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
-    $('#submit-button').attr('disabled', true)
+    $('#submit-button').attr('disabled', true);
 
     var saveInfo = Boolean($('#id-save-info').attr('checked'));
     // From using {% csrf_token %} in the form
@@ -94,7 +94,7 @@ form.addEventListener('submit', function(ev) {
                     <span>${result.error.message}</span>`;
                 $(errorDiv).html(html);
                 card.update({ 'disabled': false});
-                $('#submit-button').attr('disabled', false)
+                $('#submit-button').attr('disabled', false);
             } else {
                 if (result.paymentIntent.status === 'succeeded') {
                     form.submit();

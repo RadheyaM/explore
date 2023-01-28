@@ -12,7 +12,7 @@ class UserProfileForm(forms.ModelForm):
         """
         Add placeholders and classes, remove auto-generated
         labels and set autofocus on first field
-        """ 
+        """
 
         super().__init__(*args, **kwargs)
         placeholders = {

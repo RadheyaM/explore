@@ -14,6 +14,6 @@ urlpatterns = [
     path('crud/', include('crud.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404='home.views.handle_404'
-handler403='home.views.handle_403'
-handler500='home.views.handle_500'
+handler404 = 'home.views.handle_404'
+handler403 = 'home.views.handle_403'
+handler500 = 'home.views.handle_500'

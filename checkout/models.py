@@ -14,7 +14,13 @@ from profiles.models import UserProfile
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
+    user_profile = models.ForeignKey(
+        UserProfile,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="orders",
+    )
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
@@ -25,11 +31,18 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=80, null=False, blank=False)
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateField(auto_now_add=True)
-    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    original_basket = models.TextField(null=False, blank=False, default='')
-    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+    delivery_cost = models.DecimalField(
+        max_digits=6, decimal_places=2, null=False, default=0
+    )
+    order_total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0
+    )
+    grand_total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0
+    )
+    original_basket = models.TextField(null=False, blank=False, default="")
+    stripe_pid = models.CharField(
+        max_length=254, null=False, blank=False, default="")
 
     def _generate_order_number(self):
         """
@@ -42,9 +55,14 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.order_total = (
+            self.lineitems.aggregate(
+                Sum("lineitem_total"))["lineitem_total__sum"] or 0
+        )
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+            self.delivery_cost = (
+                self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+            )
         else:
             self.delvery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
@@ -62,14 +80,21 @@ class Order(models.Model):
     def __str__(self):
         return self.order_number
 
+
 class OrderLineItem(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, null=False, related_name='lineitems')
+    order = models.ForeignKey(
+        Order, on_delete=models.CASCADE, null=False, related_name="lineitems"
+    )
     product = models.CharField(max_length=100, blank=False, null=False)
-    book = models.ForeignKey(Books, on_delete=models.CASCADE, blank=True, null=True)
-    poster = models.ForeignKey(Posters, on_delete=models.CASCADE, blank=True, null=True)
+    book = models.ForeignKey(
+        Books, on_delete=models.CASCADE, blank=True, null=True)
+    poster = models.ForeignKey(
+        Posters, on_delete=models.CASCADE, blank=True, null=True)
     material_size = models.CharField(max_length=20, null=True, blank=True)
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    lineitem_total = models.DecimalField(
+        max_digits=6, decimal_places=2, null=False, blank=False, editable=False
+    )
 
     def save(self, *args, **kwargs):
         """
@@ -86,29 +111,29 @@ class OrderLineItem(models.Model):
             material_size = self.material_size
             price = Decimal(0.00)
 
-            if material_size == 'Paper A4':
+            if material_size == "Paper A4":
                 price = Decimal(10.00)
-            elif material_size == 'Paper A3':
+            elif material_size == "Paper A3":
                 price = Decimal(12.50)
-            elif material_size == 'Paper A2':
+            elif material_size == "Paper A2":
                 price = Decimal(15.00)
-            elif material_size == 'Plastic A4':
+            elif material_size == "Plastic A4":
                 price = Decimal(15.00)
-            elif material_size == 'Plastic A3':
+            elif material_size == "Plastic A3":
                 price = Decimal(17.50)
-            elif material_size == 'Plastic A2':
+            elif material_size == "Plastic A2":
                 price = Decimal(20.00)
-            elif material_size == 'Metal A4':
+            elif material_size == "Metal A4":
                 price = Decimal(25.00)
-            elif material_size == 'Metal A3':
+            elif material_size == "Metal A3":
                 price = Decimal(30.00)
-            elif material_size == 'Metal A2':
+            elif material_size == "Metal A2":
                 price = Decimal(40.00)
 
             self.lineitem_total = price * self.quantity
         else:
-            self.lineitem_total = self.lineitem_total = self.book.price * self.quantity
+            self.lineitem_total = self.book.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'Title:{self.product} on order {self.order.order_number}'
+        return f"Title:{self.product} on order {self.order.order_number}"

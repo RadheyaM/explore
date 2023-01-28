@@ -1,5 +1,11 @@
 """Code based upon that of the walkthrough project boutique ado"""
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render,
+    redirect,
+    reverse,
+    get_object_or_404,
+    HttpResponse
+)
 from django.contrib import messages
 from products.models import Books, Posters
 
@@ -25,7 +31,7 @@ def add_to_basket(request, item_id):
             if product.user_poster_wishlist.filter(id=request.user.id):
                 product.user_poster_wishlist.remove(request.user)
 
-    quantity =  int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     material_size = None
     if 'product_material_size' in request.POST:
@@ -36,7 +42,9 @@ def add_to_basket(request, item_id):
         if item_id in list(basket.keys()):
             if material_size in basket[item_id]['items_by_material_size'].keys():
                 basket[item_id]['items_by_material_size'][material_size] += quantity
-                messages.success(request, f'Success! You updated {product} ({material_size}) qty in your basket!')
+                messages.success(
+                    request,
+                    f'Success! You updated {product} ({material_size}) qty in your basket!')
             else:
                 basket[item_id]['items_by_material_size'][material_size] = quantity
                 messages.success(request, f'Success! You added {material_size} Poster: {product} to your basket!')

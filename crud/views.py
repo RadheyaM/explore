@@ -4,6 +4,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from products.models import Books, Posters, Category, Genre
 from django.contrib import messages
 
+
 def manage(request):
     """
     render the manage products index page
@@ -23,9 +24,10 @@ def manage(request):
     template = 'crud/manage.html'
     return render(request, template, context)
 
-#====================================================================================
+# ====================================================================================
 #                                   CREATE VIEWS
-#====================================================================================
+# ====================================================================================
+
 
 class CreateBookView(CreateView):
     """
@@ -34,7 +36,6 @@ class CreateBookView(CreateView):
     model = Books
     fields = '__all__'
     template_name = 'crud/create/create-book.html'
-    
     success_url = reverse_lazy('manage_products')
 
     def form_valid(self, form):
@@ -42,10 +43,13 @@ class CreateBookView(CreateView):
         Custom form_valid function adding a success message for display.
         """
         messages.add_message(
-            self.request, messages.SUCCESS, "You successfully added a new Book product"
+            self.request,
+            messages.SUCCESS, 
+            "You successfully added a new Book product"
         )
 
         return super().form_valid(form)
+
 
 class CreatePosterView(CreateView):
     """
@@ -54,7 +58,6 @@ class CreatePosterView(CreateView):
     model = Posters
     fields = '__all__'
     template_name = 'crud/create/create-poster.html'
-    
     success_url = reverse_lazy('manage_products')
 
     def form_valid(self, form):
@@ -62,10 +65,13 @@ class CreatePosterView(CreateView):
         Custom form_valid function adding a success message for display.
         """
         messages.add_message(
-            self.request, messages.SUCCESS, "You successfully added a new Poster product"
+            self.request, 
+            messages.SUCCESS, 
+            "You successfully added a new Poster product"
         )
 
         return super().form_valid(form)
+
 
 class CreateCategoryView(CreateView):
     """
@@ -74,7 +80,6 @@ class CreateCategoryView(CreateView):
     model = Category
     fields = '__all__'
     template_name = 'crud/create/create-category.html'
-    
     success_url = reverse_lazy('manage_products')
 
     def form_valid(self, form):
@@ -82,10 +87,13 @@ class CreateCategoryView(CreateView):
         Custom form_valid function adding a success message for display.
         """
         messages.add_message(
-            self.request, messages.SUCCESS, "You successfully added a new Category"
+            self.request,
+            messages.SUCCESS,
+            "You successfully added a new Category"
         )
 
         return super().form_valid(form)
+
 
 class CreateGenreView(CreateView):
     """
@@ -94,7 +102,6 @@ class CreateGenreView(CreateView):
     model = Genre
     fields = '__all__'
     template_name = 'crud/create/create-genre.html'
-    
     success_url = reverse_lazy('manage_products')
 
     def form_valid(self, form):
@@ -102,14 +109,17 @@ class CreateGenreView(CreateView):
         Custom form_valid function adding a success message for display.
         """
         messages.add_message(
-            self.request, messages.SUCCESS, "You successfully added a new Genre"
+            self.request, 
+            messages.SUCCESS, 
+            "You successfully added a new Genre"
         )
 
         return super().form_valid(form)
 
-#====================================================================================
+# ====================================================================================
 #                                   UPDATE VIEWS
-#====================================================================================
+# ====================================================================================
+
 
 class UpdateBookView(UpdateView):
     """
@@ -118,7 +128,6 @@ class UpdateBookView(UpdateView):
     model = Books
     fields = '__all__'
     template_name = 'crud/update/update-book.html'
-    
     success_url = reverse_lazy('manage_products')
 
     def form_valid(self, form):
@@ -126,10 +135,13 @@ class UpdateBookView(UpdateView):
         Custom form_valid function adding a success message for display.
         """
         messages.add_message(
-            self.request, messages.SUCCESS, "You successfully updated the Book product"
+            self.request,
+            messages.SUCCESS,
+            "You successfully updated the Book product"
         )
 
         return super().form_valid(form)
+
 
 class UpdatePosterView(UpdateView):
     """
@@ -138,7 +150,6 @@ class UpdatePosterView(UpdateView):
     model = Posters
     fields = '__all__'
     template_name = 'crud/update/update-poster.html'
-    
     success_url = reverse_lazy('manage_products')
 
     def form_valid(self, form):
@@ -146,10 +157,13 @@ class UpdatePosterView(UpdateView):
         Custom form_valid function adding a success message for display.
         """
         messages.add_message(
-            self.request, messages.SUCCESS, "You successfully updated the Poster product"
+            self.request,
+            messages.SUCCESS,
+            "You successfully updated the Poster product"
         )
 
         return super().form_valid(form)
+
 
 class UpdateCategoryView(UpdateView):
     """
@@ -158,7 +172,6 @@ class UpdateCategoryView(UpdateView):
     model = Category
     fields = '__all__'
     template_name = 'crud/update/update-category.html'
-    
     success_url = reverse_lazy('manage_products')
 
     def form_valid(self, form):
@@ -166,10 +179,13 @@ class UpdateCategoryView(UpdateView):
         Custom form_valid function adding a success message for display.
         """
         messages.add_message(
-            self.request, messages.SUCCESS, "You successfully updated the Category"
+            self.request,
+            messages.SUCCESS,
+            "You successfully updated the Category"
         )
 
         return super().form_valid(form)
+
 
 class UpdateGenreView(UpdateView):
     """
@@ -178,7 +194,6 @@ class UpdateGenreView(UpdateView):
     model = Genre
     fields = '__all__'
     template_name = 'crud/update/update-genre.html'
-    
     success_url = reverse_lazy('manage_products')
 
     def form_valid(self, form):
@@ -186,14 +201,17 @@ class UpdateGenreView(UpdateView):
         Custom form_valid function adding a success message for display.
         """
         messages.add_message(
-            self.request, messages.SUCCESS, "You successfully updated the Genre"
+            self.request,
+            messages.SUCCESS,
+            "You successfully updated the Genre"
         )
 
         return super().form_valid(form)
 
-#====================================================================================
+# ====================================================================================
 #                                   DELETE VIEWS
-#====================================================================================
+# ====================================================================================
+
 
 class DeleteBookView(DeleteView):
     """
@@ -202,7 +220,6 @@ class DeleteBookView(DeleteView):
     model = Books
     fields = '__all__'
     template_name = 'crud/delete/delete-book.html'
-    
     success_url = reverse_lazy('manage_products')
 
     def form_valid(self, form):
@@ -210,10 +227,13 @@ class DeleteBookView(DeleteView):
         Custom form_valid function adding a success message for display.
         """
         messages.add_message(
-            self.request, messages.SUCCESS, "You successfully deleted the Book product"
+            self.request,
+            messages.SUCCESS,
+            "You successfully deleted the Book product"
         )
 
         return super().form_valid(form)
+
 
 class DeletePosterView(DeleteView):
     """
@@ -222,7 +242,6 @@ class DeletePosterView(DeleteView):
     model = Posters
     fields = '__all__'
     template_name = 'crud/delete/delete-poster.html'
-    
     success_url = reverse_lazy('manage_products')
 
     def form_valid(self, form):
@@ -230,10 +249,13 @@ class DeletePosterView(DeleteView):
         Custom form_valid function adding a success message for display.
         """
         messages.add_message(
-            self.request, messages.SUCCESS, "You successfully deleted the Poster product"
+            self.request,
+            messages.SUCCESS,
+            "You successfully deleted the Poster product"
         )
 
         return super().form_valid(form)
+
 
 class DeleteCategoryView(DeleteView):
     """
@@ -242,7 +264,6 @@ class DeleteCategoryView(DeleteView):
     model = Category
     fields = '__all__'
     template_name = 'crud/delete/delete-category.html'
-    
     success_url = reverse_lazy('manage_products')
 
     def form_valid(self, form):
@@ -250,10 +271,12 @@ class DeleteCategoryView(DeleteView):
         Custom form_valid function adding a success message for display.
         """
         messages.add_message(
-            self.request, messages.SUCCESS, "You successfully deleted the Category"
+            self.request, messages.SUCCESS,
+            "You successfully deleted the Category"
         )
 
         return super().form_valid(form)
+
 
 class DeleteGenreView(DeleteView):
     """
@@ -262,7 +285,6 @@ class DeleteGenreView(DeleteView):
     model = Genre
     fields = '__all__'
     template_name = 'crud/delete/delete-genre.html'
-    
     success_url = reverse_lazy('manage_products')
 
     def form_valid(self, form):
@@ -270,7 +292,9 @@ class DeleteGenreView(DeleteView):
         Custom form_valid function adding a success message for display.
         """
         messages.add_message(
-            self.request, messages.SUCCESS, "You successfully deleted the Genre"
+            self.request,
+            messages.SUCCESS,
+            "You successfully deleted the Genre"
         )
 
         return super().form_valid(form)

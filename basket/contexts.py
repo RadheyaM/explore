@@ -7,6 +7,7 @@ from django.shortcuts import get_object_or_404
 from products.models import Books, Posters
 from profiles.models import UserProfile, User
 
+
 def basket_contents(request):
 
     basket_items = []
@@ -59,12 +60,12 @@ def basket_contents(request):
                 subtotal = quantity * price
                 product_count += quantity
                 basket_items.append({
-                'item_id': item_id,
-                'quantity': quantity,
-                'poster': product,
-                'price': price,
-                'subtotal': subtotal,
-                'material_size': material_size,
+                    'item_id': item_id,
+                    'quantity': quantity,
+                    'poster': product,
+                    'price': price,
+                    'subtotal': subtotal,
+                    'material_size': material_size,
                 })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
@@ -81,7 +82,7 @@ def basket_contents(request):
     else:
         grand_total = total + delivery
 
-    context ={
+    context = {
         'basket_items': basket_items,
         'total': total,
         'total_ten_percent': total_ten_percent,
