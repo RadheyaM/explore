@@ -42,7 +42,7 @@
 }
 
 .hero-text {
-    margin-top: 200px 200px 25px 200px;
+    margin: 200px 200px 25px 200px;
     padding: 100px 200px 25px 200px;
     height: 200px;
     width: 100%;
@@ -239,7 +239,6 @@
     background: url('/media/about-us.jpg') repeat center center fixed;
     background-color: black;
     background-size: cover;
-    position: scroll;
     width: 80%;
     height: 400px;
     padding: 0;
@@ -409,7 +408,7 @@
     }
     
     .left-col-top-row h3 {
-        font-size: 1,5rem;
+        font-size: 1.5rem;
         width: 100%;
         color: var(--yellow);
     }

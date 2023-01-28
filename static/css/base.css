@@ -100,7 +100,7 @@ hr {
 
 .dropdown-item:hover {
     color: var(--orange)!important;
-    background: var (--dark-blue);
+    background: var(--dark-blue);
 }
 
 .mobile-nav,
