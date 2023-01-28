@@ -14,7 +14,7 @@
 
 .hero-section {
     display: flex;
-    height: 84vh;
+    height: 100vh;
     width: 100%;
     padding-top: 10px;
     margin: 0;
@@ -119,7 +119,7 @@
 }
 
 .find-books i {
-    font-size: 5rem;
+    font-size: 3rem;
     color: var(--dark-blue);
 }
 
@@ -137,13 +137,13 @@
 }
 
 .story-of-civ-section {
-    height: 110vh;
+    height: 150vh;
     min-height: fit-content;
     width: 100%;
     background-color: var(--dark-blue);
     display: flex;
     flex: 1 0 auto;
-    padding: 0;
+    padding-bottom: 5rem;
     margin: 0;
 }
 
@@ -456,7 +456,7 @@
 
     .story-of-civ-section {
         padding: 0;
-        height: 1500px;
+        height: 1300px;
     }
 
     .about-container {
@@ -470,7 +470,7 @@
 
     .story-of-civ-section {
         padding: 0;
-        height: 1650px;
+        height: 1400px;
     }
 
 }
