@@ -9,10 +9,13 @@
 }
 
 .allauth-container {
-    height: fit-content;
+
+    height: 110vh;
+    min-height: fit-content;
     width:100%;
     margin: 0;
-    padding-bottom: 3rem;
+    padding-bottom: 20rem;
+    padding-top: 3rem;
 
     background: url('/media/hero.jpg') no-repeat center center fixed;
     background-color: black;
@@ -23,6 +26,7 @@
 
 .allauth-form-row {
     margin: auto;
+    height: 70vh;
     min-height: 400px;
     width: 100%;
     padding: 2rem;
@@ -36,6 +40,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.contact {
+    padding-bottom: 4rem;
 }
 
 .signup-container {
