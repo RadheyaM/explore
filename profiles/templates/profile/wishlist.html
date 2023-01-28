@@ -12,7 +12,11 @@
         <div class="row">         
             <div class="col-lg-4 m-auto p-3 d-flex justify-content-center justify-content-lg-end">
                 <a href="{% url 'poster_detail' poster.id %}">
-                    <img class="poster-thumbnail mb-4" src="{{ poster.image.url }}">
+                    {% if poster.image %}
+                        <img class="poster-thumbnail mb-4" src="{{ poster.image.url }}" alt="{{ poster.name }}">
+                    {% else %}
+                        <img class="poster-thumbnail mb-4" src="media/poster-placeholder-image.jpg" alt="{{ poster.name }}">
+                    {% endif %}
                 </a>
             </div>
             <div class="col-lg-8 m-auto p-3 text-center">
@@ -38,7 +42,11 @@
         <div class="row">
             <div class="col-lg-4 m-auto p-3 d-flex justify-content-center justify-content-lg-end">
                 <a href="{% url 'book_detail' book.id %}">
-                    <img class="mb-4" src="{{ book.thumbnail.url }}">
+                    {% if book.thumbnail %}
+                        <img class="mb-4" src="{{ book.thumbnail.url }}" alt="{{ book.title }}">
+                    {% else %}
+                        <img class="mb-4" src="media/book-placeholder-image.jpg" alt="{{ book.title }}">
+                    {% endif %}
                 </a>
             </div>
             <div class="col-lg-8 m-auto p-3 text-center">

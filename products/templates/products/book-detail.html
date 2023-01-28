@@ -19,7 +19,7 @@
             {% else %}
                 <div class="m-auto">
                     <a href="{% url 'book_detail' book.id %}">
-                        <img src="/media/book-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ book.title }}">
+                        <img src="media/book-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ book.title }}">
                     </a>
                 </div>
             {% endif %}
@@ -83,9 +83,15 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
                     <div class="card product-card border-0 mt-2">
                         <div>
-                            <a href="{% url 'book_detail' book.id %}">
-                                <img src="{{ book.image.url }}" class="card-img-top book-card-image" alt="{{ book.title }}">
-                            </a>
+                            {% if book.image %}
+                                <a href="{% url 'book_detail' book.id %}">
+                                    <img src="{{ book.image.url }}" class="card-img-top book-card-image" alt="{{ book.title }}">
+                                </a>
+                            {% else %}
+                                <a href="{% url 'book_detail' book.id %}">
+                                    <img src="media/book-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ book.title }}">
+                                </a>
+                            {% endif %}
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">{{ book.title }}</h5>
@@ -94,11 +100,11 @@
                             <p><strong>£{{ book.price }}</strong></p>
                             <a href="{% url 'book_detail' book.id %}" class="btn btn-outline-primary">View</a>
                             {% if user.is_authenticated %}
-                                    {% if user.is_superuser %}
-                                        <a href="{% url 'update_book' book.id %}" class="btn btn-sm btn-outline-success">Admin: Update</a>
-                                        <a href="{% url 'manage_products' %}" class="btn btn-sm btn-outline-danger">Admin: Delete</a>
-                                    {% endif %}
+                                {% if user.is_superuser %}
+                                    <a href="{% url 'update_book' book.id %}" class="btn btn-sm btn-outline-success">Admin: Update</a>
+                                    <a href="{% url 'manage_products' %}" class="btn btn-sm btn-outline-danger">Admin: Delete</a>
                                 {% endif %}
+                            {% endif %}
                         </div>
                     </div>
                 </div>

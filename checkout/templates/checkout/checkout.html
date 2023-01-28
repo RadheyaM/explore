@@ -31,7 +31,11 @@
                 <div class="row">
                     <div class="col-4">
                         <br>
-                        <img class="poster-thumbnail" src="{{ product.poster.image.url }}" alt="{{ product.poster.name  }}">
+                        {% if product.poster.image %}
+                            <img class="poster-thumbnail" src="{{ product.poster.image.url }}" alt="{{ product.poster.name }}">
+                        {% else %}
+                            <img class="poster-thumbnail" src="media/poster-placeholder-image.jpg" alt="{{ product.poster.name }}">
+                        {% endif %}
                         <br>
                     </div>
                     <div class="col-5 product-title pt-1">
@@ -52,7 +56,11 @@
                     <div class="row">
                         <div class="col-4 book-image-container">
                             <br>
-                            <img class="book-sm-thumbnail" src="{{ product.book.thumbnail.url }}" alt="{{ product.book.title  }}">
+                            {% if product.book.thumbnail %}
+                                <img class="book-sm-thumbnail" src="{{ product.book.thumbnail.url }}" alt="{{ product.book.title }}">
+                            {% else %}
+                                <img class="book-sm-thumbnail" src="media/book-placeholder-image.jpg" alt="{{ product.book.title }}">
+                            {% endif %}
                             <br>
                         </div>
                         <div class="col-5 product-title">

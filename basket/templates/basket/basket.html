@@ -26,7 +26,11 @@
                 {% if item.poster %}
                     <div class="row basket-table">            
                         <div class="col-12 col-lg-3 basket-image-container">
-                            <img class="poster-thumbnail" src="{{ item.poster.image.url }}">
+                            {% if item.poster.image %}
+                                <img class="poster-thumbnail" src="{{ item.poster.image.url }}" alt="{{ item.poster.name }}">
+                            {% else %}
+                                <img class="poster-thumbnail" src="media/poster-placeholder-image.jpg" alt="{{ item.poster.name }}">
+                            {% endif %}
                         </div>
                         <div class="col-12 col-lg-3 basket-name-container">
                             <h4> {{ item.poster.name }}</h4>
@@ -48,7 +52,11 @@
                 {% else %}
                     <div class="row basket-table">            
                         <div class="col-lg-3 basket-image-container">
-                            <img src="{{ item.book.thumbnail.url }}">
+                            {% if item.book.thumbnail %}
+                                <img src="{{ item.book.thumbnail.url }}" alt="{{ item.book.title }}">
+                            {% else %}
+                                <img src="media/book-placeholder-image.jpg" alt="{{ item.book.title }}">
+                            {% endif %}
                         </div>
                         <div class="col-lg-3 basket-name-container">
                             <h4> {{ item.book.title }}</h4>

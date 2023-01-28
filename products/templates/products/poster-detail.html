@@ -18,7 +18,7 @@
                 </div>
             {% else %}
                 <a href="{% url 'poster_detail' poster.id %}">
-                    <img src="/media/poster-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ poster.name }}">
+                    <img src="media/poster-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ poster.name }}">
                 </a>
             {% endif %}
             <div class="col-lg-7 product-details">
@@ -73,9 +73,15 @@
                 {% for poster in recommend|slice:3 %}
                 <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
                     <div class="card product-card border-0 mt-2">
-                        <a href="{% url 'poster_detail' poster.id %}">
-                            <img src="{{ poster.image.url }}" class="card-img-top poster-card-image" alt="{{ poster.name }}">
-                        </a>
+                        {% if poster.image %}
+                            <a href="{% url 'poster_detail' poster.id %}">
+                                <img src="{{ poster.image.url }}" class="card-img-top poster-card-image" alt="{{ poster.name }}">
+                            </a>
+                        {% else %}
+                            <a href="{% url 'poster_detail' poster.id %}">
+                                <img src="media/poster-placeholder-image.jpg" class="card-img-top poster-card-image" alt="{{ poster.name }}">
+                            </a>
+                        {% endif %}
                         <div class="card-body">
                             <h5 class="card-title">{{ poster.name }}</h5>
                             <p class="badge badge-info"> {{ poster.genre.name }} </p>

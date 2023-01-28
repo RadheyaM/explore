@@ -55,7 +55,7 @@
                         </a>
                     {% else %}
                         <a href="{% url 'book_detail' book.id %}">
-                            <img src="{{ MEDIA_URL }}book-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ book.title }}">
+                            <img src="media/book-placeholder-image.jpg" class="card-img-top book-card-image" alt="{{ book.title }}">
                         </a>
                     {% endif %}
                     <div class="card-body pl-0">

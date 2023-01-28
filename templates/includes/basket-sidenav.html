@@ -20,7 +20,11 @@
         {% if product.poster %}
         <div class="row m-2">
             <div class="col-6">
-                <img class="sidenav-poster-thumbnail" src="{{ product.poster.image.url }}" alt="{{ product.poster.name }}">
+                {% if product.poster.image %}
+                    <img class="sidenav-poster-thumbnail" src="{{ product.poster.image.url }}" alt="{{ product.poster.name }}">
+                {% else %}
+                    <img class="sidenav-poster-thumbnail" src="media/poster-placeholder-image.jpg" alt="{{ product.poster.name }}">
+                {% endif %}
             </div>
             <div class="col-6">
                 <p><small class="small-text">{{ product.poster.name }}</small></p>
@@ -33,7 +37,11 @@
         {% else %}
             <div class="row m-2">
                 <div class="col-6 sidenav-book-thumbnail-container">
-                    <img class="sidenav-book-thumbnail" src="{{ product.book.thumbnail.url }}" alt="{{ product.book.title }}">
+                    {% if product.book.thumbnail %}
+                        <img class="sidenav-book-thumbnail" src="{{ product.book.thumbnail.url }}" alt="{{ product.book.title }}">
+                    {% else %}
+                        <img class="sidenav-book-thumbnail" src="media/book-placeholder-image.jpg" alt="{{ product.book.title }}">
+                    {% endif %}
                 </div>
                 <div class="col-6">
                     <p><small class="small-text">{{ product.book.title }}</small></p>
