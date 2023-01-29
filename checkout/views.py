@@ -76,6 +76,7 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
             order.save()
+            order_line_item = OrderLineItem()
             for item_id, item_data in basket.items():
                 try:
                     product = Books.objects.get(code=item_id)
