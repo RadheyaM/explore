@@ -15,7 +15,7 @@
                     {% if poster.image %}
                         <img class="poster-thumbnail mb-4" src="{{ poster.image.url }}" alt="{{ poster.name }}">
                     {% else %}
-                        <img class="poster-thumbnail mb-4" src="media/poster-placeholder-image.jpg" alt="{{ poster.name }}">
+                        <img class="poster-thumbnail mb-4" src="{{ MEDIA_URL }}poster-placeholder-image.jpg" alt="{{ poster.name }}">
                     {% endif %}
                 </a>
             </div>
@@ -45,7 +45,7 @@
                     {% if book.thumbnail %}
                         <img class="mb-4" src="{{ book.thumbnail.url }}" alt="{{ book.title }}">
                     {% else %}
-                        <img class="mb-4" src="media/book-placeholder-image.jpg" alt="{{ book.title }}">
+                        <img class="mb-4" src="{{ MEDIA_URL }}book-placeholder-image.jpg" alt="{{ book.title }}">
                     {% endif %}
                 </a>
             </div>

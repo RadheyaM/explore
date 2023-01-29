@@ -11,14 +11,16 @@
 {% block order_content %}
     <div class="col-12 col-lg-8 d-flex justify-content-center m-auto">
         <div class="m-auto">
-            {% if alert %}
-                <div class="alert alert-info alert-dismissible fade show small-screen-table-alert" role="alert">
-                    <p>For better visibility on small screens switch to landscape!</p>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            {% endif %}
+            <div class="small-screen-alert-container">
+                {% if not alert %}
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        <p>For better visibility on small screens switch to landscape!</p>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endif %}
+            </div>
             <div class="table-container">
                 <table class="table table-responsive .table-sm text-light m-auto">
                     <thead>
@@ -40,7 +42,7 @@
                             <td><a href="{% url 'order_history_detail' order.order_number %}" class="btn btn-sm btn-action">Detail</a></td>
                         </tr>
                         {% empty %}
-                            <div class="m-auto alert-info">There are currently no orders in your order history.</div>
+                            <div class="m-auto alert alert-info">There are currently no orders in your order history.</div>
                         {% endfor %} 
                     </tbody>
                 </table>

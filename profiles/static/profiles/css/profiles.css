@@ -5,3 +5,14 @@
 .badge {
     font-size: 0.75rem;
 }
+
+.small-screen-alert-container {
+    display: none;
+}
+
+@media screen and (max-width: 573px) {
+
+    .small-screen-alert-container {
+        display: block;
+    }
+}

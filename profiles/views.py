@@ -40,7 +40,8 @@ def order_history(request):
     orders = profile.orders.all()
     small_screen_alert = True
 
-    if orders.count() == 0:
+    if orders != 0:
+        print(f'Your Profile Ordercount:{orders.count()}')
         small_screen_alert = False
 
     context = {
