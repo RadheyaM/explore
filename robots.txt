@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/ 
+Disallow: /basket/
+Disallow: /crud/
+Sitemap: https://explore-store.herokuapp.com/sitemap.xml

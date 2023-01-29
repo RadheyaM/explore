@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://explore-store.herokuapp.com/</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/profile/contact/</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/profile/site-review/</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/privacy/</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/about/</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/basket/</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/13</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/?genre=Egyptology</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/?genre=History</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/?genre=Philosophy</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/?genre=Curiosities</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/?genre=Latin</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/1</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/3</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/4</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/5</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/6</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/7</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/8</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/9</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/10</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/11</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/12</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/14</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/15</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/16</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/17</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/18</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/19</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/20</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/21</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/22</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/23</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/24</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/25</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/26</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/27</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/28</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/29</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/30</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/32</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/books/2</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/?genre=Coat%20of%20Arms</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/?genre=Maps</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/1</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/2</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/3</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/4</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/5</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/6</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/7</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/8</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/9</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/10</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/11</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/12</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/13</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/14</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/15</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/16</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/17</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/18</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/19</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/20</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/products/posters/21</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://explore-store.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-01-29T14:11:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

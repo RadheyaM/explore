@@ -2,7 +2,7 @@
 
 # Explore - Books, Posters and coming soon Custom Toasters
 
-[View:  Live Project]()
+[View:  Live Project](https://explore-store.herokuapp.com)
 
 ## Overview
 
@@ -35,10 +35,11 @@ Explore is an online retail store operating on a business to customer strategy. 
 + [Technologies](#technologies)
 + [Testing](#testing)
     - [Code Validation](#code-validation)
-    - [Stripe Payment, Order Creation](#stripe-payment-tests)
+    - [Stripe Payment](#stripe-payment-tests)
+    - [Django Admin Order Creation](#django-admin-order-creation)
     - [Account Email Confirmation](#email-verifictaion-for-account-setup)
     - [Devices and Browsers](#devices)
-    - [Functionality Testing](#functionality-testing)
+    - [Functionality Testing Indepth Report](#functionality-testing)
     - [Errors, Bugs, Issues](#issues)
 + [Improvements](#improvements)
 + [Deployment]()
@@ -50,6 +51,8 @@ Explore is an online retail store operating on a business to customer strategy. 
 
 ## User Stories
 [Project Board](https://github.com/users/RadheyaM/projects/3/views/1) - for detailed user story progression and developer notes.
+
+Comments have been made on the featured issues as progress was made.
 
 <br>
 
@@ -180,8 +183,8 @@ Seo practices used.
 - Descriptive 'alt' attributes in image tags.
 - 404 Error Page
 ![404 page](media/readme/images/404.png)
-- [Robots.txt]()
-- [Sitemap.xml]()
+- [Robots.txt](robots.txt)
+- [Sitemap.xml](sitemap.xml)
 
 ## Features
 [All Feature Images](media/readme/images/)
@@ -214,11 +217,13 @@ The landing page shows the purpose of the site clearly, there is a special featu
 
 ### Products Page
 
-Products are displayed in uniform cards.  Picture and important information clearly visible.  User can search, filter and sort the items at the top of the page.  clicking on view or on the image leads to the product detail page.
+Products are displayed in uniform cards.  Picture and important information clearly visible.  User can search, filter and sort the items at the top of the page. If no search result returned an error message alert is given.  clicking on view or on the image leads to the product detail page.
 
 ![Book Search](media/readme/images/dsktp-search-products.png)
 
 ![Book Row](media/readme/images/dsktp-product-row.png)
+
+![After Search](media/readme/images/dsktp-search-products-after.png)
 
 ### Product Detail
 
@@ -334,6 +339,8 @@ Python validation was done using the gitpod linter and black formatter.
 ![Webhook success](media/readme/images/webhook-success.png)
 ![Webhook success2](media/readme/images/webhook-success2.png)
 ![Webhook events](media/readme/images/stripe-events.png)
+
+### Django Admin Order Creation
 ![order added to database](media/readme/images/orders-created-in-db.png)
 ![order django admin](media/readme/images/order-django-database.png)
 
@@ -345,24 +352,49 @@ An email is sent out, the link works, confirmation page appears and on clicking 
 
 ### Devices
 
-The site has been tested personally on a widescreen, a laptop, an ipad pro and a google pixel4.  Besides this google developer tools were used to test on many popular screen sizes for the best adaptability/reponsiveness possible
+The site has been tested personally on a widescreen, a windows laptop, an ipad pro and a google pixel4.  Besides this google developer tools were used to test on many popular screen sizes for the best adaptability/reponsiveness possible
 
 Google Chrome Version 108.0.5359.98 (Official Build) (arm64)
+
 Safari Version 16.1 (18614.2.9.1.12)
+
 Microsoft Edge Version 108.0.1462.46 (Official build) (arm64)
+
 
 ### Functionality Testing Indepth
 
 
 ### Issues
 
+- Currently the save info to profile tickbox does not function.  Due to time considerations I was not able to fix this issue.
+- Data from profile to checkout form mostly works although phone number, country and name do not come accross.
+- There are a lot of components to this project, I have tested as extensively as I can but surely there are other bugs that have escaped my notice, however to the best of my knowledge the site functions as it should and looks good on most screen sizes.
+
 ## Improvements
+
+### Code
+- CSS and Bootstrap, I would improve the layout of the css files and which is used what HTML for ease of use and going over the code retrospect. I would not use as much bootstrap as I did, instead using custom CSS rather than the mixture that exists in the current code and makes editing more difficult.
+- I would improve the way Poster and Product models work, to cut down on the duplication on the pages and view to accomodate both models with different fields.
+- Add more SEO keywords throughout the site.
+
+### Features
+- Add a remove button to the basket aside.
+- Add Admin functionality to respond to user messages, maybe have a dedicated message page for message threads.
+- Add verified site reviews to the about us page.
+- Add totals to the top and bottom of the basket and checkout pages when there are a lot of items and the page gets very tall.
+- Allow users to adjust quantity in the basket instead of just deleting the whole line item.
+- Improve the 'you might also like section' on the products detail page.
+- Add product review functionality and display the reviews in the product detail page.
 
 ## Deployment
 
 This site is deployed using Heroku combined with a Github repository updated from the IDE using Git. Once you have an Heroku account and have linked that with your Github account you can create a 'new' project by clicking that button in the top right corner, in the current version. Enter the name and regional information and in the next page click the 'Connect to Github' option and select the appropriate repository from your Github (or link the accounts and then do so, if not yet linked).
 
 Enter the appropriate configuration variables in the settings tab of Heroku. If you do not know what to do here then find help for your specific case. Once the appropriate settings in Heroku match those in your repository you can navigate to the 'Deploy' tab of the Heroku dashboard.
+
+The site uses AWS for static so an account needs to be set up.
+
+Your database needs to be migrated from SQLite3 default to another service, such as ElephantSQL as this site uses.
 
 Heroku can automatically deploy the selected Git branch of your respository when it is updated, or you can choose to manually update after each change, the choice is yours. Select your branch and click 'Deploy Branch'. Wait for the deployment to execute and then click 'View' to open your new app.
 
@@ -379,8 +411,8 @@ Kevin Powell Channel on Youtube helped with some CSS features credited in code.
 
 - Product Images Books - Google Books (as I am not really selling books I don't see an issue arising with copyright, also they are available through the API).
 - Product Images Posters - Wikipedia Free use.
-Mads Mikkelsen image used is credited Gage Skidmore on the page, with ref link.
-All other photos taken from [Pexels.com](https://www.pexels.com/)
+- Mads Mikkelsen image can be used if it is credited Gage Skidmore on the page, with ref link, as it is.
+- All other photos for site taken from [Pexels.com](https://www.pexels.com/)
 
 ### Acknowledgements
 Thanks to Code Institute for the resources and my mentor Brian Macharia for his help.
