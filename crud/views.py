@@ -14,14 +14,12 @@ class SuperuserRequiredMixin(UserPassesTestMixin):
     def test_func(self):
         return self.request.user.is_superuser
 
-
 @login_required
 @permission_required('products.can_change_books')
 def manage(request):
     """
     render the manage products index page
     """
-    permission_required()
     books = Books.objects.all()
     posters = Posters.objects.all()
     genres = Genre.objects.all()
