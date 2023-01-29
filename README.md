@@ -6,7 +6,7 @@
 
 ## Overview
 
-Explore is an online retail store operating on a business to customer strategy.  The store sells books and posters with scope for expansion into niche gifts.  The site is designed to be visually appealing and user friendly creating an environment that will retain a vistor attention and gain interest leading to retention, further interaction and sales.  
+Explore is an online retail store operating on a business to customer strategy.  The store sells books and posters with scope for expansion into niche gifts. A user can browse products, add them to their basket and checkout.  They can also create an account to access extra features provided by the site.  The site is designed to be visually appealing and user friendly creating an environment that will retain a vistor attention and gain interest leading to retention, further interaction and sales.  
 
 ## Table of Contents
 + [User Stories](#user-stories)
@@ -302,6 +302,8 @@ The site also uses badges to display basket count, and also in the basket aside 
 ![badge2](media/readme/images/free-delivery-warning.png)
 ![badge4](media/readme/images/savings-breakdown.png)
 
+### Error Handling
+403 Forbidden Access, 404 Page not found and 500 Server Error custom handling pages have been designed and function appropriately.
 
 ## Technologies
  - [Gidpod](https://www.gitpod.io/) - workspace

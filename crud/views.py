@@ -1,35 +1,51 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
+from django.http import HttpResponseForbidden
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import PermissionRequiredMixin
 from products.models import Books, Posters, Category, Genre
 from django.contrib import messages
 
 
+class SuperuserRequiredMixin(UserPassesTestMixin):
+    """Limit certain class views to superuser only"""
+    def test_func(self):
+        return self.request.user.is_superuser
+
+
+@login_required
 def manage(request):
     """
     render the manage products index page
     """
-    books = Books.objects.all()
-    posters = Posters.objects.all()
-    genres = Genre.objects.all()
-    categories = Category.objects.all()
 
-    context = {
-        'books': books,
-        'posters': posters,
-        'genres': genres,
-        'categories': categories,
-    }
+    if request.user.is_superuser:
 
-    template = 'crud/manage.html'
-    return render(request, template, context)
+        books = Books.objects.all()
+        posters = Posters.objects.all()
+        genres = Genre.objects.all()
+        categories = Category.objects.all()
+
+        context = {
+            'books': books,
+            'posters': posters,
+            'genres': genres,
+            'categories': categories,
+        }
+
+        template = 'crud/manage.html'
+        return render(request, template, context)
+    else:
+        return HttpResponseForbidden()
 
 # ====================================================================================
 #                                   CREATE VIEWS
 # ====================================================================================
 
 
-class CreateBookView(CreateView):
+class CreateBookView(SuperuserRequiredMixin, CreateView):
     """
     View for Admin to create a book product
     """
@@ -51,7 +67,7 @@ class CreateBookView(CreateView):
         return super().form_valid(form)
 
 
-class CreatePosterView(CreateView):
+class CreatePosterView(SuperuserRequiredMixin, CreateView):
     """
     View for Admin to create a book product
     """
@@ -73,7 +89,7 @@ class CreatePosterView(CreateView):
         return super().form_valid(form)
 
 
-class CreateCategoryView(CreateView):
+class CreateCategoryView(SuperuserRequiredMixin, CreateView):
     """
     View for Admin to create a book product
     """
@@ -95,7 +111,7 @@ class CreateCategoryView(CreateView):
         return super().form_valid(form)
 
 
-class CreateGenreView(CreateView):
+class CreateGenreView(SuperuserRequiredMixin, CreateView):
     """
     View for Admin to create a book product
     """
@@ -121,7 +137,7 @@ class CreateGenreView(CreateView):
 # ====================================================================================
 
 
-class UpdateBookView(UpdateView):
+class UpdateBookView(SuperuserRequiredMixin, UpdateView):
     """
     View for Admin to update a book product
     """
@@ -143,7 +159,7 @@ class UpdateBookView(UpdateView):
         return super().form_valid(form)
 
 
-class UpdatePosterView(UpdateView):
+class UpdatePosterView(SuperuserRequiredMixin, UpdateView):
     """
     View for Admin to update a book product
     """
@@ -165,7 +181,7 @@ class UpdatePosterView(UpdateView):
         return super().form_valid(form)
 
 
-class UpdateCategoryView(UpdateView):
+class UpdateCategoryView(SuperuserRequiredMixin, UpdateView):
     """
     View for Admin to update a book product
     """
@@ -187,7 +203,7 @@ class UpdateCategoryView(UpdateView):
         return super().form_valid(form)
 
 
-class UpdateGenreView(UpdateView):
+class UpdateGenreView(SuperuserRequiredMixin, UpdateView):
     """
     View for Admin to update a book product
     """
@@ -213,7 +229,7 @@ class UpdateGenreView(UpdateView):
 # ====================================================================================
 
 
-class DeleteBookView(DeleteView):
+class DeleteBookView(SuperuserRequiredMixin, DeleteView):
     """
     View for Admin to create a book product
     """
@@ -235,7 +251,7 @@ class DeleteBookView(DeleteView):
         return super().form_valid(form)
 
 
-class DeletePosterView(DeleteView):
+class DeletePosterView(SuperuserRequiredMixin, DeleteView):
     """
     View for Admin to create a book product
     """
@@ -257,7 +273,7 @@ class DeletePosterView(DeleteView):
         return super().form_valid(form)
 
 
-class DeleteCategoryView(DeleteView):
+class DeleteCategoryView(SuperuserRequiredMixin, DeleteView):
     """
     View for Admin to delete a book product
     """
@@ -278,7 +294,7 @@ class DeleteCategoryView(DeleteView):
         return super().form_valid(form)
 
 
-class DeleteGenreView(DeleteView):
+class DeleteGenreView(SuperuserRequiredMixin, DeleteView):
     """
     View for Admin to delete a book product
     """

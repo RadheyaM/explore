@@ -1,10 +1,12 @@
+
+from django.contrib.auth.decorators import login_required
 from django.urls import path
 from . import views
 
 urlpatterns = [
     path(
         "manage/", 
-        views.manage, name="manage_products"),
+        login_required(views.manage), name="manage_products"),
     path(
         "create-book/",
         views.CreateBookView.as_view(), name="create_book"),
