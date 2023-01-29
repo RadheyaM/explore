@@ -32,11 +32,12 @@ Explore is an online retail store operating on a business to customer strategy. 
     - [Admin](#admin)
     - [Contact](#contact--user-feedback-forms)
     - [Site Messages](#site-messages)
-    - [Admin](#admin)
 + [Technologies](#technologies)
 + [Testing](#testing)
     - [Code Validation](#code-validation)
     - [Stripe Payment, Order Creation](#stripe-payment-tests)
+    - [Account Email Confirmation](#email-verifictaion-for-account-setup)
+    - [Devices and Browsers](#devices)
     - [Functionality Testing](#functionality-testing)
     - [Errors, Bugs, Issues](#issues)
 + [Improvements](#improvements)
@@ -207,7 +208,7 @@ The landing page shows the purpose of the site clearly, there is a special featu
 
 ![Find Books](media/readme/images/footer%20and%20find-books.png)
 
-#### about us page
+#### About Us
 
 ![about us page](media/readme/images/about-us.png)
 
@@ -336,8 +337,21 @@ Python validation was done using the gitpod linter and black formatter.
 ![order added to database](media/readme/images/orders-created-in-db.png)
 ![order django admin](media/readme/images/order-django-database.png)
 
+### Email Verifictaion for Account Setup
 
-### Functionality Testing
+![email recieved](media/readme/images/email-received.png)
+
+An email is sent out, the link works, confirmation page appears and on clicking the user is then able to login successfully.
+
+### Devices
+
+The site has been tested personally on a widescreen, a laptop, an ipad pro and a google pixel4.  Besides this google developer tools were used to test on many popular screen sizes for the best adaptability/reponsiveness possible
+
+Google Chrome Version 108.0.5359.98 (Official Build) (arm64)
+Safari Version 16.1 (18614.2.9.1.12)
+Microsoft Edge Version 108.0.1462.46 (Official build) (arm64)
+
+### Functionality Testing Indepth
 
 
 ### Issues
@@ -346,7 +360,27 @@ Python validation was done using the gitpod linter and black formatter.
 
 ## Deployment
 
+This site is deployed using Heroku combined with a Github repository updated from the IDE using Git. Once you have an Heroku account and have linked that with your Github account you can create a 'new' project by clicking that button in the top right corner, in the current version. Enter the name and regional information and in the next page click the 'Connect to Github' option and select the appropriate repository from your Github (or link the accounts and then do so, if not yet linked).
+
+Enter the appropriate configuration variables in the settings tab of Heroku. If you do not know what to do here then find help for your specific case. Once the appropriate settings in Heroku match those in your repository you can navigate to the 'Deploy' tab of the Heroku dashboard.
+
+Heroku can automatically deploy the selected Git branch of your respository when it is updated, or you can choose to manually update after each change, the choice is yours. Select your branch and click 'Deploy Branch'. Wait for the deployment to execute and then click 'View' to open your new app.
+
 ## Credits
 ### Code
+
+Code Institute Project Boutique Ado was used to help with basket, checkout and intial general good practice and site design meta.  code used credited in code file comments.
+
+Some code taken from W3schools credited in code file comments.
+
+Kevin Powell Channel on Youtube helped with some CSS features credited in code.
+
 ### Images
+
+- Product Images Books - Google Books (as I am not really selling books I don't see an issue arising with copyright, also they are available through the API).
+- Product Images Posters - Wikipedia Free use.
+Mads Mikkelsen image used is credited Gage Skidmore on the page, with ref link.
+All other photos taken from [Pexels.com](https://www.pexels.com/)
+
 ### Acknowledgements
+Thanks to Code Institute for the resources and my mentor Brian Macharia for his help.
