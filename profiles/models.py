@@ -61,7 +61,7 @@ class Contact(models.Model):
 
 class SiteReview(models.Model):
     class Meta:
-        verbose_name_plural = "Site Rewiew"
+        verbose_name_plural = "Site Review"
 
     RATING = ((1, 1), (2, 2), (3, 3), (4, 4), (5, 5))
 
