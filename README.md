@@ -15,7 +15,6 @@ Explore is an online retail store operating on a business to customer strategy. 
     - [Owner Stories](#site-owner-stories)
 + [Planning and Development](#planning-and-development)
     - [Development Milestones](#development-milestones)
-    - [Initial Wireframes](#initial-wireframes)
     - [Colour Scheme](#colour-scheme)
     - [Database Schema](#database-schema)
     - [Business Strategy](#business-strategy)
@@ -142,10 +141,6 @@ As an owner:
 - Implement search engine optimisation.
 - Add community content, special features section to the homepage.
 - Add responsive design so the site looks good and works well on all screen sizes.
-
-### Initial Wireframes
-
-[Wireframes]()
 
 ### Colour Scheme
 [From Coolors](https://coolors.co/palettes/trending)

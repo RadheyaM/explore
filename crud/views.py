@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
-from django.http import HttpResponseForbidden
+from django.http import HttpResponse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import UserPassesTestMixin
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from products.models import Books, Posters, Category, Genre
 from django.contrib import messages
@@ -16,30 +16,26 @@ class SuperuserRequiredMixin(UserPassesTestMixin):
 
 
 @login_required
+@permission_required('products.can_change_books')
 def manage(request):
     """
     render the manage products index page
     """
+    permission_required()
+    books = Books.objects.all()
+    posters = Posters.objects.all()
+    genres = Genre.objects.all()
+    categories = Category.objects.all()
 
-    if request.user.is_superuser:
+    context = {
+        'books': books,
+        'posters': posters,
+        'genres': genres,
+        'categories': categories,
+    }
 
-        books = Books.objects.all()
-        posters = Posters.objects.all()
-        genres = Genre.objects.all()
-        categories = Category.objects.all()
-
-        context = {
-            'books': books,
-            'posters': posters,
-            'genres': genres,
-            'categories': categories,
-        }
-
-        template = 'crud/manage.html'
-        return render(request, template, context)
-    else:
-        return HttpResponseForbidden()
-
+    template = 'crud/manage.html'
+    return render(request, template, context)
 # ====================================================================================
 #                                   CREATE VIEWS
 # ====================================================================================
