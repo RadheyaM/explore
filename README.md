@@ -29,12 +29,14 @@ Explore is an online retail store operating on a business to customer strategy. 
     - [Checkout](#checkout)
     - [Profile](#profile)
     - [Accounts](#accounts)
+    - [Admin](#admin)
     - [Contact](#contact--user-feedback-forms)
     - [Site Messages](#site-messages)
     - [Admin](#admin)
 + [Technologies](#technologies)
 + [Testing](#testing)
     - [Code Validation](#code-validation)
+    - [Stripe Payment, Order Creation](#stripe-payment-tests)
     - [Functionality Testing](#functionality-testing)
     - [Errors, Bugs, Issues](#issues)
 + [Improvements](#improvements)
@@ -142,8 +144,9 @@ As an owner:
 [Wireframes]()
 
 ### Colour Scheme
+[From Coolors](https://coolors.co/palettes/trending)
 
-![Landing Page](media/readme/images/colour-scheme.png)
+![Color Scheme Image](media/readme/images/colour-scheme.png)
 
 ### Database Schema
 
@@ -151,21 +154,40 @@ As an owner:
 
 ![Database Schema Image](media/readme/images/db-schema-image.png)
 ### Business Strategy
-[Facebook Page]()
+
+- Content is king and the site first and foremost needs to work, have good UI and IX and do what it promises to do well in order to gain and retain customers and increase market reach, any other business strategy must be built upon that foundation.
+- Facebook is a great strategy for our type of business to build up a customer base and generate interest in and traffic to the site and increase marketing reach.
+[Facebook Page Images](media/readme/images/facebook/)
+- Newsletter Subscription - another strategy for our business model to build up customer contacts to send offers, new product info, adverts to increase interest and sales/market reach. [See navigation section for more](#navigation)
+
+![Newsletter signup](media/readme/images/subscribe-modal.png)
+
+- Account creation 10% for signup incentive to increase engagement and potential sales.  Also might incentise a larger first time order to get more savings.
+
+![10 percent offer](media/readme/images/10percent.png)
+
+[see navigation section for more](#navigation)
+
+- £50 free delivery is another incentive to increase sales and the offer is clearly advertised throughout the site.
 
 ### SEO
-- Keywords
-- Meta Description
-- Site Title
-- Links
+Seo practices used.
+- Meta Keywords and use of keywords throughout the site.
+- Meta Description tag.
+- Site Title.
+- Good link Pactice such as: 'rel=nooopener' link attributes on irrelevant links, links to well established sites, [see navigation feature section](#navigation)
+- Descriptive 'alt' attributes in image tags.
 - 404 Error Page
-- Robots.txt
-- Sitemap.xml
+![404 page](media/readme/images/404.png)
+- [Robots.txt]()
+- [Sitemap.xml]()
 
 ## Features
-<!-- <img src="" height="" width=""> -->
+[All Feature Images](media/readme/images/)
 
 ### Navigation
+
+Users can navigate the site in an intuitive manner.  The navigation adapts to screen size and on mobile the important Products, Account and Basket links do not go into the hamburger menu but are displayed below for better UI/UX.  Links for navigation also in the footer. There is a basket aside so the user can see what they have in their basket without having to leave the page they are currently on.  Orange is used to highlight action and important text.  The basket has an item counter badge. Links are responsive when moused over.
 
 ![Desktop Navbar](media/readme/images/dsktp-navbar.png)
 
@@ -177,6 +199,8 @@ As an owner:
 
 ### Homepage
 
+The landing page shows the purpose of the site clearly, there is a special feature section below for extra content and as an advertisement and below that are links to respected sites.
+
 ![Landing Page](media/readme/images/mobile-landing-sm.png)
 
 ![Speacial Feature](media/readme/images/dsktp-feature-lg.png)
@@ -185,9 +209,11 @@ As an owner:
 
 #### about us page
 
-
+![about us page](media/readme/images/about-us.png)
 
 ### Products Page
+
+Products are displayed in uniform cards.  Picture and important information clearly visible.  User can search, filter and sort the items at the top of the page.  clicking on view or on the image leads to the product detail page.
 
 ![Book Search](media/readme/images/dsktp-search-products.png)
 
@@ -195,43 +221,81 @@ As an owner:
 
 ### Product Detail
 
+Product image and detail clearly displayed.  Add to wishlist, add to basket and keep browsing buttons prominantly displayed.  A 'you might also like' section below to recommend other products.
+
+Logged in users can choose to add items to a wishlist, the button is responsive to the items current wishlist status, and an icon appears beside the title/name showing that it is in the wishlist.
+
 ![Books Detail](media/readme/images/dsktp-product-detail.png)
 
 ![Recommend Section](media/readme/images/dsktp-recommend.png)
 
 ### Basket
 
+Products are clearly displayed with price, totals at the bottom.  Customers can choose to remove an item line from the basket using the clearly visible button.  Customers can choose to keep browsing or move to checkout.
+
 ![Basket](media/readme/images/basket.png)
 
 ### Checkout
 
-![Checkout](media/readme/images/checkout2.png)
+Checkout also shows a summary of products and totals.  Profile info will be transferred from saved section of the Profile, if the user is logged in and entered that info beforehand.  From the checkout customers can choose to move back to edit their basket, or enter details in the validated form, enter payment information and complete the order.  They are then redirected to a success page with an order summary.
+
+![Checkout](media/readme/images/checkout3.png)
 
 ![Checkout Success Message](media/readme/images/order-summary-msg.png)
 ![Checkout Success](media/readme/images/order-summary.png)
 
 ### Profile
 
+The profile section has three pages which can be toggled with the buttons at the top.  The first page shows address info, the second shows order history and from there detail page can be viewd.  The third page contains a wishlist.
+
+The wishlist has buttons to view product and remove.  Items are also automatically removed from the wishlist if that item is added to the basket, to keep the contents from getting bloated.
+
 ![Profile Home](media/readme/images/dsktp-profile.png)
 ![Profile Orders](media/readme/images/order-history.png)
+![wishlist](media/readme/images/dsktp-wishlist.png)
+![wishlist-mobile](media/readme/images/mobile-wishlist.png)
+![wishlist product detail](media/readme/images/added-to-wishlist.png)
 
 ### Accounts
 
+There are three user status', first is no account which can still make purchases.  Second is a user who has created an account, they will get a first order discount applied and will be able to use the profile functionality and save their address and order history. Third is the superuser who can access product management from a link in the navbar that the other users cannot see, this section allows for product CRUD functionality.  superuser also sees update and delete buttons on the product cards which normal users do not see.  superuser pages are protected by having no links display to normal users, and also with the permission required django service implemented in the code.
+
+Navigation links adapt to user status, if you are logged in you only see links relevant to logging out or changing your password.  If you are logged out you only see login or signup links.  If you are a superuser you see extra admin functionality links and buttons.
+
 ![Sign In](media/readme/images/sign-in.png)
-
-### Contact & User Feedback Forms
-
-![Contact](media/readme/images/contact-us.png)
-
-### Site Messages
+![Sign Out](media/readme/images/allauth-signout.png)
 
 ### Admin
+
+Without accessing django admin, the superuser can edit products in the product management section.  They can create, update or delete products.  They can read the products in the site as normal users can, or in the update form, I did not see the point of adding an extra detail view, this is something that could be easily implemented in a following increment.  Other database items can be accessed by the superuser in the django admin site.
 
 ![Product Management](media/readme/images/product-management.png)
 
 ![Create Book](media/readme/images/create-book.png)
 
 ![Update](media/readme/images/update.png)
+
+
+### Contact & User Feedback Forms
+
+Any user can leave feedback or get in touch with the two provided forms in the nav 'contact' dropdown menu.
+
+![Contact](media/readme/images/contact-us.png)
+
+### Site Messages
+
+The site gives useful feedback to the user after every action in the form of alert messages that can be dismissed by clicking the &times button or just clicking the page for convenience.  
+
+The site also uses badges to display basket count, and also in the basket aside to show the user how much more to spend for free delivery, if they qualify for free delivery and if they qualify for the 10% discount for new accounts.
+
+![message1](media/readme/images/msg.png)
+![error message](media/readme/images/error%20msg.png)
+![message2](media/readme/images/msg-2.png)
+![badge1](media/readme/images/you-qualify.png)
+![badge2](media/readme/images/helpful-message.png)
+![badge2](media/readme/images/free-delivery-warning.png)
+![badge4](media/readme/images/savings-breakdown.png)
+
 
 ## Technologies
  - [Gidpod](https://www.gitpod.io/) - workspace
@@ -250,7 +314,32 @@ As an owner:
 
 ## Testing
 ### Code Validation
+
+[Nu HTML Validation Reports](media/readme/resources/Nu%20Html%20Checker/)
+
+#### One error with duplicate ID usage on the two subscription forms in the header and footer.  I have chosen to leave this as is for time reasons and as the two forms use the same view logic, but this would be a priority fix.  I don't see any problems arising from this in the form function.  As this is in the base.html file it shows up on all the test results.
+
+![HTML Error](media/readme/images/nu-error.png)
+
+[CSS Validation Reports](media/readme/resources/css%20validation/)
+Everything passes.
+
+[JSHint Results](media/readme/resources/jshint/)
+All good.
+
+Python validation was done using the gitpod linter and black formatter.
+
+### Stripe Payment Tests
+![Webhook success](media/readme/images/webhook-success.png)
+![Webhook success2](media/readme/images/webhook-success2.png)
+![Webhook events](media/readme/images/stripe-events.png)
+![order added to database](media/readme/images/orders-created-in-db.png)
+![order django admin](media/readme/images/order-django-database.png)
+
+
 ### Functionality Testing
+
+
 ### Issues
 
 ## Improvements
